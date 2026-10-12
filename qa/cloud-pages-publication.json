@@ -1,55 +1,36 @@
 {
-  "checkedAt": "2026-10-12T22:01:41.412819+00:00",
+  "checkedAt": "2026-10-12T22:34:12.081770+00:00",
   "repository": "taniab1975/test-career-empire",
   "repositoryId": 1415756807,
+  "sourceCommit": "ba601220a8bc3ae209d1d7fd2bc84239f2a6251e",
+  "artifactCommit": "336f771812ca372e416fd0189279129548e82d03",
+  "priorArtifactCommit": "11340016f6ef1e51ee0671ec93c203890777eb33",
   "branch": "gh-pages",
-  "artifactCommit": "11340016f6ef1e51ee0671ec93c203890777eb33",
-  "sourceCommit": "8ee2a7b6e9b162affedd4d2b57b87fcfeee4fbc4",
-  "files": 623,
-  "bytes": 525006587,
   "branchPushed": true,
-  "MiB": 500.68,
-  "pagesPublishedLimitBytes": 1000000000,
-  "excluded": [
-    "QA",
-    "tests",
-    "scripts",
-    "dependencies/cache",
-    "private workspace metadata",
-    "unreferenced development assets"
-  ],
+  "files": 623,
+  "bytes": 525012101,
   "httpVerification": {
     "baseURL": "http://127.0.0.1:4291/test-career-empire/",
-    "sourceCommit": "8ee2a7b6e9b162affedd4d2b57b87fcfeee4fbc4",
+    "sourceCommit": "ba601220a8bc3ae209d1d7fd2bc84239f2a6251e",
     "verifiedHttpFiles": 620,
-    "verifiedBytes": 524889389,
+    "verifiedBytes": 524894903,
     "mediaRange": "206, 64 bytes",
     "existingLegacyLinkWarnings": [
       "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
     ]
   },
-  "publicationStatus": "static branch ready; Pages activation blocked",
-  "pagesApiResult": "Get \"https://api.github.com/repos/taniab1975/test-career-empire/pages\": Forbidden",
-  "callablePagesCreateAction": false,
-  "publicUrlCheck": {
-    "url": "https://taniab1975.github.io/test-career-empire/playable-3d/",
-    "error": "Tunnel connection failed: 403 Forbidden",
-    "liveVerified": false
-  },
-  "ownerAction": {
-    "url": "https://github.com/taniab1975/test-career-empire/settings/pages",
-    "steps": [
-      "Select Deploy from a branch",
-      "Choose gh-pages",
-      "Choose /(root)",
-      "Save"
-    ]
-  },
+  "pagesActivation": "Owner enabled gh-pages /(root); prior Pages workflow succeeded, API writes not used",
+  "publicHostRead": "Tunnel connection failed: 403 Forbidden; web reader also inaccessible",
   "liveBrowserVerified": false,
-  "credentialsGrantsSecurityChanged": false,
+  "newExportBrowserVerified": false,
+  "newWorkflowStatus": "Not checked at this checkpoint",
+  "sourceBrowserEvidence": "qa/cloud-repair-status.md",
+  "remaining": [
+    "Confirm new deployment workflow",
+    "Public-host root/game/browser pixels blocked in this executor",
+    "Instrumented cold skip 8.825s exceeds unchanged 8s target",
+    "User-reported Market Admin reserved for ECC follow-up"
+  ],
   "ECCDeploymentChanged": false,
-  "priorArtifactCommit": "bc412a4d59d842b666123eb3fb7f15ef142f7934",
-  "stagedBrowserEvidence": "qa/cloud-morning-checkpoint.json",
-  "visualStartupCompletenessAccepted": true,
-  "coldEightSecondTargetAccepted": true
+  "credentialsGrantsSecurityChanged": false
 }
