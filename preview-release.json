@@ -1,9 +1,9 @@
 {
   "repository": "taniab1975/test-career-empire",
-  "sourceCommit": "797f9f978099b905f03f2636331149ebf7ba271d",
+  "sourceCommit": "4d282b3c1b593583ce9630fbf1023ccdbcc1951c",
   "gamePath": "playable-3d/",
-  "fileCount": 622,
-  "dependencyBytes": 524884940,
+  "fileCount": 623,
+  "dependencyBytes": 524886019,
   "existingLegacyLinkWarnings": [
     "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
   ],
@@ -2857,6 +2857,11 @@
       "path": "playable-3d/vendor/three/examples/jsm/libs/meshopt_decoder.module.js",
       "bytes": 29059,
       "sha256": "cb08bf53ad8ad9693d8bb759b2dbade350eb38bcce63d005385e225b564c5f6a"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/libs/meshoptimizer-LICENSE.md",
+      "bytes": 1079,
+      "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
     },
     {
       "path": "playable-3d/vendor/three/examples/jsm/lights/RectAreaLightTexturesLib.js",
