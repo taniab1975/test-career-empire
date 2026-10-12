@@ -1,0 +1,3107 @@
+{
+  "repository": "taniab1975/test-career-empire",
+  "sourceCommit": "797f9f978099b905f03f2636331149ebf7ba271d",
+  "gamePath": "playable-3d/",
+  "fileCount": 622,
+  "dependencyBytes": 524884940,
+  "existingLegacyLinkWarnings": [
+    "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
+  ],
+  "files": [
+    {
+      "path": "Assets/EST Preparation/EST - Knowledge reactor/2026-CEMGT-EST-Unit-3-Content.pdf",
+      "bytes": 263495,
+      "sha256": "0e45796aa40823ce937a970a18deb9c6fd102a348f1d12142a641254b559813c"
+    },
+    {
+      "path": "Assets/EST Preparation/EST - Knowledge reactor/Glossary of Terms.pdf",
+      "bytes": 145337,
+      "sha256": "c0d8ed80a5eaabddfb6e05b8ae99dafef388bcf5897fc09e1d1a574accd9655c"
+    },
+    {
+      "path": "Assets/EST Preparation/EST - Knowledge reactor/Glossary-of-key-words-used-in-the-formulation-of-questions_.pdf",
+      "bytes": 390884,
+      "sha256": "53486eb2f57c7ff559ebb9f2a3280a3d33d1ef654a9fe15e027538dd62e2fb65"
+    },
+    {
+      "path": "Assets/EST Preparation/EST - Knowledge reactor/Initiative Song/Step In First - full guide mix.mp3",
+      "bytes": 1956093,
+      "sha256": "b89f6aabc01d4f462cd882963a9afdf36801c7dff64401ecb8b2816bf71dfd26"
+    },
+    {
+      "path": "Assets/EST Preparation/communication-portrait.mp4",
+      "bytes": 1916438,
+      "sha256": "ed2fbb942e2f334b93666b962f2e43069b422eddfb8ee050a470990b21187507"
+    },
+    {
+      "path": "Assets/EST Preparation/est-lab-card-boss.png",
+      "bytes": 125915,
+      "sha256": "931856fdaa7a42a19fd41acb42d784b72bf605449a66e005fdf5366218d32610"
+    },
+    {
+      "path": "Assets/EST Preparation/est-lab-card-content.png",
+      "bytes": 121179,
+      "sha256": "aa9809267301098fd4fd34b76ef838ce610845c7c516d056239a143c4b09dc5f"
+    },
+    {
+      "path": "Assets/EST Preparation/est-lab-card-decoder.png",
+      "bytes": 98767,
+      "sha256": "312029eb7d1cd56f29ea444f68030188226e735857c962872de5ead618504515"
+    },
+    {
+      "path": "Assets/EST Preparation/est-lab-card-glossary.png",
+      "bytes": 123937,
+      "sha256": "fdd855b1d587438d5a92b6d4f54ed2970cbc07f63c5d49b9daaee3d0874889e6"
+    },
+    {
+      "path": "Assets/EST Preparation/est-lab-systems-poster.png",
+      "bytes": 968623,
+      "sha256": "31a50830674ed01497a349e731f5bb606b6831aeb2351f8e8be2585f30a0fcaa"
+    },
+    {
+      "path": "Assets/EST Preparation/est-lab-systems.mp4",
+      "bytes": 18186474,
+      "sha256": "8d78d63b4a0db0b4629fcbf5374a4706caececfa7368568ab79e2a08c1ef20cc"
+    },
+    {
+      "path": "Assets/EST Preparation/guide-character/guide-celebration.png",
+      "bytes": 327573,
+      "sha256": "59cd19df4cf0755dea0eb2fbd7941aab13a466c40dd56cf27780a6c555da7222"
+    },
+    {
+      "path": "Assets/EST Preparation/guide-character/guide-pointing.png",
+      "bytes": 285683,
+      "sha256": "02899f95bdcade733d940607f7c79ff7eee4bf5b9b7d4703b27301a3111a0584"
+    },
+    {
+      "path": "Assets/EST Preparation/guide-character/guide-thinking-bottom.png",
+      "bytes": 232465,
+      "sha256": "0f0a018a3cdb8a313df85d9c3e5596bc3666ae2a7be742b9aa64df5512f1a932"
+    },
+    {
+      "path": "Assets/EST Preparation/guide-character/guide-thinking-top.png",
+      "bytes": 236830,
+      "sha256": "840efe5fa6068a22548706937d205bc614ef0e6bf1123060f139edc074f06e35"
+    },
+    {
+      "path": "Assets/EST Preparation/guide-character/guide-thumbs-up.png",
+      "bytes": 251481,
+      "sha256": "ec2f44917c3022e592643b4c5bc6fb3dbe8003ec6ee1c0802f071ef19e27bb72"
+    },
+    {
+      "path": "Assets/EST Preparation/initiative-one-page-summary.png",
+      "bytes": 902142,
+      "sha256": "2054950318cbfb9c1df260cf0cce62f57ef656c834fa67c26fdb583cf7477ea7"
+    },
+    {
+      "path": "Assets/EST Preparation/initiative-portrait.mp4",
+      "bytes": 7246975,
+      "sha256": "26f7cdd63a12bd8ef39ce57bb9864eeef91bd944894299271a5ca53d6c76fd9d"
+    },
+    {
+      "path": "Assets/EST Preparation/initiative-q1.mp4",
+      "bytes": 3228977,
+      "sha256": "2a64fcf32675ad3f5c7b0973fea9de714a8952e07c70a96ec0aea71461c7bd29"
+    },
+    {
+      "path": "Assets/EST Preparation/initiative-q2-replacement.mp4",
+      "bytes": 2710644,
+      "sha256": "12038af378125ed68b61d6ad6f587b5eec3867381bd198772700d94325e67143"
+    },
+    {
+      "path": "Assets/EST Preparation/initiative-q3.mp4",
+      "bytes": 3050438,
+      "sha256": "bbbd3084bf6dd032eab71ea5cb10716f255fc23620e360db9e7d0f68efcc1ae2"
+    },
+    {
+      "path": "Assets/EST Preparation/job-application-portrait.mp4",
+      "bytes": 2151273,
+      "sha256": "7784ae083ae5392447a02f9222d17c8f36c544cbf6d97599e28ea4f41ea4b182"
+    },
+    {
+      "path": "Assets/EST Preparation/megatrends-lmi-portrait.mp4",
+      "bytes": 2263502,
+      "sha256": "a18378803b9f2aaa0399eae2bf0fcaf34109e2b813d70c00907991380194fad8"
+    },
+    {
+      "path": "Assets/EST Preparation/personal-finance-portrait.mp4",
+      "bytes": 2154751,
+      "sha256": "985a5863bf7c0cd80ca44435b3dd475314ef1627911457565e75027463f68378"
+    },
+    {
+      "path": "Assets/EST Preparation/time-management-portrait.mp4",
+      "bytes": 2072922,
+      "sha256": "eced7620e8ee62a438cd7ea16e32a080a7d3ef6de365ed3436608a77aba7061a"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/animated_next_button.gif",
+      "bytes": 1489510,
+      "sha256": "e1a6bb123ecc381b727a313af2f74246e835b6a36175bb1622003b34fec6a5e3"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/animated_progress_bar_fill.gif",
+      "bytes": 1226763,
+      "sha256": "bb85ee93614a8039ce2f660cdfc7f35cdf78030dd80fc4e7448a20fc39a6126f"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/animated_tick_success.gif",
+      "bytes": 1724193,
+      "sha256": "98f356b803f383b55713008293696be30af35c50b6e8adcac73790860198d308"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/animated_unlock.gif",
+      "bytes": 198224,
+      "sha256": "cdc5560aa69719ad7ad786023f10f93cd8e9aa00968f8cfbb0b337b56e9de5ac"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/chamber_complete.gif",
+      "bytes": 898371,
+      "sha256": "04c3d5e8d37fc37ca12469f3de67b657a947d4605935b6ba4b139f29f0eeea02"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/hint_nearly_there.gif",
+      "bytes": 796437,
+      "sha256": "50d42d553fab497858b8376da20cb9e3c68b6f3d7ff9fc21fbf99e0c42012f27"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/step_transition.gif",
+      "bytes": 175735,
+      "sha256": "08f24ee148119256589c64b4593762778ac4fb0ad6bff1077b5461ae971f8968"
+    },
+    {
+      "path": "Assets/Images and Animations/Animated Buttons/wrong_answer_glitch.gif",
+      "bytes": 379502,
+      "sha256": "d3cf5498c9804ce844fddcc733341262e50c6c6fd1dc6f0add84f4754174383f"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Black hair.png",
+      "bytes": 9499,
+      "sha256": "d0992d721ced5a8a657e3cbe01827741a5e7e5b512d8967d783d4d613705b611"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Blazer Separate Camel.png",
+      "bytes": 92146,
+      "sha256": "b4b6b3ab306009c7d46e79db938209cd203500815246a3bcc1856a2a70083316"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Blazer Separate Navy.png",
+      "bytes": 73524,
+      "sha256": "f823e7bb8955909098fbf5bac27ceab1bb81a19672cd6e98e1e7bf891f20b580"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Blazer.png",
+      "bytes": 66008,
+      "sha256": "abfde3cb663cbdb96be4b96414ebe43b3616255835dca6ff0b7dec8e3e41aa8c"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Chef Apron Fitted.png",
+      "bytes": 65847,
+      "sha256": "6833abc3d7531a90a6c0cdfb358940250ef574fb1bae6e2c5c07630c349d414f"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Chef Jacket Fitted.png",
+      "bytes": 66594,
+      "sha256": "40d420e4831fbde58745da892407f0870825ffccc42c685323b75c8efc9d8868"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Full Jumper Teal.png",
+      "bytes": 66434,
+      "sha256": "af3b743dfd605eded64881aa4652d8251e852e8aada25e27a3a24f2cc18484c5"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Full Shirt Teal Tie.png",
+      "bytes": 72221,
+      "sha256": "53c50cfc018f22a6c220286e375b68ed89f23ed2092dafa375f5646ba7de8aa8"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hair Auburn Deep.png",
+      "bytes": 29281,
+      "sha256": "c9537500cd962d3460c835505ecaf3528995befd930c653b83a8e9c89c402ccc"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hair Auburn.png",
+      "bytes": 36173,
+      "sha256": "38f0e942dee544a78989f22d39e8d6a9c053ebbdd11f23970e19307bbcbb0b15"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hair Blonde.png",
+      "bytes": 452308,
+      "sha256": "2eb9ca7f1e41c79966c39ea376cfa65cf67b2b34b8007dd19582c6c49bc4e8ae"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hair Silver.png",
+      "bytes": 459534,
+      "sha256": "cc9969335e157bfd38c7e4f9636ecf15388bbcc1d3bbafdbc679e5e2944df472"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hair Teal.png",
+      "bytes": 458281,
+      "sha256": "080d7ce160f24e057cf52453f89def800b4f01ff445ce394ce3bfa096980ce82"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hair.png",
+      "bytes": 27641,
+      "sha256": "c2d3a1be15f66ee5ad9033471ffdfbf140bc7fb6a2b988cf9eb269c9f9259ee6"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Hi Vis Vest.png",
+      "bytes": 52348,
+      "sha256": "3e0b792d36f9cfcb8f25b6a0ff2cbb6c687e6a84425f6c76c9ca29d686b42dcd"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Jeans.png",
+      "bytes": 57825,
+      "sha256": "4713b56e0f4f84096df3b20c77b04e4f3146a2b12ba30f687fd30444f4665971"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Lab Coat.png",
+      "bytes": 56243,
+      "sha256": "41d9f46b2507b85c39d3e5401cd85192df5557b9065521dc82fe5397b135e20d"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Pants Burgundy.png",
+      "bytes": 52986,
+      "sha256": "ead43e88fd52eada8aa6f0a0031df91d186230f0d1915c98e04099330e9fd60f"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Pants.png",
+      "bytes": 49640,
+      "sha256": "38faba3617c7817565bc585f0edce8caac44c58dd793481ed839c3afa06ee9b0"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Safety Goggles Clear.png",
+      "bytes": 12022,
+      "sha256": "e336b2ce03b84de0db4d6e528e6f6dd426f616ba7cc99bbfd6ed42dd12f932f1"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Scrubs Pants Teal.png",
+      "bytes": 74790,
+      "sha256": "163bb9b58dc1e7c7c1db10b4c1ed42e1852014fb2832c9dff3967099c80ffb32"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Scrubs Top Teal.png",
+      "bytes": 61319,
+      "sha256": "5e60afea4d2ad620c6ebb4acc6a05ddb0894b44dd1101c2c2aa83157c9ec09bb"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Shirt and tie.png",
+      "bytes": 22370,
+      "sha256": "c845ec97f1e453c4c054e77ecd760d500a6524c95ef42459c80eaef840308b5a"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Boy Tool Belt Brown.png",
+      "bytes": 32498,
+      "sha256": "3627974da23e94a6b5e3492a26ceedfdfe8f3531274aa7931435b8a61b797a15"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Brown Shoes.png",
+      "bytes": 20565,
+      "sha256": "019ac3b8114936fa471f22d8cbbb498b5794dacfff7395a462982ac292408f13"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Blazer Separate Camel.png",
+      "bytes": 115786,
+      "sha256": "271b69f19f0d89083c2e9b10bf4cc7bf6d7079be94891b1ed18238f4e8acbddf"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Blazer Separate Navy.png",
+      "bytes": 89350,
+      "sha256": "e3ee5431857d66027305e9eb0207b740b33f28a0eff873ed0b9cbb1303f5a21f"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Chef Apron Fitted.png",
+      "bytes": 65350,
+      "sha256": "a5302323b114dcb2193ec75628613c1cb197788d2d2516a133e882a7d8f2faff"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Chef Jacket Fitted.png",
+      "bytes": 74474,
+      "sha256": "7997b7309fe7954da336ebf850e429ff78159228c1ed72234e6ae81c2dd931f4"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Full Jumper Teal.png",
+      "bytes": 86757,
+      "sha256": "67afbdd1d531b223021fb3559c17626d37097b6aed96568e0224a218c745cbfe"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Full Shirt Teal Tie.png",
+      "bytes": 91760,
+      "sha256": "c9674f5e25160974c060644bcb994eb9b5d0b3a6e6db1effdf5aae383bd42752"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Bob Brown.png",
+      "bytes": 49387,
+      "sha256": "b9b2b24b6ce12b8b6ee356ffe54945b1f282567de0d29d45a8ba4915d8e58297"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Ponytail Brown.png",
+      "bytes": 63702,
+      "sha256": "a019774d063253eabb8569dc27b1c0bc74eb5350a7212bf4916d228ac18bc97c"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Auburn Deep.png",
+      "bytes": 37683,
+      "sha256": "8fb454ee4c1670fe53e75da9e97cefced883550619c3b5ff0f4eb50fc6e10f5e"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Auburn.png",
+      "bytes": 47432,
+      "sha256": "42956cd80fc9a443b6a2c9422faa2cc164b01105fb1630c180d7688757550b6a"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Black.png",
+      "bytes": 8608,
+      "sha256": "471e6825dbe6e784e1e0e4f11037cf410e67ec22520600dd0cd8549da37a5d2e"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Blonde.png",
+      "bytes": 43198,
+      "sha256": "28bdb83f0c90b61457b1e73882af218754d4171e20c072b86236e1e560e2a0d9"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Brown.png",
+      "bytes": 36770,
+      "sha256": "6ffc0cad2b6d7b6f1f76dbb83c9e8ec4d90f5d83099f1e560906e29d432aefca"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Silver.png",
+      "bytes": 36198,
+      "sha256": "1e93841d9d605f259375faad99d31ea0dbe8699c010550ace0ccff2faec0f67e"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hair Waves Teal.png",
+      "bytes": 35216,
+      "sha256": "6a424ef756a98cd63b449b3ac02db03acc9a4fe199c06ff694f6cea3d2ffccf8"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Hi Vis Vest.png",
+      "bytes": 61769,
+      "sha256": "cdc1e7abbe2613a70887952c7dc04bbd5f151488b7766914d27cb806fd4f7c3c"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Jeans.png",
+      "bytes": 71645,
+      "sha256": "07ac01117cb48c85ef875d2d1ab58041270cc87d0662cf4162f6ea35e6987cf2"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Lab Coat.png",
+      "bytes": 82805,
+      "sha256": "9ed0d2f61a04bbca4b9b3cc2e4a05d8a5e6226764b1d65fa69c608b5479966d3"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Pants Burgundy.png",
+      "bytes": 63475,
+      "sha256": "a8b4285aae632b18d598ac0af39b780741964da559d5cb9ab9a80367ad88bb7a"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Pants Navy.png",
+      "bytes": 62183,
+      "sha256": "e15ab1144cc6ad231059d493d6a2c07443fa4200080a42c369b24a6006353dd3"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Safety Goggles Clear.png",
+      "bytes": 13277,
+      "sha256": "088cf80356fdf9610848e19a03aabb6a0599ea05d130e37b49e9f5f74635e34d"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Scrubs Pants Teal.png",
+      "bytes": 70917,
+      "sha256": "b20d0e99e973ab2022c3e2d72223e7b018aafc9a8530988e3487785ca325514c"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Scrubs Top Teal.png",
+      "bytes": 60845,
+      "sha256": "fbaaaf70ddbd3e93af8b637c66484918c544a1d5352086d11a18fdf339284246"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Shoes Black.png",
+      "bytes": 19292,
+      "sha256": "4dcd23eeca984b71404169134c7c430c8baef29dbe4b5f827a0f1e87b9c32b0d"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Shoes Brown.png",
+      "bytes": 18811,
+      "sha256": "34a20f2960455dc91fd18dc6ba4c013d3852a1311719f0cf3b291bffb65e5bb5"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Skirt Tartan.png",
+      "bytes": 71334,
+      "sha256": "4578b55c82b45631430bc75b8df2e3c6b17c6a86093fb38fcb744f52cf691f8b"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Girl Tool Belt Brown.png",
+      "bytes": 34307,
+      "sha256": "0fe0557570f9fedd68b93cf0fde8e6cfc387ab289c61b5059a52c6da8c0c16e5"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Layered Dressed Boy svg.svg",
+      "bytes": 1441596,
+      "sha256": "3a6bfe990a979ccce8142fa9889616049b2bab87b2d7063e7d1ea9ec322e8798"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Neutral Boy Smooth Transparent background.png",
+      "bytes": 166264,
+      "sha256": "890713c6cd6857000231b57480ac7cc7d8638bb470c6f415f42744336bfd7a41"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Neutral Girl Take 2.png",
+      "bytes": 199695,
+      "sha256": "5dd16fb4c97fed9962f93335a7301571ca320bb451d2db3f10c26e722fe488f4"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/Shoes Corrected.png",
+      "bytes": 21719,
+      "sha256": "89ec199b357e9cbd0d3b2f5a6b5eb4277aa67386c6a90d10675d3d0ef6e2c923"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/layers/ecc-boy-base-neutral/recomposed-preview.png",
+      "bytes": 514200,
+      "sha256": "3af0756c1ec49b1adc37dce82fa46b5f435f12e7bc7ec614e71d4a021666a4f3"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/layers/ecc-girl-base-neutral/recomposed-preview.png",
+      "bytes": 547705,
+      "sha256": "8d14006989bfe482ddab522b67cd42368d6e123a5b79b42dde63052acdda9a98"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/model-sheets/ecc-avatar-model-sheet-v1.png",
+      "bytes": 1871372,
+      "sha256": "4838f8ff2767e5ea3febfd5f9c0a972d00b09c7b64230c97dc715eaf539727d4"
+    },
+    {
+      "path": "Assets/Images and Animations/Avatar Studio/model-sheets/ecc-avatar-model-sheet-v2-female.png",
+      "bytes": 2082026,
+      "sha256": "f5cc7ef0a7dcb683eb82f337c87559ed72a1010abf3d41417d681f38eb5d6640"
+    },
+    {
+      "path": "Assets/Images and Animations/Celebration Reward Icons/Chamber complete.png",
+      "bytes": 1632027,
+      "sha256": "9c46d52c860eff17cea4fd58f2576a62bdcb1843a48cabe36afa9e2fa780df03"
+    },
+    {
+      "path": "Assets/Images and Animations/Celebration Reward Icons/Salary Banked.png",
+      "bytes": 1602294,
+      "sha256": "aa83738e2fc5dfd8f745dc79cb8e671954e858ea3f2cacd0e65398c9c804c880"
+    },
+    {
+      "path": "Assets/Images and Animations/Celebration Reward Icons/Signal restored.png",
+      "bytes": 1255554,
+      "sha256": "a75c12c1249e436ecc21310214337bcec88bc92d979a598413089ca90e8bd197"
+    },
+    {
+      "path": "Assets/Images and Animations/Celebration Reward Icons/Tax contributed.png",
+      "bytes": 1486952,
+      "sha256": "0bceaac2f6275e6114b46595a5a9b2d5f9f819c1a31f7c856f89dd6f63578393"
+    },
+    {
+      "path": "Assets/Images and Animations/Celebration Reward Icons/Topic Complete.png",
+      "bytes": 1871484,
+      "sha256": "813a523f1e0fae4d9d5c578b66b12a2db4c649520fe1d12f8e0cc45611fd66ab"
+    },
+    {
+      "path": "Assets/Images and Animations/Community Page/community-path-digital-access.png",
+      "bytes": 2428791,
+      "sha256": "4f14a5176d72e473799525943450a8cad960c28ff54489c23f16f03675962cfd"
+    },
+    {
+      "path": "Assets/Images and Animations/Community Page/community-path-fairer-starts.png",
+      "bytes": 2452029,
+      "sha256": "598dc65e1fca0c42ed782ced7e0a08480fd45bac3881984b428369564e4fd28e"
+    },
+    {
+      "path": "Assets/Images and Animations/Community Page/community-path-green-futures.png",
+      "bytes": 2344028,
+      "sha256": "0816dd2d901b1a144810f7fdfde169fb08e7d688c2009bcbdfd99cfd78c2f32e"
+    },
+    {
+      "path": "Assets/Images and Animations/Community Page/community-path-wider-horizons.png",
+      "bytes": 2639361,
+      "sha256": "54ec74edd361e55baedfb5c9d90843d027781af485407d65e4e3a6bda6018da7"
+    },
+    {
+      "path": "Assets/Images and Animations/EST backgrounds/Background Broken.png",
+      "bytes": 1540867,
+      "sha256": "d02efdecb9ed89543ed79fbd8c02880e5a5b57b68d525816594e684085b09d06"
+    },
+    {
+      "path": "Assets/Images and Animations/EST backgrounds/Background Neutral.png",
+      "bytes": 1442561,
+      "sha256": "e0c37c2f9583e7068d696c5a31b1aa4e66848083b1af12ab40d70fbb892a0eb8"
+    },
+    {
+      "path": "Assets/Images and Animations/EST backgrounds/Background restored.png",
+      "bytes": 1784305,
+      "sha256": "d5f825dd19fab3694afb7dd92d72c819fdbebbb07b2c3c1bd588643439e42dbd"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Boy avatar.png",
+      "bytes": 1871372,
+      "sha256": "4838f8ff2767e5ea3febfd5f9c0a972d00b09c7b64230c97dc715eaf539727d4"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Francis.png",
+      "bytes": 2367908,
+      "sha256": "2a3753f083cc1f75ec1550b8cab05b7765b53b33a7b265cde1ba105e00c557a9"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Frassati.png",
+      "bytes": 2555882,
+      "sha256": "be3175b765eca5f5a21dd0dab1515d7c368a1626969057ae1737b7c843bcc5c6"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Girl Avatar 1.png",
+      "bytes": 2082026,
+      "sha256": "f5cc7ef0a7dcb683eb82f337c87559ed72a1010abf3d41417d681f38eb5d6640"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Lisieux.png",
+      "bytes": 2582120,
+      "sha256": "3d40636ab21dc2ec13b9e3d62051efb5d63a18db4f7d0032a0a7058d8f0a9b6c"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/MacKillop/MacKillop Celebrating.png",
+      "bytes": 918731,
+      "sha256": "88c906fa46a268417b8d54f753a009e7a231e84000cd88b6d8161fdd8085d613"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/MacKillop/MacKillop Encouraging.png",
+      "bytes": 769330,
+      "sha256": "fe6fd452b629d19c69d75137ff3f5190adfe941b16440bf054846bcc3dda8c30"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/MacKillop/MacKillop Pointing.png",
+      "bytes": 2364118,
+      "sha256": "a4cd4f42d189eebf265360cf5e3e636000294d3c4105a6f8aa53841312b3bbd8"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/MacKillop/MacKillop Thinking.png",
+      "bytes": 2341253,
+      "sha256": "028fff552fdf48e1ef1623a7bb56fc4d980f446fd082d199ec4e5eb01bef8b94"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/MacKillop/MacKillop Welcome.png",
+      "bytes": 2389835,
+      "sha256": "5d7fbf8369f28ceae0b5da0742a720a260236a9aa43c49656bd3d972fe1bb150"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Romero/Romero Celebrating.png",
+      "bytes": 953686,
+      "sha256": "08b9513766cb94a093ecf4f2df779c7502b97379ea081dfb0744dad5abff5748"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Romero/Romero Encouraging.png",
+      "bytes": 835372,
+      "sha256": "4ad11d2051e6c4f60d114b88678074794b9a9c1eda5529700d8468af292f79a8"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Romero/Romero Pointing.png",
+      "bytes": 892946,
+      "sha256": "421f23f63cbf0af9db44324838a1540c6fdb75160de2767aace0f53bbb214332"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Romero/Romero Thinking.png",
+      "bytes": 2357209,
+      "sha256": "1e52353c370bf03feaf914f5ec4b43e3f840bf6233357084680046df8505a5e6"
+    },
+    {
+      "path": "Assets/Images and Animations/Emmanuel Student Characters/Romero/Romero Welcoming.png",
+      "bytes": 922782,
+      "sha256": "4de54f964aa3efd106436eafb9d6dc4d9703a3665f43b18959dddefafac84e3f"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/1.0 Communication.png",
+      "bytes": 112373,
+      "sha256": "93eada24161817838f9c971222d219a0f7d49df2e377d2109a6c939a51fcd59b"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/1.1 Communication.png",
+      "bytes": 136572,
+      "sha256": "a8eb61ebddc2a5d808a34843d36a3c2f9a5b15494a321001f2a13a570313c92b"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/1.2 Communication.png",
+      "bytes": 138565,
+      "sha256": "bebaf1497c9b07eb88f424a20828e99f4e02af71cfdac58bafc7e47519a15e58"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/1.3 Communication.png",
+      "bytes": 135459,
+      "sha256": "4c098781b4be0f03f39478845eccb286d1ab1fddd286832b7e4e418dd31135c6"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/1.4 Communication.png",
+      "bytes": 136716,
+      "sha256": "c12c1af38c456e42e99f8cab046e2ba6718e22fe071be42824f53f9dd7c2fe66"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/2.0 Digital Literacy.png",
+      "bytes": 106906,
+      "sha256": "dd2e3de9430f61fee4e971324a9d47c2a0e0b9b076173257ff71110812565b8a"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/2.1 Digital Literacy.png",
+      "bytes": 132478,
+      "sha256": "4c6d83250b93312a73aedeb149b2245196c0c1f5b26e848d767a35d87cba7f11"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/2.3 Digital Literacy.png",
+      "bytes": 133861,
+      "sha256": "b9429a9697e6c18ceb63e269d7ec871a47ab5aaccb7b40ddfb5ae38d5ebebd09"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/2.4 Digital LIteracy.png",
+      "bytes": 130594,
+      "sha256": "c36751690904d69e6ae5d6ff40e699339d5d4bb13101128326a1b20c77687dc6"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/2.5 Digital Literacy.png",
+      "bytes": 129300,
+      "sha256": "be03acce238e9f7244800326f20933e8e74c31a252109d828328eaa10eeb49da"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/3.0 Teamwork.png",
+      "bytes": 126568,
+      "sha256": "a0dacab6e4c478c37bacb7bc6e38768b574e0d6b3b83e4a227fa904bca6a4b5c"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/3.1 Teamwork.png",
+      "bytes": 147524,
+      "sha256": "e1a4017d48192dfab0e9dc6ee02c236478793612f4302eb1685ea2f251b83200"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/3.2 Teamwork.png",
+      "bytes": 146137,
+      "sha256": "32c3c875f574681ad9668128b58ec5394dcfe61de8d92315d83e6c00c5062eaa"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/3.3 Teamwork.png",
+      "bytes": 147926,
+      "sha256": "df6dacf242f4e863941892e7b17823fe731bbc81557eb278ee7645128171dd58"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/3.4 Teamwork.png",
+      "bytes": 148733,
+      "sha256": "525e632325da0827cf808785b90635b5e0035294a0ad83b0b30e052c594a84e7"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/4.0 Time Management.png",
+      "bytes": 125464,
+      "sha256": "44047897ae5754c05aaaae48ca3d4c960ac43403e1650a9672ca2edd29dd36ac"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/4.1 Time Management.png",
+      "bytes": 146616,
+      "sha256": "999330ba4902e4de2bede919d8e4199668feb1ca16b52e00ceb15f73e3dd57e9"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/4.2 Time Management.png",
+      "bytes": 146864,
+      "sha256": "36f6c67c91baa9b808a0215fb3a153cb60bd792d4701504abbb6c37ddaa821bb"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/4.3 Time Management.png",
+      "bytes": 149428,
+      "sha256": "fed8133a03e20be74247c862fe4550969c4bf2abe99fa348ace130a0664c7559"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/5.0 Critical Thinking.png",
+      "bytes": 126305,
+      "sha256": "6e6e98c5b76161406cac17dd706173c9582edabb30ed1997f52b6225bdb51b4c"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/5.1 Critical Thinking.png",
+      "bytes": 149557,
+      "sha256": "239025a302e14017889de21ea44d7d5dbbaafb0260a9ca5037fbe12d286ecf5f"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/5.2 Critical Thinking.png",
+      "bytes": 149482,
+      "sha256": "7ac892bff83ca91f820d84dfa9c8cb90b32731dcbb5ed76aa48361fad9b2b17f"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/5.3 Critical Thinking.png",
+      "bytes": 152648,
+      "sha256": "0d2660119c74f235fbec706a45d68956e9e0ec18268fba6af5d1c118e8b38330"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/6.0 Problem Solving.png",
+      "bytes": 109294,
+      "sha256": "c87d15c0b23473a22465ecd23e470de3d512a8bf3f034c1cb8e08eee32807231"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/6.1 Problem Solving.png",
+      "bytes": 134740,
+      "sha256": "0fa4f6be1476ea872b4df1b3fc6cbea0833e64619c2bfe5208328ce5f5ac77fe"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/6.2 Problem Solving.png",
+      "bytes": 134235,
+      "sha256": "9329645fa7762842d36bbf345b94b324379999d9eaec8f9e508d18621dbec643"
+    },
+    {
+      "path": "Assets/Images and Animations/Employability Skill Logos/6.3 Problem Solving.png",
+      "bytes": 132598,
+      "sha256": "03be4e2157671c8f252a0b93ec9f8c64d794a8fe918e1da97a43368ff5d70b00"
+    },
+    {
+      "path": "Assets/Images and Animations/Feedback Images/Feedback Burst.png",
+      "bytes": 1379430,
+      "sha256": "22a26773fbdb2afbc4074fdd090f7761ee791ce2f757c72a8b4e986b36f3cb85"
+    },
+    {
+      "path": "Assets/Images and Animations/Feedback Images/Feedback hint.png",
+      "bytes": 1305277,
+      "sha256": "44e42c76727628dbf57ed4906ee43ba27aa5808e051e7d15e6136109acd8537a"
+    },
+    {
+      "path": "Assets/Images and Animations/Feedback Images/Feedback tick.png",
+      "bytes": 1337914,
+      "sha256": "b15a3fce1acde06681edc91f2dc0b7618eb1526a7a176688339bd7b6dc2e3e5a"
+    },
+    {
+      "path": "Assets/Images and Animations/Global Shop/global-shop-student-hub.png",
+      "bytes": 1929773,
+      "sha256": "f52768ad1511f67e8e67999a329fc3052535b41c58daab547eb60f036214b981"
+    },
+    {
+      "path": "Assets/Images and Animations/Global Shop/items/laptop-upgrade.png",
+      "bytes": 793558,
+      "sha256": "afc7c2fa3a7e1319fdc96c64484524f1944d341c3ce01ceefca285c2406eb360"
+    },
+    {
+      "path": "Assets/Images and Animations/Global Shop/items/study-desk.png",
+      "bytes": 842973,
+      "sha256": "3db2808ebfa51970dcbd3bb8251674cc1ab212022aea97a1e4e3a097f74ee8c5"
+    },
+    {
+      "path": "Assets/Images and Animations/Global Shop/items/wellbeing-pack.png",
+      "bytes": 880165,
+      "sha256": "11e441d1cc5b42bcffa6db18669f07de632b781fb9de3f1ec64382657acadbfe"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/Vault Bridge/vault-bridge-backdrop.png",
+      "bytes": 2340929,
+      "sha256": "31d7fd82f86b4d4b177e9d0f72fe2fb1ab7763332a02b7cca18aea74483bc101"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-blank-repair.svg",
+      "bytes": 1982,
+      "sha256": "89d1b85d3310d46251fe9e526ae70f5467320de8b8aaf214582f9138279f40fb"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-corruption-sweep.svg",
+      "bytes": 2107,
+      "sha256": "da80aaedf21f8d3b853b816ad06e4aad7dcbcc53022ed98c97155a8bab9e9062"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-arena-bg.png",
+      "bytes": 2110877,
+      "sha256": "8634d368435b3ab405d6b9e4a40b5ab889c1642200b53214ce7b016ed4b16815"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-arena-crimson.png",
+      "bytes": 2384313,
+      "sha256": "a7d5b028d035576c85d060750a9445b3e0b30785f4089a3d5612ab1565124ff3"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-arena-emerald.png",
+      "bytes": 2426289,
+      "sha256": "b968dbddd8e7b48bcdaefed01c16232de222906932539930837f814ceffa2c2c"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-arena-solar.png",
+      "bytes": 2424094,
+      "sha256": "bf6921f34b40fb4d35423462611125b39fb9de6d32088377b511cef673001724"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-arena-violet.png",
+      "bytes": 2442792,
+      "sha256": "476251ad09c4281a80197266f039e7dd33546bdc4f7a3dc9e589a40cd1823fe7"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-card-back.png",
+      "bytes": 2622232,
+      "sha256": "849c225fe1bd6447d1ccac7b31d7033ed28a8b98bc964a6bf493c7157c043c6c"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-card-crimson.png",
+      "bytes": 2652744,
+      "sha256": "309712431dda38b297ab2e704bf5630ac8aa5824726ff7a79b76dac41f5dca1f"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-card-emerald.png",
+      "bytes": 2744137,
+      "sha256": "3b4131d32bfe3c1cec9e18d33761590494a9c4dc91dbbfa877d2a8519c3eed66"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-card-solar.png",
+      "bytes": 3012337,
+      "sha256": "0bf631b1c915cd805d50319555e11c867f245af5d1053e03bca4016dc79cce3b"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-memory-card-violet.png",
+      "bytes": 2914487,
+      "sha256": "11ea35474c46d3d72da5960cd5f25446f20e202517d296f17e5f7daffaac83f5"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-recall-forge.svg",
+      "bytes": 2039,
+      "sha256": "a9b61fdf1fbc143d259acd2a3f058bb460952ee8c06228ccab3079852445d91a"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-reward-vault.svg",
+      "bytes": 2398,
+      "sha256": "9be72d3f5142a0c7d297ec0bb7ff833823f4f9f5f6aa505bb23af531071eb4af"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-signal-scan.svg",
+      "bytes": 2595,
+      "sha256": "1766c077f408584994112caab154f383b9b94f7de61233967d1480e51a51a31d"
+    },
+    {
+      "path": "Assets/Images and Animations/Glossary Check/glossary-space-runner.svg",
+      "bytes": 3756,
+      "sha256": "f20703c1fcfd568894ba50ba68a1242864a4962da3b3e9e7639bd27c963bf628"
+    },
+    {
+      "path": "Assets/Images and Animations/Initiative Scenes/Initiative problem.png",
+      "bytes": 2022874,
+      "sha256": "e357bb6368f0f12ec62b85930b16cea7faee528bb2ec3f940cf2d8a62b15d579"
+    },
+    {
+      "path": "Assets/Images and Animations/Initiative Scenes/Initiative scene success.png",
+      "bytes": 2007423,
+      "sha256": "5f68777b62a1a3df31e891d4d149ff96669e9c9becb918d7e9ea66bbeef84e66"
+    },
+    {
+      "path": "Assets/Images and Animations/Initiative Scenes/Initiative topic scene neutral.png",
+      "bytes": 1977311,
+      "sha256": "1bc5ea0e032f2759964fd955770a596931bc6ecd9ec7e5ce81683f5875408509"
+    },
+    {
+      "path": "Assets/Images and Animations/Progress Bar/All steps complete.png",
+      "bytes": 1293624,
+      "sha256": "8bc542c5b3ad0d54e99a5ba5a6c0ec19bc1edf816eb42ab771cb47657c326d00"
+    },
+    {
+      "path": "Assets/Images and Animations/Progress Bar/No progress yet.png",
+      "bytes": 1096933,
+      "sha256": "fa17a4e5733c80bd8b0d55e8c972111cfe31012e0fa5a0916908e98dfa24aba2"
+    },
+    {
+      "path": "Assets/Images and Animations/Progress Bar/Step 1 active.png",
+      "bytes": 1201180,
+      "sha256": "261808f19d1654d2636a2eb2e69f2345f3116b36bb47e0a7976bc2f3997652ac"
+    },
+    {
+      "path": "Assets/Images and Animations/Progress Bar/Step 2 Active.png",
+      "bytes": 1403373,
+      "sha256": "c0f1d1e11781cfa6f39398cf127d80a1289d3aa11b92dce36e4f1b68428b9ff9"
+    },
+    {
+      "path": "Assets/Images and Animations/Progress Bar/Step 3 Active.png",
+      "bytes": 1497655,
+      "sha256": "2469249bbd546ed5ea789fb2b44e6b17d9f6643f2a26f90f7569471b56e6e26f"
+    },
+    {
+      "path": "Assets/Images and Animations/Progress Bar/Step 4 Active.png",
+      "bytes": 1313799,
+      "sha256": "0794c2e70ac9e4bb9205cdce319e73a42874c180f75e074fd5d78237316fb50f"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/activity-empty-state.png",
+      "bytes": 499530,
+      "sha256": "54d875777358c50c48da51a5ebac4629b1d11297f53b3ac84038ba2c2146e5ca"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/community-impact-banner.png",
+      "bytes": 1593915,
+      "sha256": "9733c86bbc4b003ad0237aafbfa7103a9e4a0787dedb08f4092f2415cac4576a"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/empire-status-assets-owned.png",
+      "bytes": 198938,
+      "sha256": "b68583cd4e5eaa341344ff3691fd2c2fcb41fa38f3e6f7ef5d1a84d4e0bb5526"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/empire-status-community-tax.png",
+      "bytes": 175705,
+      "sha256": "b6c3cfb6afe565b3845be2a23816f88c78977d86bb32e5923de1ab0c0ad8d016"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/empire-status-job-security.png",
+      "bytes": 67842,
+      "sha256": "6bd5b9a4312c294ab96edc15b8ea4fa5455347aa2bef91e17c5007e9b83ecd9a"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/empire-status-net-worth.png",
+      "bytes": 67101,
+      "sha256": "8611bed9c7ca1570ab1e73b3470cd6e9b8c80621043efee3dbfc7f9bb2067acd"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/empire-status-salary.png",
+      "bytes": 63278,
+      "sha256": "6e35c4953a8e3faa1fc59078d8d1a0f02b3565e14e0159cd2ca750d942cd1fb1"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/empire-status-work-life-balance.png",
+      "bytes": 66604,
+      "sha256": "8138dd56cc065475ca3b78f5662980607edb3969b1fa2d0b2a8cb3a9d6b308a8"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/module-est-prep-thumb.png",
+      "bytes": 1286653,
+      "sha256": "a2a0dc317631f2b0877b0522c3e2194328b81796fdc2d866d97eaa3d6d246506"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/module-lifelong-learning-thumb.png",
+      "bytes": 1524746,
+      "sha256": "f1352a583becb5f09fa178eeb6b8d1b1968a2e96d8b5e277b97ed39cd2476946"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/module-megatrends-loop.gif",
+      "bytes": 10013640,
+      "sha256": "e3fb411ee9e4dd955fc73a3b85fbeb7b4f343601061bb77f85f26b1be6a341c0"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/module-megatrends-thumb.png",
+      "bytes": 1337657,
+      "sha256": "85c3fb0a04db428cd8b1421145ab55edcc8d4ac8d2cbcc3b0209e747f27e4f6e"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/student-hub-guide.gif",
+      "bytes": 1612492,
+      "sha256": "51b3d1afff82a8b65d44a873f596b482d9952ccfc3a5389ccee4532afe0a9174"
+    },
+    {
+      "path": "Assets/Images and Animations/Student Hub/student-hub-hero-career-empire.png",
+      "bytes": 2824894,
+      "sha256": "23bcb9a00fdbaa5e3ca47eddf7005b50377ee18561a03d0d5102bde0f0b189a6"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/1.0 Communication.png",
+      "bytes": 112373,
+      "sha256": "93eada24161817838f9c971222d219a0f7d49df2e377d2109a6c939a51fcd59b"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/1.1 Communication.png",
+      "bytes": 136572,
+      "sha256": "a8eb61ebddc2a5d808a34843d36a3c2f9a5b15494a321001f2a13a570313c92b"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/1.2 Communication.png",
+      "bytes": 138565,
+      "sha256": "bebaf1497c9b07eb88f424a20828e99f4e02af71cfdac58bafc7e47519a15e58"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/1.3 Communication.png",
+      "bytes": 135459,
+      "sha256": "4c098781b4be0f03f39478845eccb286d1ab1fddd286832b7e4e418dd31135c6"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/1.4 Communication.png",
+      "bytes": 136716,
+      "sha256": "c12c1af38c456e42e99f8cab046e2ba6718e22fe071be42824f53f9dd7c2fe66"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/2.0 Digital Literacy.png",
+      "bytes": 106906,
+      "sha256": "dd2e3de9430f61fee4e971324a9d47c2a0e0b9b076173257ff71110812565b8a"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/2.1 Digital Literacy.png",
+      "bytes": 132478,
+      "sha256": "4c6d83250b93312a73aedeb149b2245196c0c1f5b26e848d767a35d87cba7f11"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/2.3 Digital Literacy.png",
+      "bytes": 133861,
+      "sha256": "b9429a9697e6c18ceb63e269d7ec871a47ab5aaccb7b40ddfb5ae38d5ebebd09"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/2.5 Digital Literacy.png",
+      "bytes": 129300,
+      "sha256": "be03acce238e9f7244800326f20933e8e74c31a252109d828328eaa10eeb49da"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/3.0 Teamwork.png",
+      "bytes": 126568,
+      "sha256": "a0dacab6e4c478c37bacb7bc6e38768b574e0d6b3b83e4a227fa904bca6a4b5c"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/3.1 Teamwork.png",
+      "bytes": 147524,
+      "sha256": "e1a4017d48192dfab0e9dc6ee02c236478793612f4302eb1685ea2f251b83200"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/3.2 Teamwork.png",
+      "bytes": 146137,
+      "sha256": "32c3c875f574681ad9668128b58ec5394dcfe61de8d92315d83e6c00c5062eaa"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/3.3 Teamwork.png",
+      "bytes": 147926,
+      "sha256": "df6dacf242f4e863941892e7b17823fe731bbc81557eb278ee7645128171dd58"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/3.4 Teamwork.png",
+      "bytes": 148733,
+      "sha256": "525e632325da0827cf808785b90635b5e0035294a0ad83b0b30e052c594a84e7"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/4.0 Time Management.png",
+      "bytes": 125464,
+      "sha256": "44047897ae5754c05aaaae48ca3d4c960ac43403e1650a9672ca2edd29dd36ac"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/4.1 Time Management.png",
+      "bytes": 146616,
+      "sha256": "999330ba4902e4de2bede919d8e4199668feb1ca16b52e00ceb15f73e3dd57e9"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/4.2 Time Management.png",
+      "bytes": 146864,
+      "sha256": "36f6c67c91baa9b808a0215fb3a153cb60bd792d4701504abbb6c37ddaa821bb"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/4.3 Time Management.png",
+      "bytes": 149428,
+      "sha256": "fed8133a03e20be74247c862fe4550969c4bf2abe99fa348ace130a0664c7559"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/5.0 Critical Thinking.png",
+      "bytes": 126305,
+      "sha256": "6e6e98c5b76161406cac17dd706173c9582edabb30ed1997f52b6225bdb51b4c"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/5.1 Critical Thinking.png",
+      "bytes": 149557,
+      "sha256": "239025a302e14017889de21ea44d7d5dbbaafb0260a9ca5037fbe12d286ecf5f"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/5.2 Critical Thinking.png",
+      "bytes": 149482,
+      "sha256": "7ac892bff83ca91f820d84dfa9c8cb90b32731dcbb5ed76aa48361fad9b2b17f"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/5.3 Critical Thinking.png",
+      "bytes": 152648,
+      "sha256": "0d2660119c74f235fbec706a45d68956e9e0ec18268fba6af5d1c118e8b38330"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/6.0 Problem Solving.png",
+      "bytes": 109294,
+      "sha256": "c87d15c0b23473a22465ecd23e470de3d512a8bf3f034c1cb8e08eee32807231"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/6.1 Problem Solving.png",
+      "bytes": 134740,
+      "sha256": "0fa4f6be1476ea872b4df1b3fc6cbea0833e64619c2bfe5208328ce5f5ac77fe"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/6.2 Problem Solving.png",
+      "bytes": 134235,
+      "sha256": "9329645fa7762842d36bbf345b94b324379999d9eaec8f9e508d18621dbec643"
+    },
+    {
+      "path": "Assets/employability-logos/futuristic-suite/png/6.3 Problem Solving.png",
+      "bytes": 132598,
+      "sha256": "03be4e2157671c8f252a0b93ec9f8c64d794a8fe918e1da97a43368ff5d70b00"
+    },
+    {
+      "path": "Assets/employability-logos/main/communication.png",
+      "bytes": 112373,
+      "sha256": "93eada24161817838f9c971222d219a0f7d49df2e377d2109a6c939a51fcd59b"
+    },
+    {
+      "path": "Assets/employability-logos/main/critical-thinking.png",
+      "bytes": 126305,
+      "sha256": "6e6e98c5b76161406cac17dd706173c9582edabb30ed1997f52b6225bdb51b4c"
+    },
+    {
+      "path": "Assets/employability-logos/main/digital-literacy.png",
+      "bytes": 106906,
+      "sha256": "dd2e3de9430f61fee4e971324a9d47c2a0e0b9b076173257ff71110812565b8a"
+    },
+    {
+      "path": "Assets/employability-logos/main/problem-solving.png",
+      "bytes": 109294,
+      "sha256": "c87d15c0b23473a22465ecd23e470de3d512a8bf3f034c1cb8e08eee32807231"
+    },
+    {
+      "path": "Assets/employability-logos/main/teamwork.png",
+      "bytes": 126568,
+      "sha256": "a0dacab6e4c478c37bacb7bc6e38768b574e0d6b3b83e4a227fa904bca6a4b5c"
+    },
+    {
+      "path": "Assets/employability-logos/main/time-management.png",
+      "bytes": 125464,
+      "sha256": "44047897ae5754c05aaaae48ca3d4c960ac43403e1650a9672ca2edd29dd36ac"
+    },
+    {
+      "path": "Assets/landing-screenshots/ecc-future-campus-hero.png",
+      "bytes": 2284531,
+      "sha256": "efcfc0962c3d1eb5e9f9a4e9ad4b8efe380949d06cff94e4fa48bbe9a69de0d8"
+    },
+    {
+      "path": "Assets/videos/initiative-trailer-poster.png",
+      "bytes": 1624608,
+      "sha256": "07453c392aac581938aec96a4da3586abb5925a6c9ed60ea97e76d5702810e51"
+    },
+    {
+      "path": "Assets/videos/initiative-trailer.mp4",
+      "bytes": 39836919,
+      "sha256": "91ed63455360e94265c40fda36ad6321e657e36b1fb752b9bedac4ed871f8110"
+    },
+    {
+      "path": "auth/add-students.html",
+      "bytes": 5070,
+      "sha256": "69d1b0b07e9d7b2ab6b9e969679abd2acd482f7af5df8bd925513d2b65ace5a1"
+    },
+    {
+      "path": "auth/auth.css",
+      "bytes": 9494,
+      "sha256": "64235237d9ad38972e6ebd25856f47589dd34ad32d79c0a78e5f707cf84078d9"
+    },
+    {
+      "path": "auth/auth.js",
+      "bytes": 68289,
+      "sha256": "c1f23795da8c4702fe1d11dfb29f75089c698ae2b6983c571e9cd62ad2a21522"
+    },
+    {
+      "path": "auth/create-class.html",
+      "bytes": 4478,
+      "sha256": "658484df60ce5b87dd6d28e305b9d185efa9dccb353758b491796a29c6787deb"
+    },
+    {
+      "path": "auth/index.html",
+      "bytes": 4968,
+      "sha256": "4fdbb941eb924a378ffbf3c8780f0b937161edaecd60f86c3d08d52ce0532323"
+    },
+    {
+      "path": "auth/manage-students.html",
+      "bytes": 5352,
+      "sha256": "e5c89c52f8afa170fb043e2a1422e74e6a2f380aa7ccdece320e3e1fe6f981bf"
+    },
+    {
+      "path": "auth/student-login.html",
+      "bytes": 2936,
+      "sha256": "49420be1d53c1272d0daad9a79491ea0f90f4af96e129a96bd877c31ea51f331"
+    },
+    {
+      "path": "auth/teacher-login.html",
+      "bytes": 4163,
+      "sha256": "78f8bafe0d2d6ba94e52ad0b35cb6b7927b752949082cf92702dbe24c08efd56"
+    },
+    {
+      "path": "auth/teacher-reset-password.html",
+      "bytes": 3950,
+      "sha256": "98131581cd71090054e38038c3cb4e87ec7ffc8ff5e64fd2b0f80d44000af931"
+    },
+    {
+      "path": "auth/teacher-signup.html",
+      "bytes": 6305,
+      "sha256": "75d0ce6f6fd2e138495eca374af30cf108fda1a52acaa895716101fb10c739d9"
+    },
+    {
+      "path": "config/supabase-config.js",
+      "bytes": 155,
+      "sha256": "3cf6452cd2233e9ea901414ae619f50421361f93009fd4927702b51caf96d1a6"
+    },
+    {
+      "path": "dashboards/community.html",
+      "bytes": 3861,
+      "sha256": "f8396cc1e72332c2dfaabf39cbd2ba7591f8b23e0b023e87cf5464c747c2c7e7"
+    },
+    {
+      "path": "dashboards/dashboard.css",
+      "bytes": 103014,
+      "sha256": "dcdfb49f3e8c3468e0e176ac79741f77fa2cf1b24f1b71e8801e7d73a2b0bcd0"
+    },
+    {
+      "path": "dashboards/dashboard.js",
+      "bytes": 318158,
+      "sha256": "1cd986739a6833dc90181f0f50e8d19336024d40674646824b1ad527aad9bb33"
+    },
+    {
+      "path": "dashboards/global.html",
+      "bytes": 6200,
+      "sha256": "05f764184ce75ba08f1f2ac159830a9ef7fcda23d45476fd47c17fa963a54f8c"
+    },
+    {
+      "path": "dashboards/leaderboard.html",
+      "bytes": 1870,
+      "sha256": "ad8b6315c894e4a10f2e4d1f3a278fadbc9565ab69a1de9749db6c973091933a"
+    },
+    {
+      "path": "dashboards/student.html",
+      "bytes": 9687,
+      "sha256": "41f5eb617baa1369beb974e3c9cf463c235db71bbfb26a5b2e2249b5e64d7328"
+    },
+    {
+      "path": "dashboards/teacher-diagnostic-mockup.css",
+      "bytes": 15625,
+      "sha256": "582c54a05f0b6ab1243694dc3f86cb56e20efc751a790a83cc077e0448cb97d4"
+    },
+    {
+      "path": "dashboards/teacher-diagnostic-mockup.html",
+      "bytes": 7958,
+      "sha256": "8033ba96b155910cec9140512720a4cc4835e5aa7ed6a3cf96d5e2c77ebec070"
+    },
+    {
+      "path": "dashboards/teacher-diagnostic-mockup.js",
+      "bytes": 27477,
+      "sha256": "1386e849137db558d91322bee2fabcaed14c278bf6e51beaf5d52ecbfe914433"
+    },
+    {
+      "path": "dashboards/teacher.html",
+      "bytes": 17230,
+      "sha256": "9ec02401e65e42d396292a9719bda8bd31ee4fe7d6cd9b66597abb494795c3c9"
+    },
+    {
+      "path": "data/employability-skills.json",
+      "bytes": 6207,
+      "sha256": "87e7764065477bd581221d293d72704607e948d50e52db7cf1971034c32f8226"
+    },
+    {
+      "path": "data/modules/est-prep-bank.json",
+      "bytes": 47541,
+      "sha256": "1d954ce839d71034e56aeca40fa823edb0f448d7fae3ae20b06451635f67ef44"
+    },
+    {
+      "path": "data/modules/est-prep-rounds/content-stage.json",
+      "bytes": 61119,
+      "sha256": "ea06a76ea2dc9edea98d366ae7c0ad319b6e63ae091630f00b6b30c358a57f1c"
+    },
+    {
+      "path": "data/schools-list.js",
+      "bytes": 10746,
+      "sha256": "b323d78317c5ae85cf25edc2d20ffb15f57298dbef46f21d2a3ad39899ac1f96"
+    },
+    {
+      "path": "data/world/town-layout.stage1-corrected.json",
+      "bytes": 10034,
+      "sha256": "abcb8b0ba2ec3cf2160807799e13f4cbddf6ca3f61194c093d69a5a7065ba7c1"
+    },
+    {
+      "path": "economy-lab/app.mjs",
+      "bytes": 19517,
+      "sha256": "125a79fa63d7f8be0bdef794d70f230b2d386a58395365220b44084bb6f9cca6"
+    },
+    {
+      "path": "economy-lab/assets/campus-evening.png",
+      "bytes": 2284531,
+      "sha256": "efcfc0962c3d1eb5e9f9a4e9ad4b8efe380949d06cff94e4fa48bbe9a69de0d8"
+    },
+    {
+      "path": "economy-lab/assets/laptop-upgrade.png",
+      "bytes": 793558,
+      "sha256": "afc7c2fa3a7e1319fdc96c64484524f1944d341c3ce01ceefca285c2406eb360"
+    },
+    {
+      "path": "economy-lab/assets/study-desk.png",
+      "bytes": 842973,
+      "sha256": "3db2808ebfa51970dcbd3bb8251674cc1ab212022aea97a1e4e3a097f74ee8c5"
+    },
+    {
+      "path": "economy-lab/assets/wellbeing-pack.png",
+      "bytes": 880165,
+      "sha256": "11e441d1cc5b42bcffa6db18669f07de632b781fb9de3f1ec64382657acadbfe"
+    },
+    {
+      "path": "economy-lab/economy.mjs",
+      "bytes": 5603,
+      "sha256": "b6d030f9a4c2bfdf8dd91d63f3ca2b68703b9b24415c854a1f6cc4f7c353b75c"
+    },
+    {
+      "path": "economy-lab/exploration.mjs",
+      "bytes": 1161,
+      "sha256": "5a4058871caab1146878a203a5a0192f62f20c8c841bf9aba7ac651bfcc10e8e"
+    },
+    {
+      "path": "economy-lab/index.html",
+      "bytes": 13523,
+      "sha256": "28eb077b0a0658a649a08b5a3b5eba6a564cc505b94597751bba5cb152aed212"
+    },
+    {
+      "path": "economy-lab/market-work-bridge.mjs",
+      "bytes": 3536,
+      "sha256": "c6d3554c5e8a3205598e48aa624d2229ed22432f088df588ad0490b0c93748d0"
+    },
+    {
+      "path": "economy-lab/scene.mjs",
+      "bytes": 5862,
+      "sha256": "204dcb75cb208b25c3bdba4e529527b2c92d24f4c302b8db2fb1cbf970b06cb2"
+    },
+    {
+      "path": "economy-lab/style.css",
+      "bytes": 18623,
+      "sha256": "32433cf5e1af340b518976bb955c037b687f89f19ceb3e2c6529cafc5c4679a0"
+    },
+    {
+      "path": "economy-lab/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "economy-lab/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "economy-lab/work-store.mjs",
+      "bytes": 3599,
+      "sha256": "858dc14749b3351e911fefd36aef004aee533bc3d43280d38546cf7254866d30"
+    },
+    {
+      "path": "economy-lab/work-ui.mjs",
+      "bytes": 4433,
+      "sha256": "78aaba0b9d95d8298d28e2e59b3f7a9b274d53782a30187bd5dbe6a0fa36ed81"
+    },
+    {
+      "path": "modules/archon-careers/archon-careers.css",
+      "bytes": 16996,
+      "sha256": "18bf0d013641e912d3c8699e20a854ce062452c46f59ae821da6447ee6b98591"
+    },
+    {
+      "path": "modules/archon-careers/archon-careers.js",
+      "bytes": 43341,
+      "sha256": "3853f77aff1f137a0ca4714a342b641728ffe813fe013790f184b86efdcc2862"
+    },
+    {
+      "path": "modules/archon-careers/assets/occupations/carpenter.png",
+      "bytes": 318636,
+      "sha256": "4ec3409c25126688a98207084f8ec4686bec184e0b8d13bddfad870835272cfa"
+    },
+    {
+      "path": "modules/archon-careers/assets/occupations/early-childhood-educator.png",
+      "bytes": 321292,
+      "sha256": "f144151e6e39238c20aa91149423559d4573ed18578fb880e1f76e7d510525d8"
+    },
+    {
+      "path": "modules/archon-careers/assets/occupations/electrician.png",
+      "bytes": 320656,
+      "sha256": "7dc14a5ef335741488dfc30d6ed800239189d93a850a9dc493685159624d19bf"
+    },
+    {
+      "path": "modules/archon-careers/assets/occupations/nurse.png",
+      "bytes": 305170,
+      "sha256": "b953adf70e85dba2639cf93d07039674d1ccfc85c1bf782d00a285a7a60d4542"
+    },
+    {
+      "path": "modules/archon-careers/assets/occupations/renewable-energy-technician.png",
+      "bytes": 320656,
+      "sha256": "7dc14a5ef335741488dfc30d6ed800239189d93a850a9dc493685159624d19bf"
+    },
+    {
+      "path": "modules/archon-careers/assets/occupations/software-developer.png",
+      "bytes": 302312,
+      "sha256": "e1995640b54ebf4ecb7ee502986479b3fafbfd9b7b7ce700ea309ddf315598a5"
+    },
+    {
+      "path": "modules/archon-careers/assets/tiles/adaptability.png",
+      "bytes": 337940,
+      "sha256": "be958ea4ec20f8f73469bbf27bbf8a274390e189396a9501cc7ae6cf6e59b754"
+    },
+    {
+      "path": "modules/archon-careers/assets/tiles/career-network.png",
+      "bytes": 343173,
+      "sha256": "b8e0ea2f1c125ffa86a48f9a3580926f9304e4d72f333a524815f2fce80a5117"
+    },
+    {
+      "path": "modules/archon-careers/assets/tiles/technological-megatrend.png",
+      "bytes": 313300,
+      "sha256": "ba437a47c3a6735d41bad60084bf39aeb884792952d0d9f852a0b66abe5f1afa"
+    },
+    {
+      "path": "modules/archon-careers/index.html",
+      "bytes": 6520,
+      "sha256": "40e5693f49931e70b7bac0088c60c171bbb3d13fc725581d1a6104aa699323f7"
+    },
+    {
+      "path": "modules/avatar/avatar-parts.js",
+      "bytes": 30438,
+      "sha256": "40e20fb39843ee4f7e38b7899a60cb082ebf6bdf4bfce83916488b6876022c0d"
+    },
+    {
+      "path": "modules/avatar/avatar.css",
+      "bytes": 18978,
+      "sha256": "1c9b984be2616c15d892dea637b4700c25310bf68fbcfe2e0c84f2709722ec76"
+    },
+    {
+      "path": "modules/avatar/avatar.js",
+      "bytes": 75734,
+      "sha256": "40be587289eea293ce016a60e65adc7305d2b196c8afa00ff97e66ec76eba587"
+    },
+    {
+      "path": "modules/avatar/index.html",
+      "bytes": 7867,
+      "sha256": "ecb1650bf7bc1a328bdaed2d2b836cc799cb28b788b10840a25653fc0f41c89c"
+    },
+    {
+      "path": "modules/est-prep/est-prep-boss.css",
+      "bytes": 58205,
+      "sha256": "03576470c5026322e1af3178c951d08b254faac13dfff31be30940d59f7dadc5"
+    },
+    {
+      "path": "modules/est-prep/est-prep-boss.js",
+      "bytes": 90176,
+      "sha256": "0f10cff86043c8e6fa234d33c0990982b1a7b833b69a803e0cc8d10d0ed93e79"
+    },
+    {
+      "path": "modules/est-prep/est-prep-content.css",
+      "bytes": 62110,
+      "sha256": "d03bdf658653d91677c4db4347790ee1411b2fced3c98fe0bd9fd62482890b70"
+    },
+    {
+      "path": "modules/est-prep/est-prep-content.js",
+      "bytes": 112066,
+      "sha256": "52218fb7557a31d2cb6ca3ea23bc28496b8bb84a22649845c264d163d67cff92"
+    },
+    {
+      "path": "modules/est-prep/est-prep-core.css",
+      "bytes": 43692,
+      "sha256": "8ce40a1a0ddcc57a2d5a9bc34b3a8cab34e679d376c5a2a215859e978d35a9f3"
+    },
+    {
+      "path": "modules/est-prep/est-prep-data.js",
+      "bytes": 76648,
+      "sha256": "98524a2662980b2b88e525371e05df45b684fdbcc721b802502626d4ece7fc16"
+    },
+    {
+      "path": "modules/est-prep/est-prep-glossary.css",
+      "bytes": 131207,
+      "sha256": "c1b71a55d6ba4d411ca28a58b610d9c6881ae28f7c22b2b669f140bd116f7cb1"
+    },
+    {
+      "path": "modules/est-prep/est-prep-glossary.js",
+      "bytes": 183875,
+      "sha256": "0daf34856e0150580f814ea1fd235272b4f29eafb0a1b56ad04c3bf4103f49b1"
+    },
+    {
+      "path": "modules/est-prep/est-prep-render.js",
+      "bytes": 45319,
+      "sha256": "c4fc89f6688ca917330d726a43c6e2c189890335f493ffdd2ce3e9a63bccef87"
+    },
+    {
+      "path": "modules/est-prep/est-prep-responsive.css",
+      "bytes": 14641,
+      "sha256": "1075123ef469de8bbe1e5f1d45d77b0c364aaeb6589d9fe880b12c83789bdd95"
+    },
+    {
+      "path": "modules/est-prep/est-prep-state.js",
+      "bytes": 17685,
+      "sha256": "c8da535ff18f634f2a9ad998d75ad29bcf785cfb4e0656a52f116c3a4e6827f8"
+    },
+    {
+      "path": "modules/est-prep/est-prep-supabase.js",
+      "bytes": 18529,
+      "sha256": "0da5a2ed3bcaffdd2bd50f993c83e9005a6bd8cb0a79f416e5bdc9795ab1ba0c"
+    },
+    {
+      "path": "modules/est-prep/est-prep.css",
+      "bytes": 402,
+      "sha256": "f355f2ebc789115db619121ed170d651d8114b4976cd2b1f59b45bd1919c3d4d"
+    },
+    {
+      "path": "modules/est-prep/est-prep.js",
+      "bytes": 22117,
+      "sha256": "8b8fee6421ac95e5361bbd3e90262063b2faeec8501e489948479944e8400f3b"
+    },
+    {
+      "path": "modules/est-prep/index.html",
+      "bytes": 9109,
+      "sha256": "23062f22a1fcb52bfd2ce9d8e45d196081ba32cb3725ebec31cebf0d6cde49dc"
+    },
+    {
+      "path": "modules/initiative/index.html",
+      "bytes": 13885,
+      "sha256": "f6aa7a448a359c4942dd55e4ab92d58612ce0e61eab994fdddbb2158226c2a79"
+    },
+    {
+      "path": "modules/initiative/initiative.css",
+      "bytes": 28436,
+      "sha256": "6937cf5b9870c8d5f532b38e82490953be64c99ef0ee256825f2135cb70737d8"
+    },
+    {
+      "path": "modules/initiative/initiative.js",
+      "bytes": 71517,
+      "sha256": "ac242105300a50a1e98777293e3e5269cb4b2403c036dcfb73b12f8c61f17b77"
+    },
+    {
+      "path": "modules/lifelong-learning/index.html",
+      "bytes": 8027,
+      "sha256": "93468cb6c924ef7987cb1a53d848e500ce5b4a316a4125f3bcfdbe143efb239a"
+    },
+    {
+      "path": "modules/lifelong-learning/lifelong-learning.css",
+      "bytes": 10435,
+      "sha256": "ffac56fdac59de029093e9d5e449591611819ff961b90aca22c7359e3f154b42"
+    },
+    {
+      "path": "modules/lifelong-learning/lifelong-learning.js",
+      "bytes": 57187,
+      "sha256": "2c23b458b18f25311a624e89c9dc70a6b8782ecbe049feff942d858ab9b26360"
+    },
+    {
+      "path": "playable-3d/administration-flow.js",
+      "bytes": 417,
+      "sha256": "f0878db9b570a428353a401f1a7c7429e5001684a5fd0f848b4a2e2bb8c1d08c"
+    },
+    {
+      "path": "playable-3d/app.js",
+      "bytes": 105401,
+      "sha256": "28d0078205273206d5e1084e936da0b97f5c4dad8ab0d9ff0d635bbb94ca3b92"
+    },
+    {
+      "path": "playable-3d/arcade-carnival.js",
+      "bytes": 562,
+      "sha256": "8218fb2e642becb527f444c513a32adf97fbf02af6e2aa2647af7d5b89a103f5"
+    },
+    {
+      "path": "playable-3d/arrival-precinct.js",
+      "bytes": 5994,
+      "sha256": "3bd0630615631d11a4e6f37b7a6dde5b476bb8436bed92127a119d1a4436d0d4"
+    },
+    {
+      "path": "playable-3d/assets/avatar-a.glb",
+      "bytes": 1174460,
+      "sha256": "082b6a59e34190c2eaf7a6247a8aa2b580b47a0de59b4de8094c54318c464569"
+    },
+    {
+      "path": "playable-3d/assets/avatar-b.glb",
+      "bytes": 1180520,
+      "sha256": "bb497602ad6283f441477f3697d81d8e06fe3bd43e6f53d5898e0fa9260cf9f1"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/careers-shared-textures.glb",
+      "bytes": 1230448,
+      "sha256": "2e393a8e73b42924060b2ecf69e17df21da29c76c4ca38c7387eb57958bae4c7"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/garden-shared-textures.glb",
+      "bytes": 871064,
+      "sha256": "ae0870c81e7034fa79d56229c6299a7bbe61182ea9c457f6fdfc9a6bd7a34554"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/shared-textures/27ad0876b9c36991.png",
+      "bytes": 145321,
+      "sha256": "27ad0876b9c36991a91c3a5015fe7f6cd1aa81d694122e7e502cec6c0bb5192a"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/shared-textures/29647e2a40f3b3a4.png",
+      "bytes": 329660,
+      "sha256": "29647e2a40f3b3a4df493c4baead5f77503866cdc3e2ecbf5354014b2a634bc1"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/shared-textures/40936ed06fce1aa6.png",
+      "bytes": 336012,
+      "sha256": "40936ed06fce1aa6f8c8ef6e30f9714de61f1668673a3898237c0af14e3c0ae3"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/shared-textures/4d90a7d0781d8038.png",
+      "bytes": 357286,
+      "sha256": "4d90a7d0781d8038eea5c24feef06e045cd1da322ce2401b123434f1aa83d22a"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/shared-textures/558d18f44b61d6b0.png",
+      "bytes": 149682,
+      "sha256": "558d18f44b61d6b06c93a397395766a27238563cb3ed254c5f686ae8c897059a"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/shared-textures/8d713e300bba6882.png",
+      "bytes": 313954,
+      "sha256": "8d713e300bba68825ded5a26fba0e4bea799a6f298afca5e9c6ea1b3aca7bb4f"
+    },
+    {
+      "path": "playable-3d/assets/campus-buildings/workplace-shared-textures.glb",
+      "bytes": 1130392,
+      "sha256": "e0d15596d016ec6fb912c9a62f0e030a6a37a2596dda856f135975d65a677972"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/boulder-a.glb",
+      "bytes": 457960,
+      "sha256": "70941240610426afe513e2e1ef096b6ffc9a0ff0843378fe8d346d8ca69eff00"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/mature-eucalypt-a-packed.glb",
+      "bytes": 2731112,
+      "sha256": "2afc41bcb44d661efd39e8d3207f271c9e895ced711f8d34c35b32551d8d497f"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/mature-eucalypt-a.glb",
+      "bytes": 4808056,
+      "sha256": "7573a54bc3221a2fcf9172be4f4c409cb96594282b78bebe71dcc515fcd006f1"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/mature-eucalypt-b-packed.glb",
+      "bytes": 2736528,
+      "sha256": "7b18cb7305f059d98fb19bb8b4b02a7348a40bc65dba145a6c9ccc3617e7d633"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/mature-eucalypt-b.glb",
+      "bytes": 4808068,
+      "sha256": "ef6a06b660ac42971528cf8bc2fcee83b2a700f7154a350618d89a6b450f5294"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/olive-shrub.glb",
+      "bytes": 1326900,
+      "sha256": "091c05b4eac7c878fa589c37c29fe7dd41d7e975cde0920fa3d1e52378ecc9f3"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/silver-shrub.glb",
+      "bytes": 1005444,
+      "sha256": "99e931a4c90e4550d7d685004d97863d7187eeb61688fffcafe7c396fe0054e0"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/small-multistem-a-packed.glb",
+      "bytes": 2425776,
+      "sha256": "1ac8e61222a52960ba9cec4bf04609776c22ee505b47a54e76cc4d1101c4de75"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/small-multistem-a.glb",
+      "bytes": 3963476,
+      "sha256": "011e673ba420f067141aa1e6ff58df90a811a06152817bb0184efae5bb636aea"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/tufted-grass.glb",
+      "bytes": 52548,
+      "sha256": "0ce8674e14e73825fc672e4b490cb3dc81df33f61784a830985ba42a3d775e6c"
+    },
+    {
+      "path": "playable-3d/assets/campus-landscape/yellow-flower-clump.glb",
+      "bytes": 488136,
+      "sha256": "8655219094d14dfb1c34d25e5a2e3c3727b064a7563ebcbbb906692f292d62b7"
+    },
+    {
+      "path": "playable-3d/assets/chapel/altar-reference.jpg",
+      "bytes": 296803,
+      "sha256": "045ba49a1082d4cc1be2eb5eff5f320d90448197c2b2c8a9732a8bfc4b33c49a"
+    },
+    {
+      "path": "playable-3d/assets/chapel/tree-glass-reference.jpg",
+      "bytes": 148191,
+      "sha256": "998e046acd7a0bb61296da11cec570bbab01c4e4b315448e86499d5a79b54686"
+    },
+    {
+      "path": "playable-3d/assets/community-cast-20260927/dev.glb",
+      "bytes": 3252396,
+      "sha256": "25504e61b651f1b725cb1d139653a44ec80331eda9cd9fde80b04bfc0076fe21"
+    },
+    {
+      "path": "playable-3d/assets/community-cast-20260927/kenji.glb",
+      "bytes": 3681616,
+      "sha256": "f7177cfd67b0e87793b5d4f43854c77df7042fc8fbdd0a848ea05a318d19f5dc"
+    },
+    {
+      "path": "playable-3d/assets/community-cast-20260927/mara-portrait.png",
+      "bytes": 100951,
+      "sha256": "6524c90c8c31281f8cf56d09152ece469d3e05e223f39ec955a16206debc637c"
+    },
+    {
+      "path": "playable-3d/assets/community-cast-20260927/nora.glb",
+      "bytes": 3147472,
+      "sha256": "71f916b71d95823e54fd5e23788e65a6f39aabb5c5327f7fe4f52bc90cc04594"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/core/page-1.png",
+      "bytes": 287185,
+      "sha256": "b45ab40364651cd0057dca2b805b8056bc8b9608f4122c4b36602553a13a66cc"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/core/page-2.png",
+      "bytes": 366284,
+      "sha256": "e0a159e639b06d3ac7fb575cd3c4a2510538c1843279edeca299e4ac5eb4b1e2"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/core/page-3.png",
+      "bytes": 324249,
+      "sha256": "d616eac21dd855dc1302c23f0b1d5863080a8ffe27f74a330b3d913e096627ea"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/core/page-4.png",
+      "bytes": 332730,
+      "sha256": "c8e2e392fe536a9cecdd16c7be994011c14f1396597d012a133f500703a74713"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/core/page-5.png",
+      "bytes": 260278,
+      "sha256": "4c80556d06ca7d3fefb148856928e026dd38bc266252636cdf51deba7769673a"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/pages.json",
+      "bytes": 603,
+      "sha256": "b0f656170ef9b5f09074fb92c3464f69c02842e06b6ae06b564ff660b9bf2373"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/term/page-1.png",
+      "bytes": 409660,
+      "sha256": "d0a2720ec0e76adfd526bf0f13c7e0bd1e382dbc39822245860e331381154a41"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/term/page-2.png",
+      "bytes": 381038,
+      "sha256": "06a56e239085b2615be0114ddee95556c9d5f9e6c0e57f8d885ea969d3deac2b"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/term/page-3.png",
+      "bytes": 171172,
+      "sha256": "28d19322546f3faa21365345c217c86fb65c68859c6e6632a752cb8d40287e0a"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/vtcs/page-1.png",
+      "bytes": 516995,
+      "sha256": "cc7a20cfbaccea66c876176bafa69216fcf99b2d87a3962b6f5f12ff66d55344"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/vtcs/page-2.png",
+      "bytes": 440873,
+      "sha256": "52b5be3e342c50a6e3fceaa79712dc5ac2b305fa0ae8179a570d121e8f10c3a2"
+    },
+    {
+      "path": "playable-3d/assets/est-documents/vtcs/page-3.png",
+      "bytes": 292734,
+      "sha256": "14e2442120bf46b1e2b32689ea103f0987279f713a4fef1d5eee61c0e489e7e9"
+    },
+    {
+      "path": "playable-3d/assets/est-exterior.glb",
+      "bytes": 873464,
+      "sha256": "57d8d0d877ca75b192b2e3e71d0e9aca97e308fc789ebbe5c8061f7021008134"
+    },
+    {
+      "path": "playable-3d/assets/est-interior.glb",
+      "bytes": 226288,
+      "sha256": "856893d1166812b8102eb406ee4b6665c71270da7b148619e8d65fe80e7eddc7"
+    },
+    {
+      "path": "playable-3d/assets/hair-bob.glb",
+      "bytes": 201848,
+      "sha256": "6ceb08dd97a616d11b29f3c4079bfd21e0ed96aea76f059770f4bc7b4fecf1c3"
+    },
+    {
+      "path": "playable-3d/assets/hair-curls.glb",
+      "bytes": 631932,
+      "sha256": "3ff18ca7bd18223e06d7eb48df9a1b20811f09e6965e597e0525d1298b254743"
+    },
+    {
+      "path": "playable-3d/assets/hair-ponytail.glb",
+      "bytes": 271452,
+      "sha256": "d00c8cbf6be54c1231bfbaef1ab97f05ab77ab8565b3541696b6f4eb4a73b4be"
+    },
+    {
+      "path": "playable-3d/assets/hair-sweep.glb",
+      "bytes": 201856,
+      "sha256": "7e2c04b75344c0bf07d4539cbbd36bbd160f7b6d99353e92c0fe112475492563"
+    },
+    {
+      "path": "playable-3d/assets/helpers/atlas.glb",
+      "bytes": 3297320,
+      "sha256": "dd72f89abcef2dee99893c420d62bc3b743fa43949bbc0216f4a23aff5bee07b"
+    },
+    {
+      "path": "playable-3d/assets/helpers/atlas.png",
+      "bytes": 39257,
+      "sha256": "9e49ecbb6fae5b6dd8ddf61397a00da37ecd653ecf034a6ac41292af787b3a70"
+    },
+    {
+      "path": "playable-3d/assets/helpers/bloom.glb",
+      "bytes": 3600332,
+      "sha256": "fe9b02cc2f63402303ac1a687c9874552a9b630eb577f175f4a4096a3cf478d7"
+    },
+    {
+      "path": "playable-3d/assets/helpers/bloom.png",
+      "bytes": 39650,
+      "sha256": "5f8deaf26250159fa3b3b367e94dcd36280636b2e0306cce924dd16b0692fe34"
+    },
+    {
+      "path": "playable-3d/assets/helpers/echo.glb",
+      "bytes": 142360,
+      "sha256": "9aae3d290a4b5fc5b678d92328628e6d188cfff3da8241803c622ecf098850a0"
+    },
+    {
+      "path": "playable-3d/assets/helpers/echo.png",
+      "bytes": 24033,
+      "sha256": "c7263c55d99ff4d0697a1c88fb9ca11009823b936842fb154a0806d2bdb0084a"
+    },
+    {
+      "path": "playable-3d/assets/helpers/moss.glb",
+      "bytes": 5329008,
+      "sha256": "8a7665499b6e7f13ad1d0297ac3748d34745f40c97e29169be3e3de652d47492"
+    },
+    {
+      "path": "playable-3d/assets/helpers/moss.png",
+      "bytes": 57684,
+      "sha256": "5f136f9f3ad4d180f250b1bc5faeb1608fdf72d75390310ce407533ec32464d5"
+    },
+    {
+      "path": "playable-3d/assets/helpers/pax.glb",
+      "bytes": 4004944,
+      "sha256": "98f73617ad1ee04f078655b2eaa9cb769e72a29804815a484963876ab6927cfc"
+    },
+    {
+      "path": "playable-3d/assets/helpers/pax.png",
+      "bytes": 36220,
+      "sha256": "f413c35aec92b7762f49cfc475eea67a3df57714e9a6385a3d2630b4ca8147c8"
+    },
+    {
+      "path": "playable-3d/assets/helpers/spark.glb",
+      "bytes": 4307132,
+      "sha256": "46e875b41787dc6df953cb7c917aa2937950d66ac6bb765d1914c94a4d4e7e84"
+    },
+    {
+      "path": "playable-3d/assets/helpers/spark.png",
+      "bytes": 45894,
+      "sha256": "bed3dce78d495e436bf5be508419e5087a97eedd7a3cb8ba323a339f759a720c"
+    },
+    {
+      "path": "playable-3d/assets/helpers/sprout.glb",
+      "bytes": 10330908,
+      "sha256": "018fa84641f655a6ce906fd95e566b003907f055b575178a3388754d655f623e"
+    },
+    {
+      "path": "playable-3d/assets/helpers/sprout.png",
+      "bytes": 45016,
+      "sha256": "9491466db57e5fd329669336cb64401d5b2d6e5f1ea9db86db4c259024f40373"
+    },
+    {
+      "path": "playable-3d/assets/hospital-scrub-top.glb",
+      "bytes": 992456,
+      "sha256": "34d11bf9d1ac4100140b03f448f08107d4cb388563bf4f68887eb6fd652374b0"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/build-receipt.json",
+      "bytes": 3059,
+      "sha256": "fd2b8fe5ba092a42a9b555ffbaa2e6deda883c7ee6ccbc9a4cb4347864c8ded8"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/customer-a.glb",
+      "bytes": 1359728,
+      "sha256": "02c806fc0770b9fcbc18250ee7fb9e60d640e39acd757f10bb7ea63404d59dee"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/customer-b.glb",
+      "bytes": 1304484,
+      "sha256": "fc79fb59df9a2690210a787448ca400838d53953172e71a9cc87ecdab543b824"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/customer-c.glb",
+      "bytes": 1553864,
+      "sha256": "7d62ece0cafcf545df342b1e65513831bd90a2b5802ce2ac8582bc74fb8284fd"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/customer-d.glb",
+      "bytes": 1375024,
+      "sha256": "9809ab28c562ff6f1c41bb85eabcb19dc6f1882cbc7ee828fe03591473782d39"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/customer-e.glb",
+      "bytes": 1676640,
+      "sha256": "c81e6659b8da8665773f7e5a72ee2041f6bc5d03b811b5b7391ad51876aadda0"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/mara.glb",
+      "bytes": 2124864,
+      "sha256": "2575e6804baad0d6d15c69e5d1543dbba38f039d3df2a0aadb64dd7a8867468a"
+    },
+    {
+      "path": "playable-3d/assets/market-npcs/sam.glb",
+      "bytes": 1696568,
+      "sha256": "c237091c8ed3b34a746aaee5c1a90f90bac8fa10e3dcfa524cde60c5ce8b0ac9"
+    },
+    {
+      "path": "playable-3d/assets/market/lunch-rush.jpg",
+      "bytes": 172568,
+      "sha256": "6dabbbab7b2bb9206d40e11b0073f36c63c4c7736388901923f9d74d72b61adc"
+    },
+    {
+      "path": "playable-3d/assets/mr-middleton-20260917.glb",
+      "bytes": 2390408,
+      "sha256": "4d73dbaeea72056618171fb72dc0d459e4161ba9c491ddbe8bb822a6c7c29d4c"
+    },
+    {
+      "path": "playable-3d/assets/mr-psandodakis-20260917.glb",
+      "bytes": 2839440,
+      "sha256": "4b4f2d7e1a2e40ee713ac7b71cad051e3a0eb1fffca51cf0e38e920f6130f4e5"
+    },
+    {
+      "path": "playable-3d/assets/neckline-skin.glb",
+      "bytes": 195516,
+      "sha256": "06e0e2fe84d1fd6eb1c67b1f413ff224e2b07054427155b73e4ae7c2f385e9ab"
+    },
+    {
+      "path": "playable-3d/assets/occupational-pants-chef.glb",
+      "bytes": 605184,
+      "sha256": "dadc8548259f503c8ce881d3e8ce64332d64a96b45e23c73b8702e1447f498ab"
+    },
+    {
+      "path": "playable-3d/assets/occupational-pants-scrubs.glb",
+      "bytes": 717016,
+      "sha256": "fc3ed1c6ee4c327f6e0f22bcad90a8909851bb15ddca1947dc8457a8fa32a981"
+    },
+    {
+      "path": "playable-3d/assets/occupational-pants-suit.glb",
+      "bytes": 650816,
+      "sha256": "4e25b12a8bd8760db54720390d35099fc3f1a303e3724ed9d80e1423996480fe"
+    },
+    {
+      "path": "playable-3d/assets/occupational-pants-tradie.glb",
+      "bytes": 742128,
+      "sha256": "cecf2768bf5816859e29eb43f75a486029e824771aa7fdf2a67f141a13d4feab"
+    },
+    {
+      "path": "playable-3d/assets/occupational-top-chef.glb",
+      "bytes": 1245588,
+      "sha256": "1d488cddc1c8c564020a6a6354a311ca19fda05e58ae287e1311bf840980889e"
+    },
+    {
+      "path": "playable-3d/assets/occupational-top-suit.glb",
+      "bytes": 1528080,
+      "sha256": "655e5d6948574477e406a2914692f15b79f1ca0c845aa4badb935ecec9b29329"
+    },
+    {
+      "path": "playable-3d/assets/occupational-top-work.glb",
+      "bytes": 1367504,
+      "sha256": "ca989ceea847a37b1fdf832127d604fd7893db995ba3d5bf41a336f2f7cad407"
+    },
+    {
+      "path": "playable-3d/assets/phone/15d504f1b759.webp",
+      "bytes": 10206,
+      "sha256": "e6434f05307f76ee70eb87d2c35dba072197f813b0e545b135fc6ce9cf44878e"
+    },
+    {
+      "path": "playable-3d/assets/phone/19ddc20ded77.webp",
+      "bytes": 9754,
+      "sha256": "61671df9bc085d76a643ec039a99aac6b6a55b86be424e8f4905ce923be2eef9"
+    },
+    {
+      "path": "playable-3d/assets/phone/1e50592a6a2b.webp",
+      "bytes": 60200,
+      "sha256": "6715b759ee9d28718154a8900f71669cd59cd2ce71bb219b7ddc8a893af15a9a"
+    },
+    {
+      "path": "playable-3d/assets/phone/3da032fd878b.webp",
+      "bytes": 16200,
+      "sha256": "a8b94fa6a6f7611d533110229efd76d3555f4ab8c0e8e8af9b01bb4a57d801f2"
+    },
+    {
+      "path": "playable-3d/assets/phone/6ceef6c83200.webp",
+      "bytes": 24742,
+      "sha256": "8a1ef8205dcc2ea61faac519fa81efe8785e11720488efb9d7a182048c2b5a9d"
+    },
+    {
+      "path": "playable-3d/assets/phone/78bc376d38e6.webp",
+      "bytes": 1736,
+      "sha256": "e645a43ce8625ee9782fc44902ea4ed1204b5264b770742441641cf188dc7b23"
+    },
+    {
+      "path": "playable-3d/assets/phone/7ad34dc0006b.webp",
+      "bytes": 260190,
+      "sha256": "367a09c0cf5a9865b24d00d3f10a0695f76993a257554657e0a60841e775793d"
+    },
+    {
+      "path": "playable-3d/assets/phone/9714666c1516.webp",
+      "bytes": 5440,
+      "sha256": "23b8a1590607843060d299e7076b3dbd1c12581fa72cf4baf22dd6ab84e62284"
+    },
+    {
+      "path": "playable-3d/assets/phone/9934c5250d1b.webp",
+      "bytes": 9418,
+      "sha256": "4b328a704301deadd6533cb154eaa09189ad08eca62b0e85a6f14cecabb8d1bc"
+    },
+    {
+      "path": "playable-3d/assets/phone/a6b40b7146e4.webp",
+      "bytes": 7996,
+      "sha256": "4cdc96c83ac15755efa35978e8b232362476d0cd43a6b7c007c39cf3509e8885"
+    },
+    {
+      "path": "playable-3d/assets/phone/a8fd2904ee35.webp",
+      "bytes": 104214,
+      "sha256": "60e1452df5be0ed027ef993870da251141100012d0b6cabad7d302996ef00119"
+    },
+    {
+      "path": "playable-3d/assets/phone/b3b814172ff1.webp",
+      "bytes": 1022,
+      "sha256": "8d97014cf761f566f577376fb8c23b0e0a0b0bbf0d0d0dfa6b644aa6a654a6e2"
+    },
+    {
+      "path": "playable-3d/assets/phone/boulder-a-mobile.glb",
+      "bytes": 124348,
+      "sha256": "04a4d9bb3f30e030170fa7592a3c64572f7cc1b07323ae52f799a0b36587f6b4"
+    },
+    {
+      "path": "playable-3d/assets/phone/c05044c0f2de.webp",
+      "bytes": 56188,
+      "sha256": "ecfbf22f530a1bd01b4bee25ac2136d396b109788b0e8cb24221d6d912e8ea7f"
+    },
+    {
+      "path": "playable-3d/assets/phone/cac32030d7a8.webp",
+      "bytes": 83906,
+      "sha256": "2ba4335e9f30849fabb1d1d571d3423401685a7dfe452619a90a8eab553ded58"
+    },
+    {
+      "path": "playable-3d/assets/phone/careers-mobile.glb",
+      "bytes": 619820,
+      "sha256": "e352d64afe4f62fb6b2b6c5b092eeccb92b2335a969a30e87e36bf889233fe1b"
+    },
+    {
+      "path": "playable-3d/assets/phone/dc020861de72.webp",
+      "bytes": 82078,
+      "sha256": "8ef48a3ada6c0e6c80cd91c1ccc5bb2ce20057bca70a1d6e53832791b8d6698f"
+    },
+    {
+      "path": "playable-3d/assets/phone/df2ca8fa1a9c.webp",
+      "bytes": 4634,
+      "sha256": "9710675cb1ed6a26e019b9bb540e8a04f8ca8dd692ea87070c7082506633391d"
+    },
+    {
+      "path": "playable-3d/assets/phone/e774700facce.webp",
+      "bytes": 109418,
+      "sha256": "4105caaaea2b1a641ce25a88f6a4dbab9863b3ed0f8bb8759eb3630f8a795005"
+    },
+    {
+      "path": "playable-3d/assets/phone/ffc6ab32527d.webp",
+      "bytes": 5430,
+      "sha256": "b50cd878335bcb55171aed0355f4d51d9fcd95a2c53f51508612411c2cd263e0"
+    },
+    {
+      "path": "playable-3d/assets/phone/garden-reflections-mobile.hdr",
+      "bytes": 529457,
+      "sha256": "08824f3cb532ea010133faee929c4b4f69ef9c2d7ed081095b4b28ed5d71ece7"
+    },
+    {
+      "path": "playable-3d/assets/phone/grass-ecc-campus-v1-mobile.webp",
+      "bytes": 147784,
+      "sha256": "03815e65d1980538421758a82de7d08cc092a502912fe6e4fd8fc340fe012520"
+    },
+    {
+      "path": "playable-3d/assets/phone/mature-eucalypt-a-mobile.glb",
+      "bytes": 1117744,
+      "sha256": "34469aac0dc733bc42f7a29e15ff01df6bc8dc4614fa93c73ea6763d1b1ecefb"
+    },
+    {
+      "path": "playable-3d/assets/phone/mature-eucalypt-b-mobile.glb",
+      "bytes": 1118864,
+      "sha256": "a6a1f92f9a3ef1d6a7dd649fd7a74a7b15086b58217a328143f3a754080c3d50"
+    },
+    {
+      "path": "playable-3d/assets/phone/player-schoolboy-2k-20260914-mobile.glb",
+      "bytes": 1279952,
+      "sha256": "6dd45b083d901f59047e094a2ececd2e8b2e555cf5a137d3a48200941b688e56"
+    },
+    {
+      "path": "playable-3d/assets/phone/reception-backwall-mobile.webp",
+      "bytes": 25860,
+      "sha256": "f094ade11c817d7ab74f70c960be69788789da54762d6dc2e411909729902b67"
+    },
+    {
+      "path": "playable-3d/assets/phone/small-multistem-a-mobile.glb",
+      "bytes": 939724,
+      "sha256": "08a46d9af70f3978a6aaa0d760565989731bb6fe9b7253f0874804a0a245cf05"
+    },
+    {
+      "path": "playable-3d/assets/phone/workplace-mobile.glb",
+      "bytes": 580536,
+      "sha256": "5d768bf8cb10bf68d45b73c8c44bed7a4b2332731c1db4c8d4ce2cc11baafd3d"
+    },
+    {
+      "path": "playable-3d/assets/player-jacket-test-20260909.glb",
+      "bytes": 52309128,
+      "sha256": "152e3868eb56359a82687a6320ebe77eac5f20f0d88939b4662a159db0679760"
+    },
+    {
+      "path": "playable-3d/assets/player-pants-test-20260916.glb",
+      "bytes": 4369752,
+      "sha256": "2d5d3cb7db44aab51b70717f6638b2dedee56145897bd133eebcf6db043c9845"
+    },
+    {
+      "path": "playable-3d/assets/player-schoolboy-2k-20260914.glb",
+      "bytes": 2999076,
+      "sha256": "692a721df0d1e341fb5996e6df0c7ac931d014a486b442533b60bb5d0c6d704c"
+    },
+    {
+      "path": "playable-3d/assets/player-tripo-20260908.glb",
+      "bytes": 4779700,
+      "sha256": "06d63dacf21c08795778a6c328773eee46d98ebb56a485982ec087d9269c80ff"
+    },
+    {
+      "path": "playable-3d/assets/player-uniform-shirt-20260908.glb",
+      "bytes": 8497616,
+      "sha256": "a273dffe0c0fe189b631f4de1fa65b833c46ea2839f08dd13cabd9b8bf223736"
+    },
+    {
+      "path": "playable-3d/assets/plaza/asphalt_dash_overlay.png",
+      "bytes": 7049,
+      "sha256": "cb9e41ad3d7533deebb12ac758dc4e53cd462589787a6fb2a776928f5bd4a395"
+    },
+    {
+      "path": "playable-3d/assets/plaza/asphalt_day-lossless.webp",
+      "bytes": 616808,
+      "sha256": "3b1cd45480636725d1b12833697dff1360faa7e6911d8d4de6912371f6d5f6cf"
+    },
+    {
+      "path": "playable-3d/assets/plaza/crosswalk_overlay.png",
+      "bytes": 5811,
+      "sha256": "43fc6f244777cdf48cd8ad9502bf2a616cacbf2d148f3521958cf4c3b12ecd33"
+    },
+    {
+      "path": "playable-3d/assets/plaza/curb_cyan_trim.png",
+      "bytes": 7943,
+      "sha256": "ed5719bda5031d0985d5815e56f668e471e14b65b8bba150657ad59d3a9a45f3"
+    },
+    {
+      "path": "playable-3d/assets/plaza/grass-ecc-campus-v1-lossless.webp",
+      "bytes": 1965028,
+      "sha256": "f8e6b5b7c297995882b58e7f173d1a337b7366787b1e085a72eb3385d2da39bc"
+    },
+    {
+      "path": "playable-3d/assets/plaza/limestone-ecc-campus-v1.png",
+      "bytes": 1911747,
+      "sha256": "73e9c90b16d616068a5bbc8394f3fa6828b129275ac6f5e7fe69ce7a2b524508"
+    },
+    {
+      "path": "playable-3d/assets/shoes-boots.glb",
+      "bytes": 741424,
+      "sha256": "163c0b81b4b97627966fd52b2a91698d4bd891335308a01e23fd7399626080a9"
+    },
+    {
+      "path": "playable-3d/assets/shoes-clogs.glb",
+      "bytes": 572736,
+      "sha256": "8c079b1103d68406ca6f4bd767495ea2c91b77299d467112ea7d7621bb713c58"
+    },
+    {
+      "path": "playable-3d/assets/shoes-dress.glb",
+      "bytes": 640176,
+      "sha256": "7c3f29cb7441a92f7a64b0bbbe79ec753f6f09c03e9f2ab1973f96d78ef2434a"
+    },
+    {
+      "path": "playable-3d/assets/shoes-trainers.glb",
+      "bytes": 682724,
+      "sha256": "7fe26b1ad615c2a593df561c9dfc9d04afbea43a34b76ddf7fe0db0128fb31f9"
+    },
+    {
+      "path": "playable-3d/assets/studio-separate-pants.glb",
+      "bytes": 1660432,
+      "sha256": "90f457d9a440000acf93dbb0f2ebf009d9a98c8fb6dada8b08857fb9465014e2"
+    },
+    {
+      "path": "playable-3d/assets/studio-walking-base.glb",
+      "bytes": 2728656,
+      "sha256": "38631c75839ef638ce6821b9ccd7152cbc1f2ca75cd8c7d075c6c6847b732b3e"
+    },
+    {
+      "path": "playable-3d/assets/ui-themes/arcade-carnival-v1/not-quite.png",
+      "bytes": 1823295,
+      "sha256": "a772c8e436b6c3471665616d146923897030709a583bcfb4f85ee58dd9b87237"
+    },
+    {
+      "path": "playable-3d/assets/ui-themes/arcade-carnival-v1/style-sheet.png",
+      "bytes": 2429047,
+      "sha256": "9d31e597afdc57c4c2d17363149bb56efa2e4d155b9ea1c696f74733257f1b5f"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/antonio.glb",
+      "bytes": 3453980,
+      "sha256": "a988469a4376c86cb051bdc104bf63c1934771ff42091043c07bf7cb3baa09a4"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/cerys.glb",
+      "bytes": 3800048,
+      "sha256": "4c4126df6ba37b41a3196e5e89bc6967d1b12c31b39486e3f30e5db3f3cdd2a9"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/che.glb",
+      "bytes": 3442736,
+      "sha256": "7e2acd2445335d233ca971a742a86fa8561d64b58357903dc3aba1369a49405e"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/diego.glb",
+      "bytes": 3347636,
+      "sha256": "ea73fb10c8aee15e1243b439b62aaebe5fa2744e3004eac640383e2481099c0e"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/hannah.glb",
+      "bytes": 3711692,
+      "sha256": "89dce2f261671199bb86bd8ce5c207048389ae315141e2e84bc04389ea2423d1"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/lilly.glb",
+      "bytes": 3620760,
+      "sha256": "ba4ee19df1314c5bac6c8b8af68f11ba1ad2bdb5ed8c0132153fcdfd17223b93"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/sienna.glb",
+      "bytes": 3884480,
+      "sha256": "c2275fc00fad061270eb3e135a3838c30eaa6a5437d28b85e81fb4b24b368989"
+    },
+    {
+      "path": "playable-3d/assets/whole-characters/taj.glb",
+      "bytes": 3385744,
+      "sha256": "df7844769c8bf95130a2f52c2eecb5bb704ed17ce1bc9dd3c7468a565e15087a"
+    },
+    {
+      "path": "playable-3d/avatar-clips.mjs",
+      "bytes": 399,
+      "sha256": "ef6ea0d063bdfe3fa0e77a3782e0c42cb7b9f67f11361334e8bcfea008eecbb5"
+    },
+    {
+      "path": "playable-3d/avatar-download.js",
+      "bytes": 1246,
+      "sha256": "3ea778d4f26a147cfa2994c25be6e5caee123d46460ca52691a97d06564a17cb"
+    },
+    {
+      "path": "playable-3d/camera-clearance.mjs",
+      "bytes": 1863,
+      "sha256": "31851ba40ad4bce96c275caea2ea29244a33bad032885be4c4666c8ac439ecc2"
+    },
+    {
+      "path": "playable-3d/campus-landscape.js",
+      "bytes": 12947,
+      "sha256": "0aaf00d9bfca06a85093c3dba369d000f1a131997b934ff87e379c4bc70ce875"
+    },
+    {
+      "path": "playable-3d/chapel.js",
+      "bytes": 18021,
+      "sha256": "02ff6b89c8e505b8c1ebfcb8ac6b1687af7fc82b0421513a3cb5fe3f05ac8e82"
+    },
+    {
+      "path": "playable-3d/characters.js",
+      "bytes": 17482,
+      "sha256": "238e33ee247b6c3069463fbf6ff167375c46a6e66f3381f196a530671e9c5aa0"
+    },
+    {
+      "path": "playable-3d/deferred-textures.js",
+      "bytes": 4223,
+      "sha256": "48ecf93201d154e0f020d427fc1f03beea7ef2d5c11b26f46735db4d0da63b0e"
+    },
+    {
+      "path": "playable-3d/destinations.js",
+      "bytes": 394,
+      "sha256": "89a6b212d9c082b56169924dc1b51fa22be2bc4c891176b10e9b739f56f08d39"
+    },
+    {
+      "path": "playable-3d/discovery-assets/chapel-clue.jpg",
+      "bytes": 21379,
+      "sha256": "a7c42c6813f8c97aef625696b2d9fd371d157c4f073ad355012b37b1ff08f686"
+    },
+    {
+      "path": "playable-3d/discovery-assets/oval-clue.jpg",
+      "bytes": 34336,
+      "sha256": "5c8ac1fca3fa2bf9091890bab75481ce8e2f8f781cdd9eafdb22fafe39ef488a"
+    },
+    {
+      "path": "playable-3d/discovery-assets/parcel-clue.jpg",
+      "bytes": 15342,
+      "sha256": "d30417c50a870cc6d2da20d65cc2e314d0c96d5aa930921ed99d11bc486acbed"
+    },
+    {
+      "path": "playable-3d/discovery-opening.css",
+      "bytes": 12377,
+      "sha256": "c9183e3577f7e90e41de2262af1b3c4e9dc5857b8560f5f033fd41dc2034dc85"
+    },
+    {
+      "path": "playable-3d/discovery-opening.js",
+      "bytes": 35616,
+      "sha256": "71fd8db8d9211f6129d2c533cb6d9b94581407b94917a315d59f46d5d425a4f6"
+    },
+    {
+      "path": "playable-3d/discovery-state.mjs",
+      "bytes": 3440,
+      "sha256": "4c5cf6d2c7fdf5934b1c49b7fc4a8dda16ce77693443d48e7f857d40c4947fa4"
+    },
+    {
+      "path": "playable-3d/ecc-preview/admin-signage.js",
+      "bytes": 5330,
+      "sha256": "41c988c7519f63496fd76eb8f0e5487bea5beff7aa8211e4f7d44172f07e7bb0"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/ECC_Logo.png",
+      "bytes": 59137,
+      "sha256": "211e78146e2b39d3fcee8a76109ac5572dfaac28b7fa60d38502af2716c80f0d"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/admin-signage/cleaned-ecc-crest-source-lossless.webp",
+      "bytes": 971688,
+      "sha256": "c9d1d3774373ffb11f045affee230e1038088638cb7d779cbdc22acaf4d97e7e"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/chapel-etched-glass-v2-lossless.webp",
+      "bytes": 1708878,
+      "sha256": "f3f31325ccc6e500d9899ea58ecde6ed2ad50f0d94fac9960829a4ede682c7cf"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/chapel-recognition-source.png",
+      "bytes": 184471,
+      "sha256": "920ffad8be0c46c3a6e1967e8d7c84331dab1c41c4443df68236150c7ad52b3d"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/ecc-courtyard-compressed.glb",
+      "bytes": 2224820,
+      "sha256": "70a645c368bb55ad7c96a94fd5564c63e29e295bf1569a811211b72c3b9f9aa6"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/ecc-exterior-annotations.glb",
+      "bytes": 1302116,
+      "sha256": "0044d1d829db551f247b9ee3b77004d559621b35593bf4a2f791ddb1ba0c717e"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/ecc-exterior-v5-compressed.glb",
+      "bytes": 1444048,
+      "sha256": "7563edf9322d7ab89bfb3fe171305911463d12f5b59178d9be2a18243f840df4"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/garden-reflections.hdr",
+      "bytes": 1836222,
+      "sha256": "f8c7970483be873487fabc0f07891be7e1551220dba911ea9dadd56f8a336a00"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/provenance.json",
+      "bytes": 4186,
+      "sha256": "a12c396c689885272d7eac9bea3ff4a1224c1feae2ef4a6146fb3d26d756e252"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/reception-backwall.jpg",
+      "bytes": 228112,
+      "sha256": "6d239d0d4a38b09c3f5c9aa243f5fa6f03c5bfd0b91add25cd75f76cfd1e9126"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/scene-layout.json",
+      "bytes": 688,
+      "sha256": "5c2cb0a9055b5c892d69d06065f594779e3b363fec639a4ba1377857098b74bb"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/stone-surface-arm.webp",
+      "bytes": 219322,
+      "sha256": "5a34519fc0db907a422af2c01d95c621d6e7c6cd6370e1f86311b1210fdc060b"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/stone-surface-diffuse.webp",
+      "bytes": 417548,
+      "sha256": "759d73c54542c9be330d1c066027a91ea685cbed7f73bc6513bfbc34c7c91299"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/authored-courtyard/stone-surface-normal.webp",
+      "bytes": 651290,
+      "sha256": "ae1f1ef6d293706d43e512b978b12171bf10904680a95af6cea2ce70a0f00acb"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/courtyard/provenance.json",
+      "bytes": 1069,
+      "sha256": "8e809ac6f8093ad7eefe9cf3f6d95d3783aca5def9097aca918bbf39e5963625"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/courtyard/sandstone-arm.jpg",
+      "bytes": 58846,
+      "sha256": "4a211353047f52b9f0cf545e669fa8c29ac0d4ca87dd1f74e3a17f13d9a5b50d"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/courtyard/sandstone-diffuse.jpg",
+      "bytes": 242776,
+      "sha256": "0cac65461ba33003b8a27b03c2b87f3393a824a9a98036c4c8de6182a1449369"
+    },
+    {
+      "path": "playable-3d/ecc-preview/assets/courtyard/sandstone-normal.jpg",
+      "bytes": 167040,
+      "sha256": "1203d5300dfc717db67220531fcdad75214d48b98d21114a155b3f01d54ab012"
+    },
+    {
+      "path": "playable-3d/ecc-preview/authored-courtyard.js",
+      "bytes": 12935,
+      "sha256": "9346997937d2d5b78db5a56d06370ef3a832597278fd395ac0b1131c1e5d55e7"
+    },
+    {
+      "path": "playable-3d/ecc-preview/authored-garden.js",
+      "bytes": 9175,
+      "sha256": "78fb0ed07f161ad861e3859d19d00579f9cbad670747446e538c932fb34dbcef"
+    },
+    {
+      "path": "playable-3d/ecc-preview/courtyard-detail.js",
+      "bytes": 8872,
+      "sha256": "4f096e8bbd046ba16eabc7a0148aeaeb5ed557836411eb1f9743b85b930dd4d4"
+    },
+    {
+      "path": "playable-3d/ecc-preview/hero-materials.js",
+      "bytes": 9697,
+      "sha256": "1208a074ba2e0d6f77f494f1599d3b3b28c50d39c62e85610b8292592cbbc0ea"
+    },
+    {
+      "path": "playable-3d/ecc-preview/landmark-layout.js",
+      "bytes": 276,
+      "sha256": "c19f5758afd182af3dab10e820371baf6c119d0e1c5dba5153cfbba1a5cd6e50"
+    },
+    {
+      "path": "playable-3d/ecc-preview/model.js",
+      "bytes": 19435,
+      "sha256": "467bf466350d82b52a5da59aa89073bf5e1242aad9241b630915d8a24ab2986b"
+    },
+    {
+      "path": "playable-3d/echo-guide.css",
+      "bytes": 2395,
+      "sha256": "a9ceb06932499063a5554c2a77bb41245e8ca6c5d20d9c8c63d6b20d7e5a414b"
+    },
+    {
+      "path": "playable-3d/echo-guide.js",
+      "bytes": 16390,
+      "sha256": "c25a3d3c869d8844338773420f3bbbd6476a0078ad67c536dbe357bd81d3e11c"
+    },
+    {
+      "path": "playable-3d/echo-state.js",
+      "bytes": 5201,
+      "sha256": "2ba0da51110fe75b631c85a3bdab62b81d7f8effe322a470c7d3441b1ffa2ac0"
+    },
+    {
+      "path": "playable-3d/environment.js",
+      "bytes": 8455,
+      "sha256": "20c3ffdff030ec6cf427d07b9b2389c95df79428990b91b19393ed67f67a38c4"
+    },
+    {
+      "path": "playable-3d/environment/approved-campus-kit.js",
+      "bytes": 8710,
+      "sha256": "315dfcd52d260cdd93dcf546138c40223b13ab68b292a0bb638e6673c03bfb75"
+    },
+    {
+      "path": "playable-3d/environment/assets/SPACE-reference.jpg",
+      "bytes": 396567,
+      "sha256": "45a5a6fd0781cbeaa3d4b5dd037be582aa43763bc34c35967ad292a65e6fe2a1"
+    },
+    {
+      "path": "playable-3d/environment/assets/media-mural-sharp-v2-lossless.webp",
+      "bytes": 1521348,
+      "sha256": "399295c8bc0d9d841231fa64cfd23da81adba3bf324c7bb135d1ffacccae18f4"
+    },
+    {
+      "path": "playable-3d/environment/campus-extensions.js",
+      "bytes": 1644,
+      "sha256": "281f2d49a49fada0c595d2f7fa221fd7c7538fa38f5d2dcab1876b3204ed582f"
+    },
+    {
+      "path": "playable-3d/environment/exterior-landmarks.js",
+      "bytes": 1543,
+      "sha256": "be80823489228a0b170993a58f16d03f4a01b0fe688c74c4a1c6693352b1bf6a"
+    },
+    {
+      "path": "playable-3d/environment/ground-polish.js",
+      "bytes": 2513,
+      "sha256": "4706a586bf896c8a7f243b828ae7e381957c3581106b4e95ae72c55261cdbdbe"
+    },
+    {
+      "path": "playable-3d/environment/learning-interiors.js",
+      "bytes": 9207,
+      "sha256": "648a111f88ff3c541327ceda9516f046ea794750bb0bc9eb343e5f882db11854"
+    },
+    {
+      "path": "playable-3d/environment/market-exterior.js",
+      "bytes": 1083,
+      "sha256": "3878e031304598fa58a408257dff7cbfca2e30aa8ceaca8f5617a938b138c670"
+    },
+    {
+      "path": "playable-3d/environment/media-building.js",
+      "bytes": 6309,
+      "sha256": "b5ee7552a87bebcde40b949325184d76f5d6fd87f92b9116505043708879b290"
+    },
+    {
+      "path": "playable-3d/environment/paving-network.js",
+      "bytes": 1755,
+      "sha256": "fae11730dcfbcc9842b35587d04dc3b445c240f73ec52d0ae836dab5c7ad5762"
+    },
+    {
+      "path": "playable-3d/environment/paving-polygons.js",
+      "bytes": 1988,
+      "sha256": "bae21e20b8e63228ae41d10ab7c12e7ee5f80850cf5621d5b9f0ee1911acf912"
+    },
+    {
+      "path": "playable-3d/environment/space-building.js",
+      "bytes": 5548,
+      "sha256": "42109ba4a38ab8c56f24238d90484157f684cb0b3948a9e2debea0f32b994a0d"
+    },
+    {
+      "path": "playable-3d/environment/static-batching.js",
+      "bytes": 3607,
+      "sha256": "a46fa6847cff0a4dd69c92da56b686c54704306f9efa042efaef1ed2cb8664eb"
+    },
+    {
+      "path": "playable-3d/environment/surroundings.js",
+      "bytes": 3405,
+      "sha256": "a511134fd10429e3f13349e3361b0e1b82234239bf7a32c1a4229b4367b12546"
+    },
+    {
+      "path": "playable-3d/environment/teaching-exteriors.js",
+      "bytes": 1507,
+      "sha256": "85a31f575f0c4e13184f48ca453cc61607ee60ccb0646a2a9bcdfe3ab6e0a02f"
+    },
+    {
+      "path": "playable-3d/est-wall-video.js",
+      "bytes": 1955,
+      "sha256": "01dff693af85f4c15b86bda3a17e88fe9b0e49fe8c03e6079861f79d80ca9ea4"
+    },
+    {
+      "path": "playable-3d/evidence-express.js",
+      "bytes": 16862,
+      "sha256": "9201e98c8dfc0287e8a705bd7371fd7bb72593623a5f6b2343c73238865f72d5"
+    },
+    {
+      "path": "playable-3d/exploration-tools.css",
+      "bytes": 3256,
+      "sha256": "2b9172eed101111806e3afcb008a69315c88a841c0b8990a56682662fd269088"
+    },
+    {
+      "path": "playable-3d/exploration-tools.mjs",
+      "bytes": 12275,
+      "sha256": "5a0ce98cac98d19a20a87e48069bb27a890fa3c2cd883e3a664a1da627c5886c"
+    },
+    {
+      "path": "playable-3d/field-guide.html",
+      "bytes": 2092,
+      "sha256": "438774db0a0cde8f69dbd89dd881e3af9d04514416e6001dab93ea3c91d824d5"
+    },
+    {
+      "path": "playable-3d/flyover.css",
+      "bytes": 1959,
+      "sha256": "e4bbe25e03beab5c19da2b247f4158e1809cf08b01b7c3885c5486d49d87b335"
+    },
+    {
+      "path": "playable-3d/flyover.js",
+      "bytes": 6493,
+      "sha256": "aa9f2e1f3d6bba32a67e1141eabf5644000f8ddae06a35dbb53f084d1fbd5cc0"
+    },
+    {
+      "path": "playable-3d/frame-budget.mjs",
+      "bytes": 1690,
+      "sha256": "937ab68a4adf9ed1d19ba1aaa29ceead2a076735307ff8316be229ecb24de995"
+    },
+    {
+      "path": "playable-3d/game-session.mjs",
+      "bytes": 3311,
+      "sha256": "2b76cc2550af27c5418144a5d843eba66cd9a10fdf2c4829fff20f81dbfa79e1"
+    },
+    {
+      "path": "playable-3d/guest-shell.mjs",
+      "bytes": 1307,
+      "sha256": "f9c0353420fe73f8607c34a2e9af66374b0ce0638e4a0119faa148cb47d26ddc"
+    },
+    {
+      "path": "playable-3d/header-controls.css",
+      "bytes": 8497,
+      "sha256": "b1f91df7f1c126b13b18421eb31f0965c09510876274d881e4383684f554d196"
+    },
+    {
+      "path": "playable-3d/helper-model.js",
+      "bytes": 2459,
+      "sha256": "bd69014edbe067b926b21415f594cdfb1b688f60ff5a997b62a7e6f3a7597b18"
+    },
+    {
+      "path": "playable-3d/helper-picker.css",
+      "bytes": 2565,
+      "sha256": "2fd6696d72828e813f8b09df9ef9b596a573f1a046ad52effff8a4637679713d"
+    },
+    {
+      "path": "playable-3d/helper-picker.js",
+      "bytes": 3842,
+      "sha256": "d38d528457f56a7e347c716d6d3b05e41ac559041e5af20bb5c3edec1bc15827"
+    },
+    {
+      "path": "playable-3d/helper-state.js",
+      "bytes": 1376,
+      "sha256": "91b9e917718d5364226d33ea647e5a92ec69a480a9a0366ef480863daf828feb"
+    },
+    {
+      "path": "playable-3d/index.html",
+      "bytes": 12800,
+      "sha256": "abedbb6223f4c84b521396517e5c5c0248a02cafb237b01467c4c80a8d4dfcfc"
+    },
+    {
+      "path": "playable-3d/intro-taster.css",
+      "bytes": 2187,
+      "sha256": "835f23fe93caca6ef6258f39671c6a90e5510bce78156908019344a6570b1ce0"
+    },
+    {
+      "path": "playable-3d/intro-taster.mjs",
+      "bytes": 4270,
+      "sha256": "96588757e24da359495a4887aece8169e20a9d8b20ca95bef9eb6193610ac87e"
+    },
+    {
+      "path": "playable-3d/joystick.js",
+      "bytes": 1793,
+      "sha256": "70a748903a79f15a5582d83fa282c407a0414e3e94ecb9ecc63397d5a1385613"
+    },
+    {
+      "path": "playable-3d/learning-resources.css",
+      "bytes": 2503,
+      "sha256": "977b6713e70bb8ea71c2ece0062e40176a0716d69d634bfc631f23d219abf6bf"
+    },
+    {
+      "path": "playable-3d/learning-resources.js",
+      "bytes": 15845,
+      "sha256": "b51f02bc82d3b3d0011fd0fefa8173d46ad6674df4e433ead5f5bad7bd061fad"
+    },
+    {
+      "path": "playable-3d/locomotion.js",
+      "bytes": 1314,
+      "sha256": "270edfe2f8851eb7d713b85177ada1b6506de53289645fe3085280a688941bb0"
+    },
+    {
+      "path": "playable-3d/market-arrangement.mjs",
+      "bytes": 674,
+      "sha256": "244bfb6318ebb7c2c2fa36e66c264b7aff8c02ba1c35f0d7b58e5c2173325a72"
+    },
+    {
+      "path": "playable-3d/market-characters.js",
+      "bytes": 4259,
+      "sha256": "1bc61ad5a96236a2f12af828d4004a5f9eba361ebecda85a670adf97333afa69"
+    },
+    {
+      "path": "playable-3d/market-collection.mjs",
+      "bytes": 6121,
+      "sha256": "2d2a287898a4fc48fbde91c1c261e024be849702c28bc366edf130dcc76e5cb6"
+    },
+    {
+      "path": "playable-3d/market-food.js",
+      "bytes": 3449,
+      "sha256": "e50734bd175770224d80d429a8c7873b0f0ddea476b1bde27b858f9b11196f3c"
+    },
+    {
+      "path": "playable-3d/market-surroundings.js",
+      "bytes": 4966,
+      "sha256": "1aff21c5646cfc9f323536b4a6d7a2865d8c4155741dca5f6a1a111c6760aab0"
+    },
+    {
+      "path": "playable-3d/mobile-play.css",
+      "bytes": 4940,
+      "sha256": "b47857bf2319011bac542309fe99a398538334bf8ef820cc3ef8a8becea24447"
+    },
+    {
+      "path": "playable-3d/mobile-play.js",
+      "bytes": 1107,
+      "sha256": "03aa2d4436bfb0865d45c6cd8d5da26c59bd63049e3e976e86f8f494d4b21411"
+    },
+    {
+      "path": "playable-3d/night-market-agency.js",
+      "bytes": 3347,
+      "sha256": "918d0b3403ab11d267ba128c1af343f5a0187d4e52ba927b51a188c3bcccb83d"
+    },
+    {
+      "path": "playable-3d/night-market-state.js",
+      "bytes": 9165,
+      "sha256": "5b4b6d5329656811cff0a868b7fe883a0358347da358107b441b1804e7e8f233"
+    },
+    {
+      "path": "playable-3d/night-market.css",
+      "bytes": 8017,
+      "sha256": "ab2bf5d2d7ac2aa3666f1c370f5aa35cbb6677b6b21bc8d93d83eb61bc43daf8"
+    },
+    {
+      "path": "playable-3d/night-market.js",
+      "bytes": 87069,
+      "sha256": "5c045d0aebaf3eeeea420ec390a303228c2ab7e282fbb769e979f203142b7381"
+    },
+    {
+      "path": "playable-3d/opening-chapters-state.js",
+      "bytes": 9319,
+      "sha256": "80a5e52931c2add1ef86cb95d7cf916b35f4b69a5ddc5838df9a22a3fb3ad94c"
+    },
+    {
+      "path": "playable-3d/opening-chapters.js",
+      "bytes": 22082,
+      "sha256": "f6800efd34af19c9a4a351821bc34fe9822332ec288fe0d55f150ed386ef1be0"
+    },
+    {
+      "path": "playable-3d/opening-district.js",
+      "bytes": 12366,
+      "sha256": "c0b0fe5454b307bb88f1b3f5365267aca0f8030ff908f58a113293131791564a"
+    },
+    {
+      "path": "playable-3d/phone-assets.js",
+      "bytes": 3256,
+      "sha256": "6844d8afe03226d8f88a2d3a2745b956ccf89f676339900c8b6d057c2306f3f3"
+    },
+    {
+      "path": "playable-3d/photo-style.mjs",
+      "bytes": 853,
+      "sha256": "31f4d195ea9e17fbfb04b06ba431e36d437a47cdda573985ec5f45c83cab390a"
+    },
+    {
+      "path": "playable-3d/profiles.js",
+      "bytes": 8812,
+      "sha256": "4730b30f5bcd27729fd23d1ebbfa6a910c75a39f3a3aca63ec406642cf9184af"
+    },
+    {
+      "path": "playable-3d/proximity-gate.mjs",
+      "bytes": 386,
+      "sha256": "7069036254409d9885faa2294840b7036a30dc8459b0eb652f0e55f739bad190"
+    },
+    {
+      "path": "playable-3d/render-quality.mjs",
+      "bytes": 729,
+      "sha256": "23b8c3355b7462408a4b9b69b51f43852b0c3058db9166a542e5b3b2cf55e2c4"
+    },
+    {
+      "path": "playable-3d/reveal-layout.mjs",
+      "bytes": 1270,
+      "sha256": "f7c6d323820a2662564c4a386890233cb5bdcd88a91ef80cd46172809007b53a"
+    },
+    {
+      "path": "playable-3d/scenery.js",
+      "bytes": 3758,
+      "sha256": "7fa832316fc6b22b7335581759e92c9ccebb1a01446158acfd360cbc221b9a2e"
+    },
+    {
+      "path": "playable-3d/scout-framing.mjs",
+      "bytes": 690,
+      "sha256": "aba66ab28764f27f9afcc5a77047633efd49424fe4e1b799f55b32c1f0d89ac9"
+    },
+    {
+      "path": "playable-3d/shadow-anchor.js",
+      "bytes": 905,
+      "sha256": "4775537d1b1fbac033d612ce196cfd7edb0b225122d95f39e3c6d7118519e271"
+    },
+    {
+      "path": "playable-3d/signal-spin-state.js",
+      "bytes": 7520,
+      "sha256": "43736826e4e8c7c4ed5e8ebf37a949d20aeb43f7a89b297086af9425318503b1"
+    },
+    {
+      "path": "playable-3d/signal-spin.css",
+      "bytes": 20030,
+      "sha256": "3385ce32a507ae5acd707645a87b19124a8feca0168d43b9b569e91785277689"
+    },
+    {
+      "path": "playable-3d/signal-spin.js",
+      "bytes": 7352,
+      "sha256": "7c815cb7265c2da03e1c1b32fd5b57c631f0b5add8ca731762bddea5375b4997"
+    },
+    {
+      "path": "playable-3d/startup-assets.mjs",
+      "bytes": 1267,
+      "sha256": "aafe7461355477e47f90eb1e002b8ffe93f407bdd1bd16690c86352473d1ce71"
+    },
+    {
+      "path": "playable-3d/studio.js",
+      "bytes": 1150,
+      "sha256": "845220ec47c3a4d9de85a416607835ad5e72676ca01952a7336494572d082204"
+    },
+    {
+      "path": "playable-3d/style.css",
+      "bytes": 19715,
+      "sha256": "9b1b9eb9c35bcf0b6c90134ef3a0383221b1cc446e72bb5d679cbd79a8456359"
+    },
+    {
+      "path": "playable-3d/taster-assets/career-empire-intro.mp4",
+      "bytes": 11806836,
+      "sha256": "fe3bb055fc150227a59959589ff6570cf725905144f02be943c46ed1d20e2f84"
+    },
+    {
+      "path": "playable-3d/taster-assets/intro-poster.jpg",
+      "bytes": 242677,
+      "sha256": "67e42da6f78f36af98172dffa3057a40ca937a89185cf0a860e2c74e794801d5"
+    },
+    {
+      "path": "playable-3d/teacher-npc.js",
+      "bytes": 6555,
+      "sha256": "fef906d4bd9dfc48dcb833028590342067ea0ac3eca07439c7b3c523603bca3c"
+    },
+    {
+      "path": "playable-3d/test-avatar-catalog.mjs",
+      "bytes": 308,
+      "sha256": "e34e790b68de2fd9305ed26c994b764c33fcec6c757712165b3b53d109cb9f9c"
+    },
+    {
+      "path": "playable-3d/vendor/draco/draco_decoder.js",
+      "bytes": 720148,
+      "sha256": "5656ccaf1f50300e3c318e15c3313430483f3866cd9c25f22fbf9d6f229e6728"
+    },
+    {
+      "path": "playable-3d/vendor/draco/draco_decoder.wasm",
+      "bytes": 285948,
+      "sha256": "2516a4e43526d71787bf2f678f951329f7f858f8f15f42d4bc9e370b31a0da3a"
+    },
+    {
+      "path": "playable-3d/vendor/draco/draco_wasm_wrapper.js",
+      "bytes": 58763,
+      "sha256": "e8049906ef3f8f75d3456c22a3f31bfdfe5b5b5bd09ccdec613b9e9a49d554d8"
+    },
+    {
+      "path": "playable-3d/vendor/lucide/lucide.min.js",
+      "bytes": 357796,
+      "sha256": "3411692820cb8d47543f69496aa25fd603a358f4498046f41c508a5a3342210e"
+    },
+    {
+      "path": "playable-3d/vendor/rapier/rapier.mjs",
+      "bytes": 2219371,
+      "sha256": "1ade6875c663c1398f490d4fa67837386b2d7e0aad45fe54e9b7af52b8198a49"
+    },
+    {
+      "path": "playable-3d/vendor/rapier/rapier_wasm3d_bg.wasm",
+      "bytes": 1555075,
+      "sha256": "c8cf07035996629dbf6156c82fec836ddc1c6cff78cf6afde726c30585da2bfd"
+    },
+    {
+      "path": "playable-3d/vendor/three/build/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "playable-3d/vendor/three/build/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/environments/RoomEnvironment.js",
+      "bytes": 4899,
+      "sha256": "c20f0b4677f6128a138d7152b85cbef9091f4f45cdfa05adca04d40c1697c7ae"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/libs/meshopt_decoder.module.js",
+      "bytes": 29059,
+      "sha256": "cb08bf53ad8ad9693d8bb759b2dbade350eb38bcce63d005385e225b564c5f6a"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/lights/RectAreaLightTexturesLib.js",
+      "bytes": 314770,
+      "sha256": "8acc50043aebc3ff0f63e21607ef2394cda41d634f92093bcb7ad6f1d1e2eb11"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/lights/RectAreaLightUniformsLib.js",
+      "bytes": 1014,
+      "sha256": "494fef2d731ff1689050cc6040ad78d927c22b9125a12f532beb0374c2811c6e"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/loaders/DRACOLoader.js",
+      "bytes": 16781,
+      "sha256": "7a4a51c694a6c9f983be452cc82b365e69ce08424654e3f245b4115e6efef258"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/loaders/HDRLoader.js",
+      "bytes": 12456,
+      "sha256": "d7053cfc4019f520335ae07e0fe82b4ef5a66b6766e8b253d066616184995e89"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "playable-3d/vendor/three/examples/jsm/utils/SkeletonUtils.js",
+      "bytes": 11062,
+      "sha256": "0761b1e003917b215d25dd81439d854b36034b5a57ce84c2cfe3b02428d7b253"
+    },
+    {
+      "path": "playable-3d/wardrobe-cards.css",
+      "bytes": 2678,
+      "sha256": "d98665b18dc69118cc46c173cfbe46116a1f4b07453f14e0a9ee84422a8b9fd1"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/hair-bob.png",
+      "bytes": 73849,
+      "sha256": "32d0f98e5ce4fa5f17ea87c615a02bb5a08ee2d4ec35d3348990dcd3c0dab054"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/hair-curls.png",
+      "bytes": 76010,
+      "sha256": "e062234e8254650c67a5d782c465bc73e044cb9bafbd87c83c98c4a21fb613c2"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/hair-ponytail.png",
+      "bytes": 71939,
+      "sha256": "42e88634931b9ab75779c9ae03317581140d759d6e2bd24b596c128fd687407d"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/hair-sweep.png",
+      "bytes": 71222,
+      "sha256": "373f21ad687346be20d199a7d543b4f6f72057a480e5b10ea7583702e308a44b"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/pants-chef.png",
+      "bytes": 78176,
+      "sha256": "2dc2eec972304f3f0e75797c734d5ea85b11284e04ed8670b7c956b7d0f11cee"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/pants-scrubs.png",
+      "bytes": 51481,
+      "sha256": "ddb0dd24e8de9f741c3e84094ae5c7ec66b9d145dbe466c338cf5d9b9f48da0b"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/pants-suit.png",
+      "bytes": 50464,
+      "sha256": "7ba8f2b4f0dc52b65b46757a65fdc0ea7a2b34bb43e0cbdead2239ac76c83957"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/pants-tradie.png",
+      "bytes": 55786,
+      "sha256": "ea7c550b1ef0b5528507c89a89548b18bf156b8f101b5e83b5bffb0df3bf1fdd"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/shoes-boots.png",
+      "bytes": 53937,
+      "sha256": "2bbad347426452b09980fe36c529b15b8f24da1c79c4b8b23f27393d428a9532"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/shoes-clogs.png",
+      "bytes": 43480,
+      "sha256": "cae57fa2028e4305e3aa07887b337abe7816332dac8007c03d4c116baf223757"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/shoes-dress.png",
+      "bytes": 44029,
+      "sha256": "58a16e394ea44c94f7cf65d869f5d2e4af7fa2a29dc7114b2689c1cee3c2ac87"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/shoes-trainers.png",
+      "bytes": 46666,
+      "sha256": "c5629b51ea782665b6061932ebb746baeeb314a3c72dd59a35f51dd546bb5b27"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/top-chef.png",
+      "bytes": 41287,
+      "sha256": "ffec0503dce22e0a8e9cd45bf95c133c3eefd659b6780b7498ce38557ee27b5a"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/top-scrubs.png",
+      "bytes": 49022,
+      "sha256": "770b9c87547daff39e84919492c655044d99d49de25c6a61333c4e99ac40de48"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/top-suit.png",
+      "bytes": 46710,
+      "sha256": "057a1722b2bfd8ae82fa89d07d3cab5e782acea0282a5e983c37a1c54a1e0af9"
+    },
+    {
+      "path": "playable-3d/wardrobe-thumbnails/top-work.png",
+      "bytes": 43634,
+      "sha256": "f939043ad79229f297a733ae4f969570b709c5903b375636a358cb3f5f9de1a8"
+    },
+    {
+      "path": "playable-3d/whole-avatar-catalog.mjs",
+      "bytes": 1349,
+      "sha256": "7f321224541db8b4c806f55ef24c10f83856b52861be3660598313f9fc78fe03"
+    },
+    {
+      "path": "playable-3d/world.js",
+      "bytes": 38627,
+      "sha256": "3bf889715df647ed3795be575df5238088f598f107ccb96114f89b5c8a700c47"
+    },
+    {
+      "path": "remotion-est-scenes/public/avatar-builder-rigs/ecc-boy-base-neutral/recomposed-preview.png",
+      "bytes": 514200,
+      "sha256": "3af0756c1ec49b1adc37dce82fa46b5f435f12e7bc7ec614e71d4a021666a4f3"
+    },
+    {
+      "path": "remotion-est-scenes/public/avatar-builder-rigs/ecc-girl-base-neutral/recomposed-preview.png",
+      "bytes": 547705,
+      "sha256": "8d14006989bfe482ddab522b67cd42368d6e123a5b79b42dde63052acdda9a98"
+    },
+    {
+      "path": "remotion-est-scenes/public/est-assets/game-images/Active listening.png",
+      "bytes": 139589,
+      "sha256": "d8a993d22f151b581d5cf2a02d1f705d1181d49e0e58af87700d820d9be457b6"
+    },
+    {
+      "path": "remotion-est-scenes/public/est-assets/game-images/Comms_2.png",
+      "bytes": 561181,
+      "sha256": "76344ed80ba68a96ebec8fcfe4deb55314b9784ff453f3a617eace12bfdf5b1a"
+    },
+    {
+      "path": "remotion-est-scenes/public/est-assets/game-images/Siena.png",
+      "bytes": 1474616,
+      "sha256": "40918b7cfd7aac5036e84142c813fed46cedb30a284c70c75e096ac22d8775f7"
+    },
+    {
+      "path": "remotion-est-scenes/public/est-assets/game-images/Teresa.png",
+      "bytes": 1304108,
+      "sha256": "bad5477132a65caf392c827d817da2fd8cc9547da6e6b240083d11a2315fe583"
+    },
+    {
+      "path": "remotion-est-scenes/public/student-intro/shop/laptop-upgrade.png",
+      "bytes": 793558,
+      "sha256": "afc7c2fa3a7e1319fdc96c64484524f1944d341c3ce01ceefca285c2406eb360"
+    },
+    {
+      "path": "remotion-est-scenes/public/student-intro/shop/study-desk.png",
+      "bytes": 842973,
+      "sha256": "3db2808ebfa51970dcbd3bb8251674cc1ab212022aea97a1e4e3a097f74ee8c5"
+    },
+    {
+      "path": "remotion-est-scenes/public/student-intro/shop/wellbeing-pack.png",
+      "bytes": 880165,
+      "sha256": "11e441d1cc5b42bcffa6db18669f07de632b781fb9de3f1ec64382657acadbfe"
+    },
+    {
+      "path": "shop/index.html",
+      "bytes": 24331,
+      "sha256": "a89f8366deaa249aa1e671f914705ae3396d8fc16031b9e39b8bb07b0e22b1d9"
+    },
+    {
+      "path": "shop/shop.js",
+      "bytes": 38049,
+      "sha256": "e5219f0143de5f23db3cd96d061192508fc7a22618cb39708721619e6d367dfe"
+    },
+    {
+      "path": "src/services/economy-ledger.js",
+      "bytes": 2294,
+      "sha256": "82f9e99fb123ace28a073a004eb6b54f4eea698aa8405b5cd84970613a0996bb"
+    },
+    {
+      "path": "src/services/feedback-widget.js",
+      "bytes": 29261,
+      "sha256": "90bad9446f2e31fcf75b36eac271b50de898222999ed709dd925aacd91a542b0"
+    },
+    {
+      "path": "src/services/response-moderation.js",
+      "bytes": 7621,
+      "sha256": "bd54f07707c2538a56a72c3c13ddfde858e259af04678d30a516e48b9206f573"
+    },
+    {
+      "path": "src/services/session-banner.js",
+      "bytes": 11655,
+      "sha256": "9f5506ad374ab18083e0720dea77164d3ba2ad603cbcf2e74d245ce0fe3de845"
+    },
+    {
+      "path": "src/services/supabase-browser.js",
+      "bytes": 1214,
+      "sha256": "5cc89c63b87b0924015a7b9dc8ade2d2a17083b2d4591567003eef3d5bf893c8"
+    },
+    {
+      "path": "world/index.html",
+      "bytes": 2487,
+      "sha256": "2f912b94bded8e7b33ab42d1178091027b4c0f5c8fef360bb65629f184c83e76"
+    },
+    {
+      "path": "world/rebuild-corrected.css",
+      "bytes": 8267,
+      "sha256": "f0ccc1032cedd86b7501f0258f85502fa0b166813286a41092812c1342017782"
+    },
+    {
+      "path": "world/rebuild-corrected.html",
+      "bytes": 3528,
+      "sha256": "85efb059477fca50dafda7c95418fa04860bf43daad4ade360bbbf0a4cb90667"
+    },
+    {
+      "path": "world/rebuild-corrected.js",
+      "bytes": 39304,
+      "sha256": "ba77bc389152f4b522a912619942a82f2ba442d14483988fbb4487ca58592222"
+    },
+    {
+      "path": "world/rebuild.css",
+      "bytes": 4987,
+      "sha256": "f1d0ec3adf74a997a9158ee5d388504cec6edc3793b38f3848f67206c058c90e"
+    },
+    {
+      "path": "world/rebuild.html",
+      "bytes": 3169,
+      "sha256": "5e831f6809ec56d0368a6f6a37be582e02c91818c38226859b7da4c96c8a322b"
+    },
+    {
+      "path": "world/rebuild.js",
+      "bytes": 35996,
+      "sha256": "307baf2c03fae3e38252ff3cf8dcc4f14c382c1cb367ba56b1aaf9ee1c5638b1"
+    }
+  ]
+}
