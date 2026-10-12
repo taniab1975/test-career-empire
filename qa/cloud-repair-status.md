@@ -1,6 +1,7 @@
 # Test copy repair status
 
-Updated 2026-10-12 16:08 UTC. Only `taniab1975/test-career-empire` (1415756807).
+Updated 2026-10-12 16:14 UTC. Environment commands and files are available;
+this task has resumed as sole writer. Only `taniab1975/test-career-empire` (1415756807).
 Seed `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. Repairs were implemented here;
 the untransferred Mac candidate was not imported. No production deployment.
@@ -54,12 +55,19 @@ but texture recovery still failed until scheduling and warning clearing were rep
 Early handover/movement checks failed their strict budgets; those failures prompted
 runtime repairs. Existing acceptance deadlines were not increased.
 
-## Running / not yet accepted
+## Latest focused run / next work
 
-Twelve focused checks are running sequentially: complete natural intro and actual
-Chapel exit → mural photo → oval clue; held photo preview and distinct saved styles;
-visible companion; teacher persistence; live minimap; wallet/rewards; physical Market
-exit/re-entry; Market Admin modules and keyboard doorway travel; latest phone startup.
+The twelve-check run was stopped for an ownership handoff: one passed (real entry
+geometry/collision), one failed, one was interrupted and nine did not run. The
+complete natural intro ended and the parcel developed, but the keyboard approach
+to the Chapel timed out at `[1.13, 0.16, -13.225]` before the doorway interaction.
+Photo completion was interrupted. These later journeys are not accepted yet.
+
+Next: reproduce the Chapel path with visible evidence and fresh input/physics samples
+to distinguish route overshoot from real collision. Then resume Chapel exit → mural
+photo → oval clue, photo styles/held preview, companion, teachers, live map,
+wallet/rewards and physical Market/Admin journeys. No later browser run is active
+at this report checkpoint.
 
 The full browser suite has not been run. Generated logs, screenshots and JSON
 remain under ignored `coverage/`. Use
