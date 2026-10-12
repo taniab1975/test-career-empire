@@ -1,9 +1,9 @@
 {
   "repository": "taniab1975/test-career-empire",
-  "sourceCommit": "4d282b3c1b593583ce9630fbf1023ccdbcc1951c",
+  "sourceCommit": "f7331060ce86ef1eedecf4e6a1271a68e36d4689",
   "gamePath": "playable-3d/",
   "fileCount": 623,
-  "dependencyBytes": 524886019,
+  "dependencyBytes": 524888216,
   "existingLegacyLinkWarnings": [
     "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
   ],
@@ -1550,8 +1550,8 @@
     },
     {
       "path": "playable-3d/app.js",
-      "bytes": 105401,
-      "sha256": "28d0078205273206d5e1084e936da0b97f5c4dad8ab0d9ff0d635bbb94ca3b92"
+      "bytes": 106904,
+      "sha256": "f4ff96be7807362df37ad728d1ddb1078d1a4ea5d592265e71fec8aa5e57b90d"
     },
     {
       "path": "playable-3d/arcade-carnival.js",
@@ -2250,8 +2250,8 @@
     },
     {
       "path": "playable-3d/camera-clearance.mjs",
-      "bytes": 1863,
-      "sha256": "31851ba40ad4bce96c275caea2ea29244a33bad032885be4c4666c8ac439ecc2"
+      "bytes": 2343,
+      "sha256": "1ee758c77a90c64a0ab51aae06694e4ac6e23a7b7fb0899926c02c37a121d5f3"
     },
     {
       "path": "playable-3d/campus-landscape.js",
@@ -2565,8 +2565,8 @@
     },
     {
       "path": "playable-3d/frame-budget.mjs",
-      "bytes": 1690,
-      "sha256": "937ab68a4adf9ed1d19ba1aaa29ceead2a076735307ff8316be229ecb24de995"
+      "bytes": 1904,
+      "sha256": "d5b05e74660c41337ec1a36f36fd42645ee7eb7b48162e6ddad6002cecb9bbe0"
     },
     {
       "path": "playable-3d/game-session.mjs",
