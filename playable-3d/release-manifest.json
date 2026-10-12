@@ -1,8 +1,8 @@
 {
-  "release": "test-startup-ui-fairness-20261012",
+  "release": "test-visual-restoration-handover-20261012",
   "gameUrl": "/playable-3d/",
   "baseCommit": "cb05d4ef12addb53f0c744655bfbb19261f18671",
-  "scope": "Personal test copy: complete entry exterior geometry, unobstructed arrival camera, completed scene handover and deferred heavy campus detail. Browser acceptance and cold handover timing failures are reported separately.",
+  "scope": "Personal test copy: original student camera, original opening trees and gardens, complete exterior geometry and actual completed entry frame; restored world phases, original rendered mural and accurate photo-to-Mara handover. Deferred interiors and decorative detail remain separate. Exact failures are recorded in QA.",
   "files": [
     {
       "path": "../Assets/EST Preparation/initiative-one-page-summary.png",
@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "f9ff2458b0f037bacb2e145d244ee3f3b3e389238917d379d91984afc7efb0c6"
+      "sha256": "be984ccf71d8d7290e044a6754c660f28f3c9bf1de96a7388fca904eb3696139"
     },
     {
       "path": "arcade-carnival.js",
@@ -550,11 +550,11 @@
     },
     {
       "path": "camera-clearance.mjs",
-      "sha256": "1ee758c77a90c64a0ab51aae06694e4ac6e23a7b7fb0899926c02c37a121d5f3"
+      "sha256": "9ce1f9b74c22a81920261c111b650386182df5460b660838fe51f43977e0ac7e"
     },
     {
       "path": "campus-landscape.js",
-      "sha256": "0aaf00d9bfca06a85093c3dba369d000f1a131997b934ff87e379c4bc70ce875"
+      "sha256": "e51629d6cfdc1ba5137f143488533104b86283a874c07ff9653eac55d52f5855"
     },
     {
       "path": "chapel.js",
@@ -566,7 +566,7 @@
     },
     {
       "path": "deferred-textures.js",
-      "sha256": "48ecf93201d154e0f020d427fc1f03beea7ef2d5c11b26f46735db4d0da63b0e"
+      "sha256": "7909368e6189753ec11051e2cdf6688a52f52aa1bd1ea00b47f7db382cbc923a"
     },
     {
       "path": "destinations.js",
@@ -586,11 +586,11 @@
     },
     {
       "path": "discovery-opening.css",
-      "sha256": "c9183e3577f7e90e41de2262af1b3c4e9dc5857b8560f5f033fd41dc2034dc85"
+      "sha256": "6222aae5142ed71279343a0adc405c6629cd932b22c8ee15d4e10592e1538c7f"
     },
     {
       "path": "discovery-opening.js",
-      "sha256": "71fd8db8d9211f6129d2c533cb6d9b94581407b94917a315d59f46d5d425a4f6"
+      "sha256": "3b91cef065de8d70d0f1b0aa116fcc679afbaa132e4fd6aeba9cffb4ccf5ca10"
     },
     {
       "path": "discovery-state.mjs",
@@ -750,7 +750,7 @@
     },
     {
       "path": "environment/media-building.js",
-      "sha256": "b5ee7552a87bebcde40b949325184d76f5d6fd87f92b9116505043708879b290"
+      "sha256": "59d915bcbe725ae87eb6ac3b7bf03d4d5c4456c1263e1ad345cf22b51769d161"
     },
     {
       "path": "environment/paving-network.js",
@@ -774,7 +774,7 @@
     },
     {
       "path": "environment/teaching-exteriors.js",
-      "sha256": "85a31f575f0c4e13184f48ca453cc61607ee60ccb0646a2a9bcdfe3ab6e0a02f"
+      "sha256": "568f5c1a35a9e5be2dc300744b3d6ab6521a8e2c4733f26a783ae6d1f6f6f159"
     },
     {
       "path": "est-wall-video.js",
@@ -790,7 +790,7 @@
     },
     {
       "path": "exploration-tools.mjs",
-      "sha256": "5a0ce98cac98d19a20a87e48069bb27a890fa3c2cd883e3a664a1da627c5886c"
+      "sha256": "f9eb2d02b178913b30cac885c2fdaeafe78f09610415de4f131752643fae9fcd"
     },
     {
       "path": "field-guide.html",
@@ -1082,7 +1082,7 @@
     },
     {
       "path": "world.js",
-      "sha256": "3bf889715df647ed3795be575df5238088f598f107ccb96114f89b5c8a700c47"
+      "sha256": "ac01196e89f5ea16ebd439f47a56e8cbaa627308ddd52e709a408c11527c23ff"
     }
   ],
   "estVideo": {

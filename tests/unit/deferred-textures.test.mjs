@@ -5,6 +5,13 @@ import * as THREE from '../../playable-3d/vendor/three/build/three.module.js';
 const source=readFileSync(new URL('../../playable-3d/deferred-textures.js',import.meta.url),'utf8');
 const create=vm.runInNewContext(source.replace(/^import .*;$/gm,'').replace(/export /g,'')+';createDeferredTextures;',{THREE,withAssetDeadline:p=>p,setTimeout});
 const tick=()=>new Promise(resolve=>setTimeout(resolve,5));
+test('critical mural artwork starts before decorative surfaces without duplicate requests',async()=>{
+ const calls=[],target=new THREE.Texture(),queue=create();
+ const loader={loadAsync:async url=>{calls.push(url);return new THREE.Texture({src:url,width:1024});}};
+ await queue.load(loader,'decorative-stone',{target:new THREE.Texture()});await queue.load(loader,'media-mural',{target});
+ await queue.startMatching(url=>url==='media-mural');expect(calls).toEqual(['media-mural']);expect(target.image.width).toBe(1024);expect(queue.pending).toBe(1);
+ await queue.start();expect(calls).toEqual(['media-mural','decorative-stone']);expect(queue.pending).toBe(0);
+});
 test('cloned mural panels retain their source, artwork and UV crop through queued hydration',async()=>{
  let calls=0,hydrate;const target=new THREE.Texture({src:'neutral'}),panel=target.clone(),shared=target.source;panel.offset.set(.4,.383);panel.repeat.set(.6,.617);
  const queue=create({scheduleHydration:fn=>new Promise(resolve=>{hydrate=()=>resolve(fn());})});

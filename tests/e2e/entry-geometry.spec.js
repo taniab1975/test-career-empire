@@ -16,7 +16,7 @@ test('entry geometry, walking collision and later detail reuse the same teaching
   const detailColliders=w.townPhysics.world.colliders.len();await w.loadScenery();await integrateEnvironment(w);const fullColliders=w.townPhysics.world.colliders.len();await integrateEnvironment(w);
   return {initial,entryColliders,repeatedColliders,parcel,mediaWall,hallWall,oval,unchanged:shells.every((s,i)=>root.children[i]===s&&s.children[0]===before[i]&&s.children.at(-1)===details[i]),children:shells.map(s=>s.children.length),detailNames:details.map(d=>d.name),detailColliders,fullColliders,repeatedFullColliders:w.townPhysics.world.colliders.len(),surroundings:Boolean(w.town.getObjectByName('Approved campus surroundings and connections'))};
  });
- expect(result.initial).toEqual({garden:false,arrivalGarden:false,rooms:false});expect(result.repeatedColliders).toBe(result.entryColliders);expect(result.detailColliders).toBe(result.entryColliders);
+ expect(result.initial).toEqual({garden:true,arrivalGarden:true,rooms:false});expect(result.repeatedColliders).toBe(result.entryColliders);expect(result.detailColliders).toBe(result.entryColliders);
  expect(result.parcel[2]).toBeLessThan(17);expect(result.mediaWall[2]).toBeGreaterThan(-34);expect(result.hallWall[2]).toBeGreaterThan(-43);expect(result.oval[0]).toBeGreaterThan(3);
  expect(result.unchanged).toBe(true);expect(result.children).toEqual([2,2]);expect(result.detailNames).toEqual(['Media learning rooms','SPACE learning hall']);await info.attach('geometry-and-collision',{body:JSON.stringify(result,null,2),contentType:'application/json'});
  expect(result.surroundings).toBe(true);expect(result.fullColliders).toBeGreaterThan(result.entryColliders);expect(result.repeatedFullColliders).toBe(result.fullColliders);

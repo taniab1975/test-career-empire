@@ -11,11 +11,18 @@ export function createInitiativeWallet({storage,review=false,lock=fn=>Promise.re
 
 export function nextDestination(s){
  if(s.skipped)return null;
- if(s.step===4)return s.souvenir?{id:'market',label:'Market',x:43,z:-22}:{id:'oval',label:'Oval photo',x:-4,z:-57};
+ if(s.step===4)return s.souvenir?{id:'market',label:'Sunday Market Gardens · Mara',x:43,z:-22}:{id:'oval',label:'Oval photo',x:-4,z:-57};
  if(s.step===0)return {id:'parcel',label:'Parcel',x:-7,z:14.8};
  if(!s.chapelVisited)return {id:'chapel',label:'Chapel doorway',x:-3.15,z:-8.8};
  if(!s.shots?.mural)return {id:'mural',label:'Mural',x:10.6,z:-38.4};
  return {id:'oval',label:'Oval',x:-4,z:-57};
+}
+
+// Reward totals come from recorded transactions, never the opening balance.
+export function orientationHandoverCopy({earned,tax}){
+ const money=n=>new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD'}).format(n/100);
+ if(!Number.isFinite(earned)||!Number.isFinite(tax))return 'Well done! You’ve completed your first activity. Open Stats to check your saved game money and community fund contributions.';
+ return 'Well done! You’ve completed your first activity and earned '+money(earned)+' in game money. '+(tax>0?'You’ve contributed '+money(tax)+' in taxes to the community fund.':'Your community fund taxes so far: '+money(tax)+'.')+' See your progress in Stats.';
 }
 
 export function createExplorationTools({THREE:T,worlds,position,mode,state,review=false,notify=()=>{},onOpen=()=>{},header,storage=localStorage,market=()=>null,photo=()=>null,reviewPhoto=()=>{}}){
@@ -41,5 +48,5 @@ export function createExplorationTools({THREE:T,worlds,position,mode,state,revie
  async function awardParcel(){const result=await wallet.award('parcel-taster');if(result.awarded)notify('Parcel opened · +$25 game money'+(result.persistent?'':' · this tab only'));paint();return result;}
  function update(dt,available=true){lastPaint+=dt;const s=state(),w=wallet.snapshot(),eligible=s.chapelVisited&&!s.shots?.mural&&!s.skipped&&!w.initiatives.includes('litter-chapel-path');litter.visible=eligible&&mode()==='town';const p=position();if(available&&litter.visible&&!busy&&Math.hypot(p.x+3.5,p.z+20.5)<1.1){busy=true;wallet.award('litter-chapel-path').then(r=>{if(r.awarded)notify('Thanks for taking initiative · +$50 game money'+(r.persistent?'':' · this tab only'));}).finally(()=>{busy=false;paint();});}drawMap(minimap);if(lastPaint>.4){lastPaint=0;paint();}const targets=[s.shots?.mural&&'destination-mural',s.souvenir&&'destination-oval',s.souvenir&&(mode()==='market'||(mode()==='town'&&Math.hypot(p.x-43,p.z+22)<3.2))&&'destination-market'].filter(Boolean);for(const id of targets)if(!w.initiatives.includes(id)&&!attemptedRewards.has(id)){attemptedRewards.add(id);wallet.award(id).then(r=>{if(r.awarded)notify(r.log.at(-1).description);});}}
  drawMap(minimap);
- return {awardParcel,update,close,open:()=>!panel.hidden,preparing:()=>!panel.hidden&&selected==='stats'&&Boolean(marketStatsLoading),snapshot:()=>({wallet:wallet.snapshot(),market:marketStats?.snapshot()||null,mapOpen:mapVisible,statsOpen:!panel.hidden&&selected==='stats',litterVisible:litter.visible})};
+ return {awardParcel,completeOrientation:async()=>{const s=state();if(s.shots?.mural)await wallet.award('destination-mural');if(s.souvenir)await wallet.award('destination-oval');const w=wallet.snapshot();const {createPracticeStore,freshState,VALUES}=await import('./night-market-state.js?v=market-collection-20261012');const m=review?freshState():createPracticeStore(storage).state;mapVisible=true;mapVisibility();drawMap(minimap);return {earned:w.cash===null?null:w.gross+w.initiativeRewards+w.explorationRewards+(m.paid?VALUES.gross:0)+(m.researchPaid?VALUES.research:0),tax:w.cash===null?null:w.tax+m.tax};},update,close,open:()=>!panel.hidden,preparing:()=>!panel.hidden&&selected==='stats'&&Boolean(marketStatsLoading),snapshot:()=>({wallet:wallet.snapshot(),market:marketStats?.snapshot()||null,mapOpen:mapVisible,statsOpen:!panel.hidden&&selected==='stats',litterVisible:litter.visible})};
 }

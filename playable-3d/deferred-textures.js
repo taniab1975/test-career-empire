@@ -71,7 +71,7 @@ export function createDeferredTextures({onFailure=()=>{},scheduleHydration=hydra
     if(retrying)return retrying;
     retrying=drain(true).finally(()=>{retrying=null;});return retrying;
   }
-  return {load,defer,start,retry,get failed(){return jobs.filter(job=>job.failed&&!job.done).length;},get pending(){return jobs.filter(job=>!job.done).length;}};
+  return {load,defer,start,retry,startMatching:async matches=>{await Promise.all(jobs.filter(job=>matches(job.url)&&!job.done&&!job.inFlight).map(launch));if(jobs.some(job=>matches(job.url)&&job.failed&&!job.done))throw new Error('Requested campus artwork could not load. Please retry.');},get failed(){return jobs.filter(job=>job.failed&&!job.done).length;},get pending(){return jobs.filter(job=>!job.done).length;}};
 }
 
 // Two animation ticks allow the first playable frame to be presented before
