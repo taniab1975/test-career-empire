@@ -1,6 +1,6 @@
 # Test copy repair status
 
-Updated 2026-10-12 16:55 UTC. Environment commands and files are available;
+Updated 2026-10-12 17:40 UTC. Environment commands and files are available;
 this task has resumed as sole writer. Only `taniab1975/test-career-empire` (1415756807).
 Seed `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. Repairs were implemented here;
@@ -12,7 +12,7 @@ the untransferred Mac candidate was not imported. No production deployment.
 | --- | --- |
 | Locked dependency install | Passed; dependencies unchanged |
 | Seed source/release verification | 269 exact hashes, 81 runtime modules |
-| Current units | 194 passed (seed: 187) |
+| Current units | 202 passed (seed: 187) |
 | Browser launch | Chromium 154.0.8037.57 with `chromiumSandbox: true` |
 | Failed grass → Retry → original surfaces restored → warning hidden | Existing browser regression passed; deadlines/assertions unchanged |
 | Desktop video → Start exploring → both exteriors in view → walking → automatic parcel → Chapel picture development | Passed; measured handover 6.847 s; player z 23.3 → 16.522; rendered frame 72 → 92 |
@@ -94,3 +94,26 @@ teachers after its unchanged 60-second wait. A bounded loading probe is next.
 Mural textures now use the deferred surface queue; cloned panel source identity
 and UV crops have a passing unit regression. Chapel timing, photo/companion/teacher
 flows and Market/Admin remain incomplete; no broad suite is being run.
+
+Teacher checkpoint: the old integrated probe requested the module at 61.5 s,
+received it at 73.1 s and received Middleton bytes at 86.1 s without completing
+parse by 90 s. Requested photo-cast priority now requests the module at 9.7 s;
+both assets parse by 30.9 s, and the bounded teacher probe passes (44.5 s).
+
+Teacher checks now run outside the paused movement branch while retaining
+mode/reveal guards; initialization waits for discovery assignment. Missing NPCs
+have bounded backoff/retry and an explicit retry path. Shared requests reuse
+one promise and avoid duplicate teachers. Spatial batching also preserves LOD
+level objects; it previously detached them and rendered high and low together.
+
+A real trail photo could save without opening review. Explicit capture now opens
+review first, and still waits for Continue before companion choice. PNG capture
+reserves a GPU opportunity and encodes asynchronously, restoring the viewport on
+success/failure. Software rendering reuses an unchanged frame behind paused UI.
+The legacy photo driver attempted a second Pose behind the newly opened review;
+it is being aligned to the visible dialog while all image, style and handoff
+assertions and deadlines remain unchanged.
+
+Companion has no confirmed implementation defect yet; its longer multi-action
+case timed out before a useful loaded-model verdict. A small ready/parent/visible
+render check is prepared next. Market/Admin and persistent teachers remain pending.

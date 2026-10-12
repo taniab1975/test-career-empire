@@ -170,6 +170,7 @@ export function createDiscovery({THREE:T,worlds,canvas,position,mode,travel,capt
  function makePoster(retake=false){
   if(captureBusy||state.step!==4||(state.souvenir&&!retake))return;
   captureBusy=true;$('discovery-continue').disabled=true;const capturedState=state;
+  if(!dialog.open)show();
   const fail=()=>{captureBusy=false;$('discovery-continue').disabled=false;$('discovery-response').textContent='Image capture unavailable. Your scout shots are safe; try again.';};
   try{
    const load=src=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=src;});

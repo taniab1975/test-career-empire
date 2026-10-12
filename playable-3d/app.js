@@ -37,7 +37,7 @@ const gameSession=window.CareerEmpireGameRun;
 const gameStorage=gameSession?.storage||localStorage;
 const state=loadProfiles(isolatedDiscovery?reviewProfiles:gameStorage);
 let discovery=null,intro=null,explorationTools=null,revealCameraStart=null;
-let frameGate,surfaceUploads;
+let frameGate,surfaceUploads,portraitCapturePending=false;
 let worlds,renderer,camera,studio,orbit,actor,preview,mode='town',phase='flourishing',draft,editorTab='identity';
 let wardrobeSection='pants';
 let nightMarket=null;
@@ -76,22 +76,31 @@ let introWarmTime=-Infinity;
 let toastTimer,drag=null,lastTime=0,accumulator=0,metricsTime=0,frames=0,viewport={width:1,height:1};
 let tapMovement=null,watchingEST=false;
 const teachers=[];
-let teacherLoading=false,teacherAttempted=false,ovalVisitRecorded=false;
+let teacherLoading=false,teacherAttempted=false,ovalVisitRecorded=false,teacherLoad;
+const teacherFailures=new Map();
 const teacherRay=new THREE.Raycaster(),teacherPointer=new THREE.Vector2();
 function updateTeacherLoading(){
- if(mode!=='town'||document.hidden||(discoveryReview&&!discovery?.revealed()))return;
+ if(mode!=='town'||document.hidden||(discoveryReview&&(!discovery||(!discovery.revealed()&&discovery.snapshot().step<3))))return;
  const p=actor.model.position,near=Math.hypot(p.x+4,p.z+54)<28;
  if(!near){teacherAttempted=false;return;}
  if(teachers.length&&teachers.some(n=>n.near(p,7))&&!ovalVisitRecorded){ovalVisitRecorded=true;explore('oval').then(ok=>{if(!ok)ovalVisitRecorded=false;});}
- if(teachers.length===2||teacherLoading||teacherAttempted)return;
+ if(teachers.length===2||teacherLoading)return;
+ if(teacherAttempted&&![...teacherFailures.values()].some(f=>f.attempts<3&&performance.now()>=f.retryAt))return;
+ return loadTeachers();
+}
+function loadTeachers({explicit=false}={}){
+ if(teachers.length===2)return Promise.resolve();
+ if(teacherLoad)return teacherLoad;
  teacherLoading=true;teacherAttempted=true;
- import('./teacher-npc.js?v=teacher-revisit-20261012').then(async m=>{
+ teacherLoad=import('./teacher-npc.js?v=teacher-revisit-20261012').then(async m=>{
   // Stagger decode/upload work and isolate each optional NPC's failure.
   for(const config of m.TEACHERS)if(!teachers.some(n=>n.id===config.id)){
-   try{teachers.push(await m.createTeacherNPC(worlds,discoveryReview?{...config,spawn:{x:config.id==='middleton'?-6.2:-1.8,z:-54.6},fixed:true,reduced:discovery?.reduced()}:config));}
-   catch(error){console.warn(config.name+' could not load; return to the oval to retry.',error);}
+   const failed=teacherFailures.get(config.id);if(!explicit&&failed&&(failed.attempts>=3||performance.now()<failed.retryAt))continue;
+   try{teachers.push(await m.createTeacherNPC(worlds,discoveryReview?{...config,spawn:{x:config.id==='middleton'?-6.2:-1.8,z:-54.6},fixed:true,reduced:discovery?.reduced()}:config));teacherFailures.delete(config.id);}
+   catch(error){const attempts=explicit?1:(failed?.attempts||0)+1;teacherFailures.set(config.id,{attempts,retryAt:performance.now()+Math.min(30000,2000*2**(attempts-1))});console.warn(config.name+' could not load; return to the oval to retry.',error);}
   }
- }).catch(error=>console.warn('Teachers unavailable; return to the oval to retry.',error)).finally(()=>teacherLoading=false);
+ }).catch(error=>console.warn('Teachers unavailable; return to the oval to retry.',error)).finally(()=>{teacherLoading=false;teacherLoad=null;});
+ return teacherLoad;
 }
 function greetTeacher(npc){if(mode==='town'&&npc?.root?.visible&&npc.react(actor.model.position))toast('Hello, '+npc.name+'!');}
 function tapTeacher(event){
@@ -479,13 +488,28 @@ async function campusSpot(x,z,heading,angle=0){
   if(mode==='studio')leaveStudio(go);else await go();
 }
 function resetStudioCamera(){const distance=isMobile()?4.25:4.0;camera.position.set(.12,portrait?1.63:1.3,portrait?1.8:distance);orbit.target.set(0,portrait?1.48:.95,0);orbit.minDistance=1.15;orbit.maxDistance=5.2;orbit.maxPolarAngle=Math.PI*.59;orbit.minPolarAngle=Math.PI*.28;orbit.update();}
-let renderBackend='',lastRenderMs=0;
+let renderBackend='',lastRenderMs=0,lastPausedSceneStamp;
 function applyRenderQuality(){
  const quality=renderQuality(renderBackend,$('quality').value,devicePixelRatio);let changed=false;
  if(renderer.shadowMap.enabled!==quality.shadows){renderer.shadowMap.enabled=quality.shadows;changed=true;}
  if(renderer.getPixelRatio()!==quality.pixelRatio){renderer.setPixelRatio(quality.pixelRatio);resize();changed=true;}
  worlds.town.traverse(o=>{if(o.isDirectionalLight&&o.castShadow&&o.shadow.mapSize.x!==quality.shadowSize){o.shadow.mapSize.set(quality.shadowSize,quality.shadowSize);o.shadow.map?.dispose();o.shadow.map=null;o.shadow.needsUpdate=true;changed=true;}if(o.isLOD){const distance=o.userData.softwareDetail||o.userData.heroDetail?(quality.software&&!quality.shadows?0:Infinity):quality.plantDistance;if((o.userData.softwareDetail||o.name==='Campus planting distance detail')&&o.levels[1].distance!==distance){o.levels[1].distance=distance;changed=true;}}});
  return changed;
+}
+async function capturePortraitFrame(){
+ portraitCapturePending=true;
+ let restore;
+ try{
+  // Reserve one completed GPU opportunity for the requested photo. Avoid
+  // stacking a synchronous canvas readback behind regular world frames.
+  await new Promise(resolve=>{const next=()=>requestAnimationFrame(()=>{if(!frameGate.ready())next();else resolve();});next();});
+  const oldSize=renderer.getSize(new THREE.Vector2()),oldRatio=renderer.getPixelRatio(),rotation=actor.model.rotation.y;
+  restore=()=>{actor.model.rotation.y=rotation;renderer.setPixelRatio(oldRatio);renderer.setSize(oldSize.x,oldSize.y,false);renderer.setViewport(0,0,oldSize.x,oldSize.y);};
+  const shot=camera.clone();shot.fov=50;shot.aspect=900/960;const layout=revealLayout(actor.model.position);shot.position.set(...layout.photoCamera);shot.lookAt(...layout.photoLook);shot.updateProjectionMatrix();preparePortrait(actor,layout);prepareCastPortrait(teachers,actor.model.position);shot.updateMatrixWorld(true);
+  renderer.setPixelRatio(1);renderer.setSize(900,960,false);renderer.setViewport(0,0,900,960);renderer.clear();renderer.render(worlds.town,shot);frameGate.submitted();
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('Photo could not be encoded');
+  return await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob);});
+ }finally{restore?.();lastPausedSceneStamp=null;portraitCapturePending=false;}
 }
 function resize(){
   if(!renderer)return;viewport={width:window.innerWidth,height:$('experience').clientHeight};renderer.setSize(viewport.width,viewport.height,false);
@@ -695,12 +719,18 @@ function animate(){
     if(mode==='town'&&campusReady&&travelled>.001&&performance.now()>marketTravelCooldownUntil&&Math.hypot(actor.model.position.x-43,actor.model.position.z+22)<1.2)openMarket();
     // A render frame with no physics tick is not a stop. Never restart its walk.
     if(steps)actor.setWalking(travelled/(steps*STEP)>.03,travelled/(steps*STEP));
-    if(mode==='town'){if(entryReady&&!campusReady&&actor.model.position.z<-14&&worlds.scenery.status==='pending')openCampusInBackground();updateTeacherLoading();for(const npc of teachers)npc.update(discovery?.reduced()?0:dt,actor.model.position);}actor.update(discovery?.reduced()?0:dt);prepareNextTask(now);worlds.update(now,camera);updateInteraction();updateMission();
+    if(mode==='town'){if(entryReady&&!campusReady&&actor.model.position.z<-14&&worlds.scenery.status==='pending')openCampusInBackground();for(const npc of teachers)npc.update(discovery?.reduced()?0:dt,actor.model.position);}actor.update(discovery?.reduced()?0:dt);prepareNextTask(now);worlds.update(now,camera);updateInteraction();updateMission();
   }else {renderMotion=null;locomotion.reset();accumulator=0;actor.setWalking(false);if(mode==='studio')preview?.update(dt);}
+  updateTeacherLoading();
   if(mode==='market')nightMarket.update(dt,now,camera,actor.model.position);
   if(discoveryReview)for(const npc of teachers)npc.root.visible=Boolean(discovery?.revealed());
-  if(!discovery?.cinematic())updateCamera(dt,discovery?.reduced());if(!intro?.open()){discovery?.update(mode,actor.model.position,dt);explorationTools?.update(dt,!discovery?.open()&&!explorationMenuOpen()&&!helperPicker.open()&&!echo?.open());}echo?.update(dt,actor.model.position,camera,mode!=='studio'&&!helperPicker.open()&&!aerial&&!flyover?.active&&!feedbackOpen()&&!watchingEST&&$('module-overlay').hidden&&!$('reflection-dialog').open,activeScene());positionESTPlayButton();if(surfaceUploads.waitingForFrame||!frameGate.ready())return;renderer.setViewport(0,0,viewport.width,viewport.height);renderer.setScissorTest(false);renderer.clear();
+  if(!discovery?.cinematic())updateCamera(dt,discovery?.reduced());if(!intro?.open()){discovery?.update(mode,actor.model.position,dt);explorationTools?.update(dt,!discovery?.open()&&!explorationMenuOpen()&&!helperPicker.open()&&!echo?.open());}echo?.update(dt,actor.model.position,camera,mode!=='studio'&&!helperPicker.open()&&!aerial&&!flyover?.active&&!feedbackOpen()&&!watchingEST&&$('module-overlay').hidden&&!$('reflection-dialog').open,activeScene());positionESTPlayButton();if(surfaceUploads.waitingForFrame||portraitCapturePending||!frameGate.ready())return;
   let scene=mode==='studio'?studio:activeScene();
+  // On a software GPU, a paused panel should not repeatedly rasterize an
+  // unchanged world. Assets, UI and teacher preparation keep advancing.
+  const paused=renderQuality(renderBackend,$('quality').value,devicePixelRatio).software&&mode!=='studio'&&!intro?.open()&&!discovery?.cinematic()&&(discovery?.openDialog()||explorationMenuOpen()||helperPicker.open()||echo?.open()||marketDialogOpen()||!$('module-overlay').hidden||$('reflection-dialog').open);
+  if(paused){const d=discovery?.snapshot(),h=echo?.snapshot();const stamp=[scene.uuid,mode,phase,$('quality').value,viewport.width,viewport.height,entryReady,campusReady,worlds.scenery.status,worlds.pendingSurfaceDetails,detailFailed,actor.model.uuid,actor.model.rotation.y.toFixed(3),...actor.model.position.toArray().map(v=>v.toFixed(3)),...camera.position.toArray().map(v=>v.toFixed(3)),...camera.quaternion.toArray().map(v=>v.toFixed(4)),teachers.length,scene.children.length,d?.step,d?.souvenir,d?.chapelVisited,h?.helper,h?.helperStatus,h?.visible].join('|');if(lastPausedSceneStamp===stamp)return;lastPausedSceneStamp=stamp;}else lastPausedSceneStamp=null;
+  renderer.setViewport(0,0,viewport.width,viewport.height);renderer.setScissorTest(false);renderer.clear();
   if(mode==='studio'){const mobile=isMobile();renderer.setViewport(0,mobile?viewport.height*.43:0,mobile?viewport.width:viewport.width-(viewport.width>900?364:316),Math.max(1,viewport.height*(mobile?.57:1)-headerHeight));}
   renderer.toneMappingExposure=mode==='town'?1:1.03;
   // A moving/skinned player needs current-pose shadows every rendered frame.
@@ -803,7 +833,7 @@ async function boot(){
     if(completeView){$('loading').hidden=true;icons();animate();}
     if(!discoveryReview)afterFirstPaint().then(loadEcho).catch(error=>console.warn('Guidance unavailable; game remains playable.',error));
     if(discoveryReview){
-      discovery=createDiscovery({THREE,worlds,canvas,enterQuiet:enterChapel,storage:gameStorage,onPhotoFinish:offerCompanion, onParcel:()=>{explorationTools?.awardParcel();worlds.ensureChapel().catch(()=>{});},available:()=>!intro?.open()&&!helperPicker.open()&&!echo?.open()&&!explorationMenuOpen(),onLocation:label=>{if($('location-title').textContent!==label.title||$('location-subtitle').textContent!==label.subtitle){setLocation(label.title);$('location-subtitle').textContent=label.subtitle;}},beforeCapture:async()=>{resetNavigationInput();actor.setWalking(false);prepareCastPortrait(teachers,actor.model.position);await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));prepareCastPortrait(teachers,actor.model.position);},pathsReady:()=>entryReady,position:()=>actor.model.position,mode:()=>mode,travel:async target=>{if(['start','parcel','chapel-door','chapel'].includes(target))await prepareEntry();else await ensureCampus();if(target==='chapel'){await enterChapel();return;}await setMode('town');const points={start:[-7,23.3,0],parcel:[-7,16.3,0],'chapel-door':[-3.15,-8.8,1.1],mural:[10.6,-38.4,Math.PI/2],oval:[-4,-57,Math.PI]};const v=points[target];worlds.teleport(false,v[0],v[1]);actor.model.position.copy(worlds.position(false));yaw=v[2];setLocation(target==='mural'?'Mural detail':target==='oval'?'Oval · filming spot':'Arrival Gardens');updateCamera(1,true);},capture:()=>{const oldSize=renderer.getSize(new THREE.Vector2()),oldRatio=renderer.getPixelRatio(),rotation=actor.model.rotation.y;const shot=camera.clone();shot.fov=50;shot.aspect=900/960;const layout=revealLayout(actor.model.position);shot.position.set(...layout.photoCamera);shot.lookAt(...layout.photoLook);shot.updateProjectionMatrix();preparePortrait(actor,layout);prepareCastPortrait(teachers,actor.model.position);shot.updateMatrixWorld(true);try{renderer.setPixelRatio(1);renderer.setSize(900,960,false);renderer.setViewport(0,0,900,960);renderer.clear();renderer.render(worlds.town,shot);return canvas.toDataURL('image/png');}finally{actor.model.rotation.y=rotation;renderer.setPixelRatio(oldRatio);renderer.setSize(oldSize.x,oldSize.y,false);renderer.setViewport(0,0,oldSize.x,oldSize.y);renderer.clear();renderer.render(activeScene(),camera);}},pause:()=>{resetNavigationInput();actor.setWalking(false);},releaseReveal:()=>{resetNavigationInput();actor.setWalking(false);if(mode==='town'){const p=actor.model.position;yaw=Math.atan2(camera.position.x-p.x,camera.position.z-p.z);aerial=false;updateCamera(1,true);}},reveal:()=>{revealCameraStart=camera.clone();if(mode==='town')setLocation('Oval · filming spot');updateTeacherLoading();},explore:()=>canvas.focus(),personalise:()=>openWholeCharacterChoice(),market:async()=>{await offerCompanion();await openMarket();},frameReveal:t=>{const p=actor.model.position,from=revealCameraStart||camera;const startYaw=Math.atan2(from.position.x-p.x,from.position.z-p.z);const delta=Math.atan2(Math.sin(Math.PI-startYaw),Math.cos(Math.PI-startYaw));const angle=startYaw+delta*t,initialDistance=Math.hypot(from.position.x-p.x,from.position.z-p.z),distance=THREE.MathUtils.lerp(initialDistance,6.4,t);camera.position.set(p.x+Math.sin(angle)*distance,THREE.MathUtils.lerp(from.position.y,2.5,t),p.z+Math.cos(angle)*distance);camera.lookAt(p.x,1.25,p.z+2.4*t);yaw=angle;if(t===1)actor.model.rotation.y=0;},stageCast:(t,dt)=>{const layout=revealLayout(actor.model.position);teachers.forEach(n=>n.stagePose(layout.teacherX(n.id),layout.teacherZ(t),t<1,t===1&&dt===0?.3:dt));},castReady:()=>teachers.length===2});
+      discovery=createDiscovery({THREE,worlds,canvas,enterQuiet:enterChapel,storage:gameStorage,onPhotoFinish:offerCompanion, onParcel:()=>{explorationTools?.awardParcel();worlds.ensureChapel().catch(()=>{});},available:()=>!intro?.open()&&!helperPicker.open()&&!echo?.open()&&!explorationMenuOpen(),onLocation:label=>{if($('location-title').textContent!==label.title||$('location-subtitle').textContent!==label.subtitle){setLocation(label.title);$('location-subtitle').textContent=label.subtitle;}},beforeCapture:async()=>{resetNavigationInput();actor.setWalking(false);prepareCastPortrait(teachers,actor.model.position);await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));prepareCastPortrait(teachers,actor.model.position);},pathsReady:()=>entryReady,position:()=>actor.model.position,mode:()=>mode,travel:async target=>{if(target==='oval'){await prepareEntry();await loadTeachers({explicit:true});}if(['start','parcel','chapel-door','chapel'].includes(target))await prepareEntry();else await ensureCampus();if(target==='chapel'){await enterChapel();return;}await setMode('town');const points={start:[-7,23.3,0],parcel:[-7,16.3,0],'chapel-door':[-3.15,-8.8,1.1],mural:[10.6,-38.4,Math.PI/2],oval:[-4,-57,Math.PI]};const v=points[target];worlds.teleport(false,v[0],v[1]);actor.model.position.copy(worlds.position(false));yaw=v[2];setLocation(target==='mural'?'Mural detail':target==='oval'?'Oval · filming spot':'Arrival Gardens');updateCamera(1,true);},capture:capturePortraitFrame,pause:()=>{resetNavigationInput();actor.setWalking(false);},releaseReveal:()=>{resetNavigationInput();actor.setWalking(false);if(mode==='town'){const p=actor.model.position;yaw=Math.atan2(camera.position.x-p.x,camera.position.z-p.z);aerial=false;updateCamera(1,true);}},reveal:()=>{revealCameraStart=camera.clone();if(mode==='town')setLocation('Oval · filming spot');updateTeacherLoading();},explore:()=>canvas.focus(),personalise:()=>openWholeCharacterChoice(),market:async()=>{await offerCompanion();await openMarket();},frameReveal:t=>{const p=actor.model.position,from=revealCameraStart||camera;const startYaw=Math.atan2(from.position.x-p.x,from.position.z-p.z);const delta=Math.atan2(Math.sin(Math.PI-startYaw),Math.cos(Math.PI-startYaw));const angle=startYaw+delta*t,initialDistance=Math.hypot(from.position.x-p.x,from.position.z-p.z),distance=THREE.MathUtils.lerp(initialDistance,6.4,t);camera.position.set(p.x+Math.sin(angle)*distance,THREE.MathUtils.lerp(from.position.y,2.5,t),p.z+Math.cos(angle)*distance);camera.lookAt(p.x,1.25,p.z+2.4*t);yaw=angle;if(t===1)actor.model.rotation.y=0;},stageCast:(t,dt)=>{const layout=revealLayout(actor.model.position);teachers.forEach(n=>n.stagePose(layout.teacherX(n.id),layout.teacherZ(t),t<1,t===1&&dt===0?.3:dt));},castReady:()=>teachers.length===2});
     }
     if(discoveryReview){
       setupExplorationMenus();if(discovery.snapshot().souvenir){document.body.classList.add('guest-photo-finished');if(companionOffered&&helperPicker.selected().model)afterFirstPaint().then(()=>applySelectedCompanion());}

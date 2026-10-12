@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "89adf46f65621f065203ea5814a93d1871b14000c09a4945829d2b76e688761d"
+      "sha256": "55cd328fb00325abb679c06de21fa639840bede05cf58734e7f408ac111b174f"
     },
     {
       "path": "arcade-carnival.js",
@@ -590,7 +590,7 @@
     },
     {
       "path": "discovery-opening.js",
-      "sha256": "662a6b013409770c25cd41c5613f4fe6a0bd31d47822e0df059c5c8b7623b993"
+      "sha256": "3e59d6b3bb886fc61dcee2119e4984c5dbeca02bb5f612444acf5b8cf97b141d"
     },
     {
       "path": "discovery-state.mjs",
@@ -766,7 +766,7 @@
     },
     {
       "path": "environment/static-batching.js",
-      "sha256": "b3a8375634d5b25f74c5a7069ae768002e722f718500fe5a3a7eeb65bd6df463"
+      "sha256": "a46fa6847cff0a4dd69c92da56b686c54704306f9efa042efaef1ed2cb8664eb"
     },
     {
       "path": "environment/surroundings.js",
