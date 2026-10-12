@@ -1,7 +1,8 @@
 # Personal test Pages deployment plan
 
-This is a plan only for `taniab1975/test-career-empire` (1415756807).
-Pages remains disabled. No public playable test URL is verified, and no hosting,
+Publication preparation for `taniab1975/test-career-empire` (1415756807).
+The static `gh-pages` branch is now prepared and pushed. Pages activation is
+blocked. No public playable test URL is verified, and no hosting,
 account, connector, credential or permission setting has been changed.
 
 ## Existing access
@@ -27,17 +28,21 @@ for that owner action. No grant is being requested by this plan.
    repository. Preserve the `playable-3d/`, `economy-lab/`, referenced `Assets/`
    and sibling module paths. Generate a root `index.html` linking to the game and
    an empty `.nojekyll` file. Do not publish the entire development tree.
-2. Build the export from the verified release manifest, reachable runtime graph,
+2. The exporter builds from the verified release manifest, reachable runtime graph,
    HTML/CSS dependencies, dynamic avatar/helper catalog assets and linked course,
    My Life and Administration resources. Fail the export for missing files.
-   The manifest currently contains 270 files totaling 176.9 MiB; that is a
-   measured starting set, not yet a complete validated export.
+   The completed export has 623 files totaling 525,003,217 bytes (500.68 MiB),
+   below 1 GB. All 620 dependency files matched their expected hashes through
+   HTTP at `/test-career-empire/`; video byte ranges returned 206. GLB external
+   images and phone models retain their actual loader resource bases. One
+   existing optional legacy World megatrends route is absent from the seed;
+   it is recorded rather than silently redirected to different curriculum.
 3. Serve the export locally beneath `/test-career-empire/` and validate relative
    URLs, intro playback, campus walking, photo download, Market/Admin and My Life
    handoff. Verify dynamic imports, course documents and avatar choices, with no
    missing-request substitutions. Measure the completed export size.
-4. After explicit deployment authorization, push the reviewed export branch and
-   have the owner select `gh-pages` → `/` in this repository's Pages settings.
+4. Deployment was explicitly authorized. The reviewed export branch was pushed;
+   the owner still needs to select `gh-pages` → `/` in this repository's Pages settings.
    Existing git push access can maintain the branch; the owner settings action
    supplies activation without changing connector scopes.
 5. Confirm the Pages build and HTTPS site before calling any URL playable. Check
@@ -56,3 +61,26 @@ game, but the local Python test server itself is not deployed.
 
 The expected game path after a verified deployment is
 `/test-career-empire/playable-3d/`. This plan does not assert that path is live.
+
+## Current branch and exact blockers
+
+Source: `4d282b3c1b593583ce9630fbf1023ccdbcc1951c`. Export:
+`170b7989b26482560c03e35b05e9de58bf5b6970` on `gh-pages`; both remote
+heads were verified. Source-only status/test scripts remain on `main`.
+
+The existing CLI Pages read returned:
+`Get "https://api.github.com/repos/taniab1975/test-career-empire/pages": Forbidden`.
+No credential/API-route workaround or activation was attempted. The read-only
+public-URL check additionally failed at the managed network tunnel:
+`Tunnel connection failed: 403 Forbidden`. This is not an origin 404 or evidence
+of a successful Pages build.
+
+Minimal owner action: [test repository Pages settings](https://github.com/taniab1975/test-career-empire/settings/pages)
+→ **Deploy from a branch** → **gh-pages** → **/(root)** → **Save**.
+After activation, deployed source/hash/browser verification still requires a
+network path permitted to read `taniab1975.github.io`. No new connector grant,
+credential, security or production-repository change is requested.
+
+Detailed publication evidence: `qa/cloud-pages-publication.json`. Reproduction:
+`python3 scripts/export-test-pages.py coverage/new-export/test-career-empire`;
+HTTP verification: `python3 scripts/verify-test-pages.py <permitted-base-url/> <source-commit>`.

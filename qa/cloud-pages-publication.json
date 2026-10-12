@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-12T20:25:03.995109+00:00",
+  "repository": "taniab1975/test-career-empire",
+  "repositoryId": 1415756807,
+  "branch": "gh-pages",
+  "artifactCommit": "170b7989b26482560c03e35b05e9de58bf5b6970",
+  "sourceCommit": "4d282b3c1b593583ce9630fbf1023ccdbcc1951c",
+  "files": 623,
+  "bytes": 525003217,
+  "branchPushed": true,
+  "MiB": 500.68,
+  "pagesPublishedLimitBytes": 1000000000,
+  "excluded": [
+    "QA",
+    "tests",
+    "scripts",
+    "dependencies/cache",
+    "private workspace metadata",
+    "unreferenced development assets"
+  ],
+  "httpVerification": {
+    "baseURL": "http://127.0.0.1:4291/test-career-empire/",
+    "sourceCommit": "4d282b3c1b593583ce9630fbf1023ccdbcc1951c",
+    "verifiedHttpFiles": 620,
+    "verifiedBytes": 524886019,
+    "mediaRange": "206, 64 bytes",
+    "existingLegacyLinkWarnings": [
+      "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
+    ]
+  },
+  "publicationStatus": "static branch ready; Pages activation blocked",
+  "pagesApiResult": "Get \"https://api.github.com/repos/taniab1975/test-career-empire/pages\": Forbidden",
+  "callablePagesCreateAction": false,
+  "publicUrlCheck": {
+    "url": "https://taniab1975.github.io/test-career-empire/playable-3d/",
+    "error": "Tunnel connection failed: 403 Forbidden",
+    "liveVerified": false
+  },
+  "ownerAction": {
+    "url": "https://github.com/taniab1975/test-career-empire/settings/pages",
+    "steps": [
+      "Select Deploy from a branch",
+      "Choose gh-pages",
+      "Choose /(root)",
+      "Save"
+    ]
+  },
+  "liveBrowserVerified": false,
+  "credentialsGrantsSecurityChanged": false,
+  "ECCDeploymentChanged": false,
+  "priorArtifactCommit": "8d6849191a9d2aab5bf75a97615a01477291dce0",
+  "browserTestedGameFilesUnchanged": 619,
+  "stagedBrowserEvidence": "qa/cloud-final-acceptance.json",
+  "visualStartupCompletenessAccepted": false
+}
