@@ -1,9 +1,9 @@
 {
   "repository": "taniab1975/test-career-empire",
-  "sourceCommit": "8ee2a7b6e9b162affedd4d2b57b87fcfeee4fbc4",
+  "sourceCommit": "ba601220a8bc3ae209d1d7fd2bc84239f2a6251e",
   "gamePath": "playable-3d/",
   "fileCount": 623,
-  "dependencyBytes": 524889389,
+  "dependencyBytes": 524894903,
   "existingLegacyLinkWarnings": [
     "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
   ],
@@ -1550,8 +1550,8 @@
     },
     {
       "path": "playable-3d/app.js",
-      "bytes": 107644,
-      "sha256": "f9ff2458b0f037bacb2e145d244ee3f3b3e389238917d379d91984afc7efb0c6"
+      "bytes": 109191,
+      "sha256": "be984ccf71d8d7290e044a6754c660f28f3c9bf1de96a7388fca904eb3696139"
     },
     {
       "path": "playable-3d/arcade-carnival.js",
@@ -2250,13 +2250,13 @@
     },
     {
       "path": "playable-3d/camera-clearance.mjs",
-      "bytes": 2343,
-      "sha256": "1ee758c77a90c64a0ab51aae06694e4ac6e23a7b7fb0899926c02c37a121d5f3"
+      "bytes": 2161,
+      "sha256": "9ce1f9b74c22a81920261c111b650386182df5460b660838fe51f43977e0ac7e"
     },
     {
       "path": "playable-3d/campus-landscape.js",
-      "bytes": 12947,
-      "sha256": "0aaf00d9bfca06a85093c3dba369d000f1a131997b934ff87e379c4bc70ce875"
+      "bytes": 13533,
+      "sha256": "e51629d6cfdc1ba5137f143488533104b86283a874c07ff9653eac55d52f5855"
     },
     {
       "path": "playable-3d/chapel.js",
@@ -2270,8 +2270,8 @@
     },
     {
       "path": "playable-3d/deferred-textures.js",
-      "bytes": 4223,
-      "sha256": "48ecf93201d154e0f020d427fc1f03beea7ef2d5c11b26f46735db4d0da63b0e"
+      "bytes": 4480,
+      "sha256": "7909368e6189753ec11051e2cdf6688a52f52aa1bd1ea00b47f7db382cbc923a"
     },
     {
       "path": "playable-3d/destinations.js",
@@ -2295,13 +2295,13 @@
     },
     {
       "path": "playable-3d/discovery-opening.css",
-      "bytes": 12377,
-      "sha256": "c9183e3577f7e90e41de2262af1b3c4e9dc5857b8560f5f033fd41dc2034dc85"
+      "bytes": 13021,
+      "sha256": "6222aae5142ed71279343a0adc405c6629cd932b22c8ee15d4e10592e1538c7f"
     },
     {
       "path": "playable-3d/discovery-opening.js",
-      "bytes": 35616,
-      "sha256": "71fd8db8d9211f6129d2c533cb6d9b94581407b94917a315d59f46d5d425a4f6"
+      "bytes": 35726,
+      "sha256": "3b91cef065de8d70d0f1b0aa116fcc679afbaa132e4fd6aeba9cffb4ccf5ca10"
     },
     {
       "path": "playable-3d/discovery-state.mjs",
@@ -2495,8 +2495,8 @@
     },
     {
       "path": "playable-3d/environment/media-building.js",
-      "bytes": 6309,
-      "sha256": "b5ee7552a87bebcde40b949325184d76f5d6fd87f92b9116505043708879b290"
+      "bytes": 6595,
+      "sha256": "59d915bcbe725ae87eb6ac3b7bf03d4d5c4456c1263e1ad345cf22b51769d161"
     },
     {
       "path": "playable-3d/environment/paving-network.js",
@@ -2525,8 +2525,8 @@
     },
     {
       "path": "playable-3d/environment/teaching-exteriors.js",
-      "bytes": 1507,
-      "sha256": "85a31f575f0c4e13184f48ca453cc61607ee60ccb0646a2a9bcdfe3ab6e0a02f"
+      "bytes": 1703,
+      "sha256": "568f5c1a35a9e5be2dc300744b3d6ab6521a8e2c4733f26a783ae6d1f6f6f159"
     },
     {
       "path": "playable-3d/est-wall-video.js",
@@ -2545,8 +2545,8 @@
     },
     {
       "path": "playable-3d/exploration-tools.mjs",
-      "bytes": 12275,
-      "sha256": "5a0ce98cac98d19a20a87e48069bb27a890fa3c2cd883e3a664a1da627c5886c"
+      "bytes": 13575,
+      "sha256": "f9eb2d02b178913b30cac885c2fdaeafe78f09610415de4f131752643fae9fcd"
     },
     {
       "path": "playable-3d/field-guide.html",
@@ -2990,8 +2990,8 @@
     },
     {
       "path": "playable-3d/world.js",
-      "bytes": 38627,
-      "sha256": "3bf889715df647ed3795be575df5238088f598f107ccb96114f89b5c8a700c47"
+      "bytes": 39397,
+      "sha256": "ac01196e89f5ea16ebd439f47a56e8cbaa627308ddd52e709a408c11527c23ff"
     },
     {
       "path": "remotion-est-scenes/public/avatar-builder-rigs/ecc-boy-base-neutral/recomposed-preview.png",

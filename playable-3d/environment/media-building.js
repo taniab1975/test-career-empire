@@ -32,11 +32,15 @@ export function buildMedia(palette,textures){
  // Painted end faces toward SPACE after the building is rotated into the compact layout.
  box(.16,5.8,6.3,white,-12.06,3.9,.15);box(.16,5.8,6.3,white,12.06,3.9,.15);
  const muralURL='environment/assets/media-mural-sharp-v2-lossless.webp',loader=new T.TextureLoader();
- const muralTx=textures?textures.defer(loader,muralURL,{shareSource:true,colour:'#f2e8da'}):loader.load(muralURL);muralTx.colorSpace=T.SRGBColorSpace;muralTx.anisotropy=16;
+ const muralTx=textures?textures.defer(loader,muralURL,{colour:'#f2e8da'}):loader.load(muralURL);muralTx.colorSpace=T.SRGBColorSpace;muralTx.anisotropy=16;
+ const muralMaterial=new T.MeshStandardMaterial({map:muralTx,roughness:.9});muralMaterial.name='Media mural original artwork';
  // Atlas keeps the tall wall, upper projecting panel and lower circular artwork distinct.
  for(const [z,width,y,height,x,uv]of [[-1.5,2.55,3.8,5.1,-12.17,[0,0,.397,1]],[1.55,2.65,4.6,3.2,-12.46,[.4,.383,.6,.617]],[1.55,2.65,2.02,1.85,-12.18,[.4,0,.6,.38]]]){
-  box(.3,height,width,white,x+.17,y,z);const tex=muralTx.clone();tex.offset.set(uv[0],uv[1]);tex.repeat.set(uv[2],uv[3]);tex.needsUpdate=true;
-  const panel=new T.Mesh(new T.PlaneGeometry(width,height),new T.MeshStandardMaterial({map:tex,roughness:.9}));panel.rotation.y=-Math.PI/2;panel.position.set(x-.015,y,z);root.add(panel);
+  box(.3,height,width,white,x+.17,y,z);
+  // Bake each atlas crop into geometry UVs. One texture identity receives the
+  // deferred GPU upload, including panels already drawn with the placeholder.
+  const geometry=new T.PlaneGeometry(width,height),coords=geometry.attributes.uv;for(let i=0;i<coords.count;i++)coords.setXY(i,uv[0]+coords.getX(i)*uv[2],uv[1]+coords.getY(i)*uv[3]);
+  const panel=new T.Mesh(geometry,muralMaterial);panel.rotation.y=-Math.PI/2;panel.position.set(x-.015,y,z);root.add(panel);
   if(y>3){box(.05,.5,.8,silver,x-.035,y+.6,z);box(.055,.35,.63,mat(0x456675,.15),x-.06,y+.6,z);}
  }
  box(.045,2.1,.85,mat(0x4d6468),-12.17,2.1,.04);

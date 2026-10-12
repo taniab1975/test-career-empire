@@ -24,11 +24,8 @@ export function keepChapelClearance(THREE,worlds,p,camera,yaw){
  return false;
 }
 
-// A walkable establishing view at Arrival Gardens. Fade to the close follow
-// camera along the parcel path; keep normal framing at the Chapel and elsewhere.
+// Keep the familiar student follow view at Arrival Gardens. Exterior loading
+// is independent of camera height; the optional aerial control owns overhead views.
 export function campusEntryFraming(p,mobile=false){
- const lane=Math.max(0,Math.min(1,(p.x+18)/5,(9-p.x)/5));
- const blend=lane*Math.max(0,Math.min(1,(p.z-9)/9));
- return {blend,distance:6.4+11.6*blend,height:3.1+(mobile?10.9:7.9)*blend,
-  lookAhead:.6+11.4*blend,bias:6*blend,fov:(mobile?62:55)+(mobile?16:0)*blend};
+ return {blend:0,distance:6.4,height:3.1,lookAhead:.6,bias:0,fov:mobile?62:55};
 }
