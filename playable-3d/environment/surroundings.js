@@ -1,21 +1,19 @@
 import {addExteriorLandmarks} from './exterior-landmarks.js?v=entry-environment-20261012';
 import {campusExtensions} from './campus-extensions.js?v=entry-environment-20261012';
 import {batchStatic} from './static-batching.js?v=1';
-import {buildMedia} from './media-building.js?v=mural-floor-20261008';
-import {buildSpace} from './space-building.js?v=walkthrough3';
+import {addTeachingDetail} from './teaching-exteriors.js?v=entry-exteriors-20261012';
 import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 // Stage 2 composition study. Reference-derived silhouettes, not enterable buildings.
 export async function addSurroundings(scene,palette){
+ const existing=scene.getObjectByName('Approved campus surroundings and connections');if(existing)return existing;
  addExteriorLandmarks(scene,palette);
+ await addTeachingDetail(scene,palette);
  const root=new T.Group();root.name='Approved campus surroundings and connections';
  const mat=c=>new T.MeshStandardMaterial({color:c,roughness:.88});
  const stone=mat(0xc4bda7),glass=mat(0x668992),fin=mat(0x454c4b),roof=mat(0xb8c6c4),blue=mat(0x31596f);
  function box(g,w,h,d,m,x,y,z){const o=new T.Mesh(new T.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.receiveShadow=true;g.add(o);return o;}
- // Local annotated layout: separated right angle behind Admin; curved frontage west, mural north toward SPACE.
- const english=buildMedia(palette);english.position.set(-4,0,-37);english.rotation.y=Math.PI;english.scale.setScalar(.9);root.add(batchStatic(english));
- const space=buildSpace(palette);space.position.set(18,0,-53);space.rotation.y=-Math.PI/2;space.scale.setScalar(.85);root.add(batchStatic(space));
  // Home Economics is a low connecting roofline, subordinate to the hero Chapel.
  const extension=campusExtensions(root,palette);root.userData.extraBeds=extension.beds;
  const asset=await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync('./assets/campus-landscape/mature-eucalypt-a-packed.glb');asset.scene=batchStatic(asset.scene);asset.scene.updateMatrixWorld(true);

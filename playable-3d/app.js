@@ -294,7 +294,7 @@ function renderEditor(){
   }else root.append(field('Future occupation','occupation','textarea'),field('Training pathway','training','textarea'),field('A strength I bring','strength','textarea'));
   icons();
 }
-let studioLoad,modeRequest=0,campusLoad,campusReady=false,environmentReady=false;
+let studioLoad,modeRequest=0,campusLoad,campusReady=false,environmentReady=false,entryEnvironmentModule;
 function campusNotice(message,failed=false){
   $('campus-progress').hidden=campusReady;
   $('campus-progress-message').textContent=message;
@@ -337,6 +337,10 @@ function detailNotice(){
  $('campus-progress-message').textContent='Some surface detail is still loading. You can keep exploring; Retry will request missing surfaces again.';
  $('campus-retry').hidden=false;
 }
+function refreshSurfaceDetailNotice(){
+ detailFailed=worlds.failedSurfaceDetails>0;
+ if(!detailFailed&&canClearDetailWarning({entryReady,campusReady,campusLoading:campusLoad,pending:worlds.pendingSurfaceDetails,campusFailed:worlds.scenery.status==='fallback'}))$('campus-progress').hidden=true;
+}
 function startSurfaceDetail(){
  if(detailLoad)return detailLoad;
  detailFailed=false;
@@ -348,7 +352,7 @@ async function prepareEntry(){
  if(entryReady)return;
  if(entryLoad)return entryLoad;
  campusNotice('Preparing the outdoor path to the envelope and Chapel…');
- const environmentModule=environmentReady?null:import('./environment.js?v=entry-environment-20261012');environmentModule?.catch(()=>{});
+ const environmentModule=environmentReady?null:(entryEnvironmentModule||=import('./environment.js?v=entry-environment-20261012'));environmentModule?.catch(()=>{});
  // Begin the original exterior-only buildings after avatar priority, alongside paths.
  // They never gate entry or load interiors and no northward travel is required.
  setTimeout(()=>worlds.loadBuildingExteriors().then(()=>{if(entryReady)startSurfaceDetail();}).catch(()=>{}),0);
@@ -635,7 +639,7 @@ function bindEvents(){
   $('town-view').addEventListener('click',returnTown);$('studio-view').addEventListener('click',openStudio);
   $('home-destination').addEventListener('click',()=>destination('home'));$('est-destination').addEventListener('click',()=>{const go=()=>{setMode('town');enterHall();};if(mode==='studio')leaveStudio(go);else go();});$('chapel-destination').addEventListener('click',()=>destination('chapel'));
   $('interact').addEventListener('click',()=>interaction?.action());$('phase').addEventListener('change',e=>phaseChange(e.target.value));$('quality').addEventListener('change',qualityChange);
-  $('campus-retry').addEventListener('click',()=>{if(detailFailed)worlds.retryDetailTextures().then(()=>{detailFailed=worlds.failedSurfaceDetails>0;},()=>{detailFailed=true;detailNotice();});else if(!entryReady)prepareEntry().catch(()=>{});else openCampusInBackground();});
+  $('campus-retry').addEventListener('click',()=>{if(detailFailed)worlds.retryDetailTextures().then(refreshSurfaceDetailNotice,()=>{detailFailed=true;detailNotice();});else if(!entryReady)prepareEntry().catch(()=>{});else openCampusInBackground();});
   $('aerial').addEventListener('click',async()=>{const request=modeRequest;if(mode==='town'&&!campusReady){try{await ensureCampus();}catch{return;}if(request!==modeRequest)return;}aerial=!aerial;$('aerial').setAttribute('aria-pressed',aerial);});$('recenter').addEventListener('click',()=>{yaw=0;chapelTilt=0;aerial=false;$('aerial').setAttribute('aria-pressed','false');updateCamera(1,true);});
   $('profile').addEventListener('change',()=>{const id=$('profile').value;$('profile').value=state.activeId;if(id===state.activeId){updateActor();return;}const change=()=>{state.activeId=id;persist();helperPicker.choose();updateActor();if(mode==='studio')setMode('studio');};if(mode==='studio')leaveStudio(change);else change();});
   $('new-profile').addEventListener('click',()=>{const add=()=>{if(state.profiles.length>=24){toast('This browser already has 24 characters.');return;}const p=normaliseProfile({id:crypto.randomUUID(),name:`Character ${state.profiles.length+1}`});state.profiles.push(p);state.activeId=p.id;persist();helperPicker.choose();updateActor();setMode('studio');};if(mode==='studio')leaveStudio(add);else add();});
@@ -694,7 +698,7 @@ function animate(){
   }else {renderMotion=null;locomotion.reset();accumulator=0;actor.setWalking(false);if(mode==='studio')preview?.update(dt);}
   if(mode==='market')nightMarket.update(dt,now,camera,actor.model.position);
   if(discoveryReview)for(const npc of teachers)npc.root.visible=Boolean(discovery?.revealed());
-  if(!discovery?.cinematic())updateCamera(dt,discovery?.reduced());if(!intro?.open()){discovery?.update(mode,actor.model.position,dt);explorationTools?.update(dt,!discovery?.open()&&!explorationMenuOpen()&&!helperPicker.open()&&!echo?.open());}echo?.update(dt,actor.model.position,camera,mode!=='studio'&&!helperPicker.open()&&!aerial&&!flyover?.active&&!feedbackOpen()&&!watchingEST&&$('module-overlay').hidden&&!$('reflection-dialog').open,activeScene());positionESTPlayButton();if(!frameGate.ready())return;renderer.setViewport(0,0,viewport.width,viewport.height);renderer.setScissorTest(false);renderer.clear();
+  if(!discovery?.cinematic())updateCamera(dt,discovery?.reduced());if(!intro?.open()){discovery?.update(mode,actor.model.position,dt);explorationTools?.update(dt,!discovery?.open()&&!explorationMenuOpen()&&!helperPicker.open()&&!echo?.open());}echo?.update(dt,actor.model.position,camera,mode!=='studio'&&!helperPicker.open()&&!aerial&&!flyover?.active&&!feedbackOpen()&&!watchingEST&&$('module-overlay').hidden&&!$('reflection-dialog').open,activeScene());positionESTPlayButton();if(surfaceUploads.waitingForFrame||!frameGate.ready())return;renderer.setViewport(0,0,viewport.width,viewport.height);renderer.setScissorTest(false);renderer.clear();
   let scene=mode==='studio'?studio:activeScene();
   if(mode==='studio'){const mobile=isMobile();renderer.setViewport(0,mobile?viewport.height*.43:0,mobile?viewport.width:viewport.width-(viewport.width>900?364:316),Math.max(1,viewport.height*(mobile?.57:1)-headerHeight));}
   renderer.toneMappingExposure=mode==='town'?1:1.03;
@@ -770,6 +774,9 @@ async function boot(){
     const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();const environment=pmrem.fromScene(room,.04);room.dispose();pmrem.dispose();
     $('loading-message').textContent=studioFirst?'Opening your wardrobe…':'Loading your character and learning district...';
     const avatarReady=loadProfileKit(copy(active())).then(()=>true,()=>false);
+    // Fetch only the lightweight exterior module graph while the selected avatar
+    // has asset priority. Geometry integration still waits for the entry paths.
+    entryEnvironmentModule=import('./environment.js?v=entry-environment-20261012');entryEnvironmentModule.catch(()=>{entryEnvironmentModule=null;});
     worlds=await createWorlds(message=>{$('loading-message').textContent=message;},()=>{detailFailed=true;detailNotice();},(hydrate,options)=>surfaceUploads.schedule(hydrate,options));applyRenderQuality();
     $('loading-message').textContent='Preparing your first view...';worlds.town.environment=environment.texture;worlds.town.environmentIntensity=.28;worlds.interior.environment=environment.texture;worlds.interior.environmentIntensity=.55;worlds.careers.environment=environment.texture;worlds.careers.environmentIntensity=.55;worlds.chapel.environment=environment.texture;worlds.chapel.environmentIntensity=.35;
     THREE.Cache.clear();THREE.Cache.enabled=false;

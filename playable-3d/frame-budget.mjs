@@ -20,14 +20,15 @@ export function createGpuFrameGate(renderer,enabled=false){
 // Decoded decorative images retain their original pixels, but become visible
 // one at a time, after a frame can run. Downloads remain independently concurrent.
 export function createTextureUploadQueue({waitForFrame,upload}){
- const pending=[];let running=false;
+ const pending=[];let running=false,waitingForFrame=false;
  async function drain(){
   running=true;
   while(pending.length){
    pending.sort((a,b)=>b.priority-a.priority);
    const task=pending.shift();
-   try{await waitForFrame();const texture=task.hydrate();upload(texture);task.resolve();}
+   try{waitingForFrame=true;await waitForFrame();waitingForFrame=false;const texture=task.hydrate();upload(texture);task.resolve();}
    catch(error){task.reject(error);}
+   finally{waitingForFrame=false;}
   }
   running=false;
  }
@@ -35,5 +36,5 @@ export function createTextureUploadQueue({waitForFrame,upload}){
   const promise=new Promise((resolve,reject)=>pending.push({hydrate,priority,resolve,reject}));
   if(!running)drain();return promise;
  }
- return {schedule};
+ return {schedule,get waitingForFrame(){return waitingForFrame;}};
 }

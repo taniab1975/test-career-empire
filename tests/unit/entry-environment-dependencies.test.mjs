@@ -15,7 +15,8 @@ function staticGraph(file,seen=new Set()){
 test('entry environment static graph excludes full surroundings, gardens and learning interiors',()=>{
  const graph=staticGraph('playable-3d/environment.js');
  expect(graph.has('playable-3d/environment/market-exterior.js')).toBe(true);
- for(const file of ['surroundings.js','campus-extensions.js','media-building.js','space-building.js'])expect(graph.has('playable-3d/environment/'+file)).toBe(false);
+ for(const file of ['media-building.js','space-building.js'])expect(graph.has('playable-3d/environment/'+file)).toBe(true);
+ for(const file of ['surroundings.js','campus-extensions.js'])expect(graph.has('playable-3d/environment/'+file)).toBe(false);
  expect([...graph].some(file=>/learning-interiors|authored-garden/.test(file))).toBe(false);
 });
 test('full campus retains the deferred surroundings graph and original market shell function',()=>{
@@ -31,7 +32,7 @@ test('entry starts module and paths together but opens only after integration an
  const calls=[];
  const paths=new Promise(resolve=>{releasePaths=resolve;});
  const module=new Promise(resolve=>{releaseModule=resolve;});
- const context={entryReady:false,entryLoad:null,environmentReady:false,phase:'flourishing',
+ const context={entryReady:false,entryLoad:null,environmentReady:false,entryEnvironmentModule:null,phase:'flourishing',
   campusNotice(){},loadEnvironment(){calls.push('module');return module;},
   worlds:{loadEntry(){calls.push('paths');return paths;},phase(){calls.push('phase');},openCampus(){calls.push('open');},loadBuildingExteriors:()=>Promise.resolve()},
   showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},setTimeout(){}};
@@ -46,6 +47,6 @@ test('entry starts module and paths together but opens only after integration an
 });
 test('original building exteriors start alongside entry without becoming a readiness dependency',async()=>{
  const app=read('playable-3d/app.js');const body=app.slice(app.indexOf('async function prepareEntry(){'),app.indexOf('function prepareNextTask(')).replace("import('./environment.js?v=entry-environment-20261012')",'loadEnvironment()');
- let exteriors=0;const context={entryReady:false,entryLoad:null,environmentReady:false,phase:'flourishing',campusNotice(){},loadEnvironment:()=>Promise.resolve({integrateEnvironment:async()=>{}}),worlds:{loadEntry:()=>Promise.resolve(),phase(){},openCampus(){},loadBuildingExteriors(){exteriors++;return new Promise(()=>{});}},showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},setTimeout:fn=>fn()};
+ let exteriors=0;const context={entryReady:false,entryLoad:null,environmentReady:false,entryEnvironmentModule:null,phase:'flourishing',campusNotice(){},loadEnvironment:()=>Promise.resolve({integrateEnvironment:async()=>{}}),worlds:{loadEntry:()=>Promise.resolve(),phase(){},openCampus(){},loadBuildingExteriors(){exteriors++;return new Promise(()=>{});}},showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},setTimeout:fn=>fn()};
  vm.createContext(context);vm.runInContext(body,context);await context.prepareEntry();expect(exteriors).toBe(1);expect(context.entryReady).toBe(true);
 });

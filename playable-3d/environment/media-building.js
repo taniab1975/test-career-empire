@@ -1,4 +1,3 @@
-import {learningDisplays} from './learning-interiors.js?v=windows1';
 import * as T from 'three';
 export function buildMedia(palette){
  const root=new T.Group();root.name='English and Media — curved glazed frontage';
@@ -14,18 +13,9 @@ export function buildMedia(palette){
  const fasciaPoints=[];for(let i=0;i<=48;i++){const x=-12.3+i*24.6/48;fasciaPoints.push(new T.Vector3(x,6.59,curve(x)+.55));}const fascia=new T.Mesh(new T.TubeGeometry(new T.CatmullRomCurve3(fasciaPoints),48,.14,10,false),silver);root.add(fascia);
  // Raised limestone plinth, rear wall, visible floor and shallow furnishing establish depth behind glass.
  curvedSlab(1.05,1.05,.52,stone);box(24,5.4,.18,back,0,3.8,-2.9);
- const display=learningDisplays();
- for(const [level,y]of [1.1,3.85].entries()){
+ for(const y of [1.1,3.85]){
   // Keep floor edges inside the painted end walls; an overhang cuts through the mural.
   curvedSlab(y,.16,.13,floor,12.06);
-  for(const [i,x]of [-8,-4,0,4,8].entries()){
-   // Displays sit inside the rooms, with desks and chairs in front for parallax.
-   box(1.20,1.95,.09,wood,x,y+1.43,-2.68);display(root,(i+level*2)%6,1.10,1.78,x,y+1.43,-2.62);
-   box(2.45,.13,1.0,wood,x,y+.78,.30);for(const dx of[-.96,.96])box(.07,.73,.60,silver,x+dx,y+.365,.30);
-   box(.60,.12,.56,wood,x+.55,y+.45,1.08);box(.60,.64,.08,wood,x+.55,y+.80,1.32);
-   if(level===0&&i%2===0){box(.96,.62,.08,mat(0x203a43),x-.3,y+1.17,.22);display(root,i,.87,.51,x-.3,y+1.17,.268);box(.09,.18,.1,silver,x-.3,y+.83,.22);}
-   if(level===1&&i%2===1){box(.06,1.58,.07,wood,x-.50,y+.83,.12);display(root,4,.61,1.05,x-.50,y+1.35,.18,-.12);}
-  }
  }
  // Faceted shallow arc; every pane has real depth and restrained reflections, not an opaque blue slab.
  for(let i=0;i<12;i++){const a=-12+i*2,b=a+2,z1=curve(a),z2=curve(b),x=(a+b)/2,z=(z1+z2)/2,w=Math.hypot(2,z2-z1),angle=-Math.atan2(z2-z1,2);

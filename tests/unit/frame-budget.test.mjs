@@ -21,3 +21,16 @@ test('grass recovery overtakes queued building decoration without duplicating up
  const waiting=[],events=[];const queue=createTextureUploadQueue({waitForFrame:()=>new Promise(resolve=>waiting.push(resolve)),upload:t=>events.push(t)});
  const first=queue.schedule(()=> 'current-wall');const wall=queue.schedule(()=> 'queued-wall');const grass=queue.schedule(()=> 'grass',{priority:1});waiting.shift()();await first;waiting.shift()();await grass;expect(events).toEqual(['current-wall','grass']);waiting.shift()();await wall;expect(events).toEqual(['current-wall','grass','queued-wall']);
 });
+test('a queued upload reserves the completed GPU frame before animation can submit another',async()=>{
+ let complete=false,submitted=0;const waiting=[],uploads=[];
+ const gl={TIMEOUT_EXPIRED:1,ALREADY_SIGNALED:2,SYNC_GPU_COMMANDS_COMPLETE:3,fenceSync:()=>++submitted,clientWaitSync:()=>complete?2:1,deleteSync(){},flush(){}};
+ const gate=createGpuFrameGate({getContext:()=>gl},true);gate.submitted();
+ const queue=createTextureUploadQueue({waitForFrame:()=>new Promise(resolve=>waiting.push(resolve)),upload:t=>uploads.push(t)});
+ const hydration=queue.schedule(()=> 'original-grass');expect(queue.waitingForFrame).toBe(true);
+ complete=true;
+ // Animation must yield this opportunity to the upload callback, which runs later.
+ if(!queue.waitingForFrame&&gate.ready())gate.submitted();
+ expect(submitted).toBe(1);expect(gate.ready()).toBe(true);waiting.shift()();await hydration;
+ expect(uploads).toEqual(['original-grass']);expect(queue.waitingForFrame).toBe(false);
+ if(!queue.waitingForFrame&&gate.ready())gate.submitted();expect(submitted).toBe(2);
+});

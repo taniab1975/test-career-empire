@@ -440,7 +440,7 @@ export async function createWorlds(onProgress=()=>{},onSurfaceFailure=()=>{},sch
   function loadExterior(){
     if(!exteriorLoad)exteriorLoad=buildExterior({inGame:true,textures}).then(asset=>{
       addExteriorColliders(townPhysics.world,asset.obstacles);
-      outerAsset.root.add(asset.root);outerAsset.obstacles=asset.obstacles;addWalkingSurfaces(asset.root);
+      outerAsset.root.add(asset.root);outerAsset.obstacles=asset.obstacles;outerAsset.loadDetail=asset.loadDetail;addWalkingSurfaces(asset.root);
       // Arrival materials and their clones retain identity while receiving the
       // accepted courtyard artwork; later buildings use this same palette.
       const ready=approvedPalette(est),seen=new Set();
@@ -504,7 +504,7 @@ export async function createWorlds(onProgress=()=>{},onSurfaceFailure=()=>{},sch
   function loadScenery(){
     if(sceneryLoad)return sceneryLoad;
     scenery.status='loading';scenery.errors=[];
-    const trees=Promise.resolve();
+    const trees=Promise.all([precinct.loadDetail(),loadExterior().then(()=>outerAsset.loadDetail())]);
     // Avatar Studio is now a native campus building, so the old generic city model is retired.
     const building=Promise.resolve().then(()=>{scenery.home=true;});
     const district=loadExterior().then(()=>createCampusLandscape(town,townPhysics,palette,undefined,textures)).then(result=>{addWalkingSurfaces(result.group);Object.assign(campus,result);scenery.trees=result.placements.filter(p=>p.id.includes('eucalypt')||p.id.includes('multistem')).length;scenery.buildings=2;}).catch(error=>{scenery.errors.push('Campus: '+error.message);throw error;});

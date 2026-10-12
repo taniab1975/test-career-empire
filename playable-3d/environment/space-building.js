@@ -1,4 +1,3 @@
-import {addSportsHall} from './learning-interiors.js?v=windows1';
 import * as T from 'three';
 // SPACE revision 2: source-photo-led exterior; compact, non-enterable background asset.
 export function buildSpace(palette){
@@ -10,7 +9,6 @@ export function buildSpace(palette){
  // Long grey hall with shallow roof and a raised brick terrace.
  box(27,.5,10.7,stone,0,.25,.6);box(26.8,.09,10.5,brick,0,.545,.6);
  box(25,2.1,.25,grey,0,4.94,2.55);box(25,5.5,.25,grey,0,3.3,-4.2);box(.25,5.5,7,grey,-12.4,3.3,-.8);box(.25,5.5,7,grey,12.4,3.3,-.8);box(25,.14,7,stone,0,.63,-.8);
- addSportsHall(root,palette,box,beam);
  for(let x=-12.4;x<12.5;x+=.32)box(.025,1.99,.04,steel,x,4.94,2.701);box(25.7,.22,7.8,roof,0,6.15,-.8).rotation.z=-.025;
  // Front glazing and upper louvres, in repeated structural bays.
  for(let i=0;i<7;i++){const x=-10.8+i*3.2;

@@ -1,4 +1,5 @@
 import {addExteriorLandmarks} from './environment/exterior-landmarks.js?v=entry-environment-20261012';
+import {addTeachingExteriors} from './environment/teaching-exteriors.js?v=entry-exteriors-20261012';
 import {shadowAnchor} from './shadow-anchor.js';
 import {approvedPalette} from './environment/approved-campus-kit.js?v=first-play-20260921';
 import {partitionInstances} from './environment/static-batching.js?v=1';
@@ -46,6 +47,7 @@ function apply(name){activePhase=name;const p=presets[name];basePhase(name);worl
  world.town.traverse(o=>{if(o.isMesh){for(const m of (Array.isArray(o.material)?o.material:[o.material])){if(m.name==='ECC courtyard glass'){m.envMap=stageSky(name);m.needsUpdate=true;}if(m.map?.image?.src?.includes('grass-ecc-campus'))m.color.set(p.grass);}}});world.town.traverse(o=>{if(o.isDirectionalLight){o.shadow.normalBias=.045;o.shadow.bias=-.00012;o.color.set(p.sun);o.intensity=p.power;o.position.fromArray(p.p);o.shadow.radius=p.radius;if(o.shadow.mapSize.x!==p.map){o.shadow.mapSize.set(p.map,p.map);o.shadow.map?.dispose();o.shadow.map=null;o.shadow.needsUpdate=true;}}if(o.isAmbientLight)o.intensity=name==='flourishing'?.08:.35;if(o.isHemisphereLight){o.color.set(p.sky);o.groundColor.set(p.ground);o.intensity=p.fill;}});}
 
 addExteriorLandmarks(world.town,approvedPalette(world.est),world.campusGrass);
+addTeachingExteriors(world.town,approvedPalette(world.est));
 if(!world.exteriorLandmarkCollider){world.exteriorLandmarkCollider=world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cuboid(6,1.4,1.5).setTranslation(43,1.4,-26));}
 let surroundings=null;if(!entryOnly){const {addSurroundings}=await import('./environment/surroundings.js?v=entry-environment-20261012');surroundings=await addSurroundings(world.town,approvedPalette(world.est));}
 if(!world.town.getObjectByName('Soft campus perimeter'))polishGround(world.town);
@@ -60,7 +62,7 @@ const priorUpdate=world.baseEnvironmentUpdate||world.update;world.baseEnvironmen
  for(const sun of directional){const p=presets[activePhase].p,a=shadowAnchor(pos,p,sun.shadow.camera,sun.shadow.mapSize);sun.position.set(p[0]+a[0],p[1]+a[1],p[2]+a[2]);sun.target.position.fromArray(a);sun.target.updateMatrixWorld();}
 };
 
-if(entryOnly)return;
+if(!world.teachingExteriorColliders){
 // Closed reference building footprint where the approved Media exterior meets the playable edge.
 world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cuboid(10.95,3.6,3.25).setTranslation(-4,3.6,-37).setRotation({x:0,y:1,z:0,w:0}));
 // Newly accessible exteriors remain solid; the playing surface stays open.
@@ -78,6 +80,10 @@ block(12.92,.23,-48.75,.82,.46,1.72);
 block(12.92,.345,-48.75,.52,.69,1.2);
 block(18.4,3.5,-44.8,5.78,7,3.83);
 block(23.78,2.4,-44.755,2.98,4.8,3.74);
+world.teachingExteriorColliders=true;
+}
+
+if(entryOnly)return;
 
 for(const [x,z,w,d]of surroundings.userData.extraBeds)block(x,.22,z,w,.44,d);
 for(const {x,z} of surroundings.userData.treePlacements)world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cylinder(2,.28).setTranslation(x,2,z));
