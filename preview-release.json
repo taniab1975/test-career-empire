@@ -1,9 +1,9 @@
 {
   "repository": "taniab1975/test-career-empire",
-  "sourceCommit": "ba601220a8bc3ae209d1d7fd2bc84239f2a6251e",
+  "sourceCommit": "e72451c6786454e0ea4a2baa024645836b41126c",
   "gamePath": "playable-3d/",
   "fileCount": 623,
-  "dependencyBytes": 524894903,
+  "dependencyBytes": 524895078,
   "existingLegacyLinkWarnings": [
     "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
   ],
@@ -2300,8 +2300,8 @@
     },
     {
       "path": "playable-3d/discovery-opening.js",
-      "bytes": 35726,
-      "sha256": "3b91cef065de8d70d0f1b0aa116fcc679afbaa132e4fd6aeba9cffb4ccf5ca10"
+      "bytes": 35901,
+      "sha256": "3860a009bde387c2140e5de5523e7a6be0de75bb5d6f7e8dae4ef3642aabe27d"
     },
     {
       "path": "playable-3d/discovery-state.mjs",
