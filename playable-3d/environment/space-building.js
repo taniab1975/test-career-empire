@@ -1,6 +1,6 @@
 import * as T from 'three';
 // SPACE revision 2: source-photo-led exterior; compact, non-enterable background asset.
-export function buildSpace(palette){
+export function buildSpace(palette,textures){
  const root=new T.Group();root.name='SPACE reference-led exterior';
  const mat=(c,r=.8)=>new T.MeshStandardMaterial({color:c,roughness:r});
  const grey=mat(0xa6aaa3),blue=palette.blue,steel=mat(0x9ca8a6,.42),roof=mat(0xc8ccc4),dark=mat(0x333c3a),stone=palette.stone,brick=mat(0x9e6651),glass=palette.glass,warm=palette.glow,green=mat(0x477761);
@@ -50,7 +50,8 @@ export function buildSpace(palette){
  }
  // Bird mural uses a reference photograph sampled through an authored UV projection.
  // This keeps the distinctive original artwork rather than inventing a replacement crest.
- const texture=new T.TextureLoader().load('environment/assets/SPACE-reference.jpg');texture.colorSpace=T.SRGBColorSpace;
+ const muralURL='environment/assets/SPACE-reference.jpg',loader=new T.TextureLoader();
+ const texture=textures?textures.defer(loader,muralURL,{colour:'#31596f'}):loader.load(muralURL);texture.colorSpace=T.SRGBColorSpace;
  const mural=new T.Mesh(new T.PlaneGeometry(3.15,3.1),new T.MeshBasicMaterial({map:texture}));
  const uv=mural.geometry.attributes.uv; // source photo feature-wall patch, conservative inset
  uv.setXY(0,.397,1-.071);uv.setXY(1,.655,1-.055);uv.setXY(2,.397,1-.424);uv.setXY(3,.655,1-.424);uv.needsUpdate=true;

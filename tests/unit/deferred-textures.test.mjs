@@ -5,6 +5,13 @@ import * as THREE from '../../playable-3d/vendor/three/build/three.module.js';
 const source=readFileSync(new URL('../../playable-3d/deferred-textures.js',import.meta.url),'utf8');
 const create=vm.runInNewContext(source.replace(/^import .*;$/gm,'').replace(/export /g,'')+';createDeferredTextures;',{THREE,withAssetDeadline:p=>p,setTimeout});
 const tick=()=>new Promise(resolve=>setTimeout(resolve,5));
+test('cloned mural panels retain their source, artwork and UV crop through queued hydration',async()=>{
+ let calls=0,hydrate;const target=new THREE.Texture({src:'neutral'}),panel=target.clone(),shared=target.source;panel.offset.set(.4,.383);panel.repeat.set(.6,.617);
+ const queue=create({scheduleHydration:fn=>new Promise(resolve=>{hydrate=()=>resolve(fn());})});
+ expect(queue.defer({loadAsync:async()=>{calls++;return new THREE.Texture({src:'original-mural'});}},'mural',{target,shareSource:true})).toBe(target);expect(calls).toBe(0);
+ const batch=queue.start();await tick();expect(panel.image.src).toBe('neutral');hydrate();await batch;
+ expect(target.source).toBe(shared);expect(panel.source).toBe(shared);expect(panel.image.src).toBe('original-mural');expect(panel.offset.toArray()).toEqual([.4,.383]);expect(panel.repeat.toArray()).toEqual([.6,.617]);expect(calls).toBe(1);expect(queue.pending).toBe(0);
+});
 test('failed grass is reported and retried before held decorative downloads drain',async()=>{
  const failures=[],calls=new Map(),releases=[];
  const queue=create({onFailure:e=>failures.push(e.message)});

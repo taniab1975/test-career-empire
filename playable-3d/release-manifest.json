@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "826472f381ace1d5330ab8cd990db0ec8ac1af1730405314665573d8520e95ec"
+      "sha256": "89adf46f65621f065203ea5814a93d1871b14000c09a4945829d2b76e688761d"
     },
     {
       "path": "arcade-carnival.js",
@@ -566,7 +566,7 @@
     },
     {
       "path": "deferred-textures.js",
-      "sha256": "72b29b30b51e0c41c630a6fcfd33bebdff48be84a734f7f6ff24000f9d8b73bb"
+      "sha256": "48ecf93201d154e0f020d427fc1f03beea7ef2d5c11b26f46735db4d0da63b0e"
     },
     {
       "path": "destinations.js",
@@ -682,7 +682,7 @@
     },
     {
       "path": "ecc-preview/authored-garden.js",
-      "sha256": "4c1a380deabc3918c89afaa0d83f09ce1fbd4f4e5b155d6b16bfaf64a04b3852"
+      "sha256": "78fb0ed07f161ad861e3859d19d00579f9cbad670747446e538c932fb34dbcef"
     },
     {
       "path": "ecc-preview/courtyard-detail.js",
@@ -714,7 +714,7 @@
     },
     {
       "path": "environment.js",
-      "sha256": "e43ef1b8e841968fe7e49a62def45241c5755056619524b94bd7c2b3410ea15e"
+      "sha256": "20c3ffdff030ec6cf427d07b9b2389c95df79428990b91b19393ed67f67a38c4"
     },
     {
       "path": "environment/approved-campus-kit.js",
@@ -750,7 +750,7 @@
     },
     {
       "path": "environment/media-building.js",
-      "sha256": "cb4ee1e19b1607db899a1b01dbf5cf663ad82b079556c6057505308f4abb57d7"
+      "sha256": "b5ee7552a87bebcde40b949325184d76f5d6fd87f92b9116505043708879b290"
     },
     {
       "path": "environment/paving-network.js",
@@ -762,7 +762,7 @@
     },
     {
       "path": "environment/space-building.js",
-      "sha256": "f313863cc9486923aaddad2d5220c31b9d489ea9cbe071cd9de9226de2dc3f52"
+      "sha256": "42109ba4a38ab8c56f24238d90484157f684cb0b3948a9e2debea0f32b994a0d"
     },
     {
       "path": "environment/static-batching.js",
@@ -770,11 +770,11 @@
     },
     {
       "path": "environment/surroundings.js",
-      "sha256": "6a37a874afd7a7d4bd684d77396b599998a1394e87ed792db56013385ad5358f"
+      "sha256": "a511134fd10429e3f13349e3361b0e1b82234239bf7a32c1a4229b4367b12546"
     },
     {
       "path": "environment/teaching-exteriors.js",
-      "sha256": "ae3482dff2ac721f9c00f043f20c540447df112cbdb4f545ff2c3d3e85618b2a"
+      "sha256": "85a31f575f0c4e13184f48ca453cc61607ee60ccb0646a2a9bcdfe3ab6e0a02f"
     },
     {
       "path": "est-wall-video.js",
@@ -790,7 +790,7 @@
     },
     {
       "path": "exploration-tools.mjs",
-      "sha256": "3bed476a064aefdf08db21d657012df05ba51a61e39292ca17f55ae2f1c0f051"
+      "sha256": "8f34c852f946764b05f400c9f6398dac7b5cbb91cb7b9554d3f38f98ab47110f"
     },
     {
       "path": "field-guide.html",
@@ -938,7 +938,7 @@
     },
     {
       "path": "render-quality.mjs",
-      "sha256": "34dd19a1fd94b03ec479e0177b0361be156a647211bfcef4a119726ce2fc2875"
+      "sha256": "23b8c3355b7462408a4b9b69b51f43852b0c3058db9166a542e5b3b2cf55e2c4"
     },
     {
       "path": "reveal-layout.mjs",
@@ -1082,7 +1082,7 @@
     },
     {
       "path": "world.js",
-      "sha256": "376bc84a015498debfebd8bd1ad140045062e0b3dd00a7320826c3fcc43b51bc"
+      "sha256": "3bf889715df647ed3795be575df5238088f598f107ccb96114f89b5c8a700c47"
     }
   ],
   "estVideo": {

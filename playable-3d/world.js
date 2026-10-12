@@ -501,13 +501,15 @@ export async function createWorlds(onProgress=()=>{},onSurfaceFailure=()=>{},sch
   }
   const scenery={status:'pending',trees:0,home:false,buildings:0,errors:[]};
   let importedTrees,importedModern,importedFuture,sceneryLoad;
-  function loadScenery(){
+  const pendingDetailRoots=new Set();
+  function loadScenery({deferReveal=false}={}){
     if(sceneryLoad)return sceneryLoad;
     scenery.status='loading';scenery.errors=[];
-    const trees=Promise.all([precinct.loadDetail(),loadExterior().then(()=>outerAsset.loadDetail())]);
+    const holdDetail=root=>{root.visible=!deferReveal;pendingDetailRoots.add(root);return root;};
+    const trees=Promise.all([precinct.loadDetail().then(holdDetail),loadExterior().then(()=>outerAsset.loadDetail()).then(holdDetail)]);
     // Avatar Studio is now a native campus building, so the old generic city model is retired.
     const building=Promise.resolve().then(()=>{scenery.home=true;});
-    const district=loadExterior().then(()=>createCampusLandscape(town,townPhysics,palette,undefined,textures)).then(result=>{addWalkingSurfaces(result.group);Object.assign(campus,result);scenery.trees=result.placements.filter(p=>p.id.includes('eucalypt')||p.id.includes('multistem')).length;scenery.buildings=2;}).catch(error=>{scenery.errors.push('Campus: '+error.message);throw error;});
+    const district=loadExterior().then(()=>createCampusLandscape(town,townPhysics,palette,undefined,textures)).then(result=>{holdDetail(result.group);addWalkingSurfaces(result.group);Object.assign(campus,result);scenery.trees=result.placements.filter(p=>p.id.includes('eucalypt')||p.id.includes('multistem')).length;scenery.buildings=2;}).catch(error=>{scenery.errors.push('Campus: '+error.message);throw error;});
     sceneryLoad=Promise.all([loadExterior(),trees,building,district]).then(()=>{scenery.status='landscape-ready';}).catch(error=>{scenery.status='fallback';sceneryLoad=null;throw error;});
     return sceneryLoad;
   }
@@ -516,7 +518,7 @@ export async function createWorlds(onProgress=()=>{},onSurfaceFailure=()=>{},sch
   phase('flourishing');
   for(const o of [trunks,crowns,shrubs,garden,flowers,planting,marks,wear])o.visible=false;
   let arrivalOnly=true;
-  return {loadBuildingExteriors:()=>buildingExteriorsLoad||=(loadExterior().then(()=>createCampusBuildingExteriors(town,townPhysics,palette,textures)).then(group=>{addWalkingSurfaces(group);return group;}).catch(error=>{buildingExteriorsLoad=null;throw error;})),syncWalkingSurfaces:()=>addWalkingSurfaces(town),campusGrass:materials.grass,campusPalette:palette,loadEntry:async()=>{await loadExterior();createCampusPaths(town,palette);addWalkingSurfaces(town);},retryDetailTextures:()=>textures.retry(),get failedSurfaceDetails(){return textures.failed;},loadDetailTextures:async()=>{await loadExterior();return textures.start();},openCampus(){arrivalOnly=false;},get arrivalOnly(){return arrivalOnly;},careers,ensureCareers,shopDesk,myLifeDesk,estVideo,chapel,ensureChapel,chapelPhysics,campus,loadScenery,scenery,ensureInterior,town,interior,townPhysics,interiorPhysics,est,stations,phase,
+  return {revealCampusDetail(){for(const root of pendingDetailRoots)root.visible=true;},loadBuildingExteriors:()=>buildingExteriorsLoad||=(loadExterior().then(()=>createCampusBuildingExteriors(town,townPhysics,palette,textures)).then(group=>{addWalkingSurfaces(group);return group;}).catch(error=>{buildingExteriorsLoad=null;throw error;})),syncWalkingSurfaces:()=>addWalkingSurfaces(town),campusGrass:materials.grass,campusPalette:palette,campusTextures:textures,loadEntry:async()=>{await loadExterior();createCampusPaths(town,palette);addWalkingSurfaces(town);},retryDetailTextures:()=>textures.retry(),get failedSurfaceDetails(){return textures.failed;},loadDetailTextures:async()=>{await loadExterior();return textures.start();},openCampus(){arrivalOnly=false;},get arrivalOnly(){return arrivalOnly;},careers,ensureCareers,shopDesk,myLifeDesk,estVideo,chapel,ensureChapel,chapelPhysics,campus,loadScenery,scenery,ensureInterior,town,interior,townPhysics,interiorPhysics,est,stations,phase,
     tileKits:{grass:tileKits.grass.count,path:tileKits.path.count,asphalt:tileKits.asphalt.count,plaza:tileKits.plaza.count},
     get pendingSurfaceDetails(){return textures.pending;},
     plazaTextures:{grass:!!grassMap,stone:!!stoneMap,asphalt:!!asphaltMap,dash:!!dashMap,crosswalk:!!crosswalkMap,curb:!!curbMap},

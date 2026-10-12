@@ -5,6 +5,7 @@ import {addTeachingDetail} from './teaching-exteriors.js?v=entry-exteriors-20261
 import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+import {thinGeometry} from '../ecc-preview/authored-garden.js?v=annotations1';
 // Stage 2 composition study. Reference-derived silhouettes, not enterable buildings.
 export async function addSurroundings(scene,palette){
  const existing=scene.getObjectByName('Approved campus surroundings and connections');if(existing)return existing;
@@ -26,6 +27,14 @@ export async function addSurroundings(scene,palette){
  for(let i=0;i<18;i++)trees.push({x:-32+i*4.3,z:34+(i%2)*.5,h:6.6+(i%3)*.3});
  for(let i=0;i<14;i++)trees.push({x:-27+i*4.1,z:-72+(i%2)*.5,h:6.5+(i%3)*.35});
  root.userData.treePlacements=trees;
- asset.scene.traverse(o=>{if(!o.isMesh)return;const geo=o.geometry.clone().applyMatrix4(o.matrixWorld).applyMatrix4(normal);const inst=new T.InstancedMesh(geo,o.material,trees.length);inst.name='Oval edge eucalypts';trees.forEach(({x,z,h},i)=>{const scale=h/height;inst.setMatrixAt(i,new T.Matrix4().compose(new T.Vector3(x,0,z),new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),i*1.7),new T.Vector3(scale,scale,scale)));});inst.castShadow=inst.receiveShadow=true;inst.computeBoundingSphere();root.add(inst);});
+ asset.scene.traverse(o=>{
+  if(!o.isMesh)return;const geo=o.geometry.clone().applyMatrix4(o.matrixWorld).applyMatrix4(normal);
+  const instances=geometry=>{const inst=new T.InstancedMesh(geometry,o.material,trees.length);inst.name='Oval edge eucalypts';trees.forEach(({x,z,h},i)=>{const scale=h/height;inst.setMatrixAt(i,new T.Matrix4().compose(new T.Vector3(x,0,z),new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),i*1.7),new T.Vector3(scale,scale,scale)));});inst.castShadow=inst.receiveShadow=true;inst.computeBoundingSphere();return inst;};
+  if(!/^leaf/.test(o.material.name)){root.add(instances(geo));return;}
+  // Retain every original trunk and source leaf; software Auto samples the
+  // existing leaf quads. Hardware and explicit High keep the complete asset.
+  const high=new T.Group(),low=new T.Group();high.add(instances(geo));low.add(instances(thinGeometry(geo,6,4)));
+  const lod=new T.LOD();lod.name='Campus boundary tree detail';lod.userData.softwareDetail=true;lod.addLevel(high,0);lod.addLevel(low,Infinity);root.add(lod);
+ });
  scene.add(root);return root;
 }

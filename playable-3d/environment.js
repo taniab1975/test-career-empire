@@ -47,7 +47,7 @@ function apply(name){activePhase=name;const p=presets[name];basePhase(name);worl
  world.town.traverse(o=>{if(o.isMesh){for(const m of (Array.isArray(o.material)?o.material:[o.material])){if(m.name==='ECC courtyard glass'){m.envMap=stageSky(name);m.needsUpdate=true;}if(m.map?.image?.src?.includes('grass-ecc-campus'))m.color.set(p.grass);}}});world.town.traverse(o=>{if(o.isDirectionalLight){o.shadow.normalBias=.045;o.shadow.bias=-.00012;o.color.set(p.sun);o.intensity=p.power;o.position.fromArray(p.p);o.shadow.radius=p.radius;if(o.shadow.mapSize.x!==p.map){o.shadow.mapSize.set(p.map,p.map);o.shadow.map?.dispose();o.shadow.map=null;o.shadow.needsUpdate=true;}}if(o.isAmbientLight)o.intensity=name==='flourishing'?.08:.35;if(o.isHemisphereLight){o.color.set(p.sky);o.groundColor.set(p.ground);o.intensity=p.fill;}});}
 
 addExteriorLandmarks(world.town,approvedPalette(world.est),world.campusGrass);
-addTeachingExteriors(world.town,approvedPalette(world.est));
+addTeachingExteriors(world.town,approvedPalette(world.est),world.campusTextures);
 if(!world.exteriorLandmarkCollider){world.exteriorLandmarkCollider=world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cuboid(6,1.4,1.5).setTranslation(43,1.4,-26));}
 let surroundings=null;if(!entryOnly){const {addSurroundings}=await import('./environment/surroundings.js?v=entry-environment-20261012');surroundings=await addSurroundings(world.town,approvedPalette(world.est));}
 if(!world.town.getObjectByName('Soft campus perimeter'))polishGround(world.town);

@@ -1,6 +1,6 @@
 # Test copy repair status
 
-Updated 2026-10-12 16:36 UTC. Environment commands and files are available;
+Updated 2026-10-12 16:55 UTC. Environment commands and files are available;
 this task has resumed as sole writer. Only `taniab1975/test-career-empire` (1415756807).
 Seed `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. Repairs were implemented here;
@@ -12,7 +12,7 @@ the untransferred Mac candidate was not imported. No production deployment.
 | --- | --- |
 | Locked dependency install | Passed; dependencies unchanged |
 | Seed source/release verification | 269 exact hashes, 81 runtime modules |
-| Current units | 191 passed (seed: 187) |
+| Current units | 194 passed (seed: 187) |
 | Browser launch | Chromium 154.0.8037.57 with `chromiumSandbox: true` |
 | Failed grass → Retry → original surfaces restored → warning hidden | Existing browser regression passed; deadlines/assertions unchanged |
 | Desktop video → Start exploring → both exteriors in view → walking → automatic parcel → Chapel picture development | Passed; measured handover 6.847 s; player z 23.3 → 16.522; rendered frame 72 → 92 |
@@ -60,7 +60,10 @@ runtime repairs. Existing acceptance deadlines were not increased.
 Review found a `block` helper scope regression in the entry/full split. The helper
 is now shared by both paths; a new unit and real browser geometry test pass the
 entry-to-full transition and repeated collider integration. Visible full-campus
-rendering is still under verification.
+rendering now passes the focused browser test: full aerial screenshot, one teaching
+root, learning rooms, additional colliders and no page errors. Earlier runs had
+roughly 4.1 million aerial triangles; source-leaf detail is now bounded for software
+Auto while native hardware/High keep original detail.
 
 The original Chapel failure screenshot is at Administration. A live keyboard/map
 route reaches the actual Chapel door, enters the interior, and the exit snapshot
@@ -84,3 +87,10 @@ at this report checkpoint.
 The full browser suite has not been run. Generated logs, screenshots and JSON
 remain under ignored `coverage/`. Use
 `npx playwright test --config playwright.cloud-sandbox.config.mjs` for focused checks.
+
+Current checkpoint: both teacher assets and required animations decode in a real
+browser harness (1.6 s), but the integrated returning-photo flow still has zero
+teachers after its unchanged 60-second wait. A bounded loading probe is next.
+Mural textures now use the deferred surface queue; cloned panel source identity
+and UV crops have a passing unit regression. Chapel timing, photo/companion/teacher
+flows and Market/Admin remain incomplete; no broad suite is being run.

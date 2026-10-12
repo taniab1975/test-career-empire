@@ -309,7 +309,7 @@ async function ensureCampus(){
     THREE.Cache.enabled=true;
     try{
       await prepareEntry();
-      const results=await Promise.allSettled([worlds.loadScenery()]);
+      const results=await Promise.allSettled([worlds.loadScenery({deferReveal:true})]);
       const failure=results.find(result=>result.status==='rejected');if(failure)throw failure.reason;
       await new Promise(resolve=>setTimeout(resolve,0));
       if(!environmentReady){
@@ -318,7 +318,7 @@ async function ensureCampus(){
         try{await integrateEnvironment(worlds);worlds.syncWalkingSurfaces();environmentReady=true;}
         catch(error){for(const child of [...worlds.town.children])if(!before.has(child))child.removeFromParent();throw error;}
       }
-      worlds.phase(phase);worlds.openCampus();campusReady=true;worlds.scenery.status='ready';showMarketExteriorSigns();
+      worlds.phase(phase);worlds.revealCampusDetail();worlds.openCampus();campusReady=true;worlds.scenery.status='ready';showMarketExteriorSigns();
       worlds.scenery.errors=[];canvas.dataset.campusReadyMs=String(Math.round(performance.now()));
       campusNotice('Campus ready');startSurfaceDetail();if(detailFailed)detailNotice();
     }catch(error){
@@ -484,7 +484,7 @@ function applyRenderQuality(){
  const quality=renderQuality(renderBackend,$('quality').value,devicePixelRatio);let changed=false;
  if(renderer.shadowMap.enabled!==quality.shadows){renderer.shadowMap.enabled=quality.shadows;changed=true;}
  if(renderer.getPixelRatio()!==quality.pixelRatio){renderer.setPixelRatio(quality.pixelRatio);resize();changed=true;}
- worlds.town.traverse(o=>{if(o.isDirectionalLight&&o.castShadow&&o.shadow.mapSize.x!==quality.shadowSize){o.shadow.mapSize.set(quality.shadowSize,quality.shadowSize);o.shadow.map?.dispose();o.shadow.map=null;o.shadow.needsUpdate=true;changed=true;}});
+ worlds.town.traverse(o=>{if(o.isDirectionalLight&&o.castShadow&&o.shadow.mapSize.x!==quality.shadowSize){o.shadow.mapSize.set(quality.shadowSize,quality.shadowSize);o.shadow.map?.dispose();o.shadow.map=null;o.shadow.needsUpdate=true;changed=true;}if(o.isLOD){const distance=o.userData.softwareDetail||o.userData.heroDetail?(quality.software&&!quality.shadows?0:Infinity):quality.plantDistance;if((o.userData.softwareDetail||o.name==='Campus planting distance detail')&&o.levels[1].distance!==distance){o.levels[1].distance=distance;changed=true;}}});
  return changed;
 }
 function resize(){
