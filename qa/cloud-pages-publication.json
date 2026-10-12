@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-12T20:25:03.995109+00:00",
+  "checkedAt": "2026-10-12T21:17:49.174581+00:00",
   "repository": "taniab1975/test-career-empire",
   "repositoryId": 1415756807,
   "branch": "gh-pages",
-  "artifactCommit": "170b7989b26482560c03e35b05e9de58bf5b6970",
-  "sourceCommit": "4d282b3c1b593583ce9630fbf1023ccdbcc1951c",
+  "artifactCommit": "bc412a4d59d842b666123eb3fb7f15ef142f7934",
+  "sourceCommit": "f7331060ce86ef1eedecf4e6a1271a68e36d4689",
   "files": 623,
-  "bytes": 525003217,
+  "bytes": 525005414,
   "branchPushed": true,
   "MiB": 500.68,
   "pagesPublishedLimitBytes": 1000000000,
@@ -20,9 +20,9 @@
   ],
   "httpVerification": {
     "baseURL": "http://127.0.0.1:4291/test-career-empire/",
-    "sourceCommit": "4d282b3c1b593583ce9630fbf1023ccdbcc1951c",
+    "sourceCommit": "f7331060ce86ef1eedecf4e6a1271a68e36d4689",
     "verifiedHttpFiles": 620,
-    "verifiedBytes": 524886019,
+    "verifiedBytes": 524888216,
     "mediaRange": "206, 64 bytes",
     "existingLegacyLinkWarnings": [
       "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
@@ -48,8 +48,8 @@
   "liveBrowserVerified": false,
   "credentialsGrantsSecurityChanged": false,
   "ECCDeploymentChanged": false,
-  "priorArtifactCommit": "8d6849191a9d2aab5bf75a97615a01477291dce0",
-  "browserTestedGameFilesUnchanged": 619,
-  "stagedBrowserEvidence": "qa/cloud-final-acceptance.json",
-  "visualStartupCompletenessAccepted": false
+  "priorArtifactCommit": "170b7989b26482560c03e35b05e9de58bf5b6970",
+  "stagedBrowserEvidence": "qa/cloud-visibility-chapel-checkpoint.json",
+  "visualStartupCompletenessAccepted": true,
+  "coldEightSecondTargetAccepted": false
 }

@@ -31,7 +31,7 @@ for that owner action. No grant is being requested by this plan.
 2. The exporter builds from the verified release manifest, reachable runtime graph,
    HTML/CSS dependencies, dynamic avatar/helper catalog assets and linked course,
    My Life and Administration resources. Fail the export for missing files.
-   The completed export has 623 files totaling 525,003,217 bytes (500.68 MiB),
+   The completed export has 623 files totaling 525,005,414 bytes (500.68 MiB),
    below 1 GB. All 620 dependency files matched their expected hashes through
    HTTP at `/test-career-empire/`; video byte ranges returned 206. GLB external
    images and phone models retain their actual loader resource bases. One
@@ -64,8 +64,8 @@ The expected game path after a verified deployment is
 
 ## Current branch and exact blockers
 
-Source: `4d282b3c1b593583ce9630fbf1023ccdbcc1951c`. Export:
-`170b7989b26482560c03e35b05e9de58bf5b6970` on `gh-pages`; both remote
+Source: `f7331060ce86ef1eedecf4e6a1271a68e36d4689`. Export:
+`bc412a4d59d842b666123eb3fb7f15ef142f7934` on `gh-pages`; both remote
 heads were verified. Source-only status/test scripts remain on `main`.
 
 The existing CLI Pages read returned:
@@ -84,3 +84,9 @@ credential, security or production-repository change is requested.
 Detailed publication evidence: `qa/cloud-pages-publication.json`. Reproduction:
 `python3 scripts/export-test-pages.py coverage/new-export/test-career-empire`;
 HTTP verification: `python3 scripts/verify-test-pages.py <permitted-base-url/> <source-commit>`.
+
+Initial rear-building visibility and actual parcel walking pass on the rebuilt
+project-prefix export; the unchanged eight-second cold handover target remains
+unaccepted. Natural video/Chapel/mural now passes. See
+`qa/cloud-visibility-chapel-checkpoint.json`. No Pages permission/public URL retry
+was made in this visibility repair batch.
