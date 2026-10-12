@@ -1,8 +1,8 @@
 {
-  "release": "test-entry-exteriors-20261012",
+  "release": "test-visible-entry-20261012",
   "gameUrl": "/playable-3d/",
   "baseCommit": "cb05d4ef12addb53f0c744655bfbb19261f18671",
-  "scope": "Personal test copy: complete teaching exterior entry, deferred botanical and learning detail, and fair original-texture uploads. Browser acceptance is reported separately.",
+  "scope": "Personal test copy: complete entry exterior geometry, unobstructed arrival camera, completed scene handover and deferred heavy campus detail. Browser acceptance and cold handover timing failures are reported separately.",
   "files": [
     {
       "path": "../Assets/EST Preparation/initiative-one-page-summary.png",
@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "28d0078205273206d5e1084e936da0b97f5c4dad8ab0d9ff0d635bbb94ca3b92"
+      "sha256": "f4ff96be7807362df37ad728d1ddb1078d1a4ea5d592265e71fec8aa5e57b90d"
     },
     {
       "path": "arcade-carnival.js",
@@ -550,7 +550,7 @@
     },
     {
       "path": "camera-clearance.mjs",
-      "sha256": "31851ba40ad4bce96c275caea2ea29244a33bad032885be4c4666c8ac439ecc2"
+      "sha256": "1ee758c77a90c64a0ab51aae06694e4ac6e23a7b7fb0899926c02c37a121d5f3"
     },
     {
       "path": "campus-landscape.js",
@@ -806,7 +806,7 @@
     },
     {
       "path": "frame-budget.mjs",
-      "sha256": "937ab68a4adf9ed1d19ba1aaa29ceead2a076735307ff8316be229ecb24de995"
+      "sha256": "d5b05e74660c41337ec1a36f36fd42645ee7eb7b48162e6ddad6002cecb9bbe0"
     },
     {
       "path": "game-session.mjs",

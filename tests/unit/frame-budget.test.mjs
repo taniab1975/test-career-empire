@@ -34,3 +34,10 @@ test('a queued upload reserves the completed GPU frame before animation can subm
  expect(uploads).toEqual(['original-grass']);expect(queue.waitingForFrame).toBe(false);
  if(!queue.waitingForFrame&&gate.ready())gate.submitted();expect(submitted).toBe(2);
 });
+
+test('first-view completion belongs to a real completed submission, never an invalid second draw',()=>{
+ let complete=false;const gl={TIMEOUT_EXPIRED:1,SYNC_GPU_COMMANDS_COMPLETE:3,fenceSync:()=>({}),clientWaitSync:()=>complete?2:1,deleteSync(){},flush(){}};
+ const gate=createGpuFrameGate({getContext:()=>gl},true);gate.submitted();expect(gate.submittedFrame).toBe(1);expect(gate.completedFrame).toBe(0);
+ expect(()=>gate.submitted()).toThrow('preceding frame');expect(gate.submittedFrame).toBe(1);
+ complete=true;expect(gate.ready()).toBe(true);expect(gate.completedFrame).toBe(1);
+});

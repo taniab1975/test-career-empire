@@ -32,10 +32,10 @@ test('entry starts module and paths together but opens only after integration an
  const calls=[];
  const paths=new Promise(resolve=>{releasePaths=resolve;});
  const module=new Promise(resolve=>{releaseModule=resolve;});
- const context={entryReady:false,entryLoad:null,environmentReady:false,entryEnvironmentModule:null,phase:'flourishing',
+ const context={entryReady:false,entryFailure:false,mode:'town',entryLoad:null,environmentReady:false,entryEnvironmentModule:null,phase:'flourishing',
   campusNotice(){},loadEnvironment(){calls.push('module');return module;},
   worlds:{loadEntry(){calls.push('paths');return paths;},phase(){calls.push('phase');},openCampus(){calls.push('open');},loadBuildingExteriors:()=>Promise.resolve()},
-  showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},setTimeout(){}};
+  showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},updateCamera(){},waitForVisibleEntryFrame:async()=>{},updateEntryLoading(){},setTimeout(){}};
  const app=read('playable-3d/app.js');
  const body=app.slice(app.indexOf('async function prepareEntry(){'),app.indexOf('function prepareNextTask('))
   .replace("import('./environment.js?v=entry-environment-20261012')",'loadEnvironment()');
@@ -45,8 +45,17 @@ test('entry starts module and paths together but opens only after integration an
  releaseModule({integrateEnvironment:async()=>{calls.push('integrate');}});await ready;
  expect(calls).toEqual(['module','paths','integrate','phase','open']);expect(context.entryReady).toBe(true);
 });
-test('original building exteriors start alongside entry without becoming a readiness dependency',async()=>{
+test('original exterior geometry must complete before entry, without waiting for optional interiors or trees',async()=>{
  const app=read('playable-3d/app.js');const body=app.slice(app.indexOf('async function prepareEntry(){'),app.indexOf('function prepareNextTask(')).replace("import('./environment.js?v=entry-environment-20261012')",'loadEnvironment()');
- let exteriors=0;const context={entryReady:false,entryLoad:null,environmentReady:false,entryEnvironmentModule:null,phase:'flourishing',campusNotice(){},loadEnvironment:()=>Promise.resolve({integrateEnvironment:async()=>{}}),worlds:{loadEntry:()=>Promise.resolve(),phase(){},openCampus(){},loadBuildingExteriors(){exteriors++;return new Promise(()=>{});}},showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},setTimeout:fn=>fn()};
- vm.createContext(context);vm.runInContext(body,context);await context.prepareEntry();expect(exteriors).toBe(1);expect(context.entryReady).toBe(true);
+ let exteriors=0,releaseExterior;const exterior=new Promise(resolve=>releaseExterior=resolve);const context={entryReady:false,entryFailure:false,mode:'town',entryLoad:null,environmentReady:false,entryEnvironmentModule:null,phase:'flourishing',campusNotice(){},loadEnvironment:()=>Promise.resolve({integrateEnvironment:async()=>{}}),worlds:{loadEntry:()=>Promise.resolve(),phase(){},openCampus(){},loadBuildingExteriors(){exteriors++;return exterior;}},showMarketExteriorSigns(){},clock:{getElapsedTime:()=>1},$:()=>({hidden:false}),startSurfaceDetail(){},updateCamera(){},waitForVisibleEntryFrame:async()=>{},updateEntryLoading(){},setTimeout:fn=>fn()};
+ vm.createContext(context);vm.runInContext(body,context);const ready=context.prepareEntry();await Promise.resolve();expect(exteriors).toBe(1);expect(context.entryReady).toBe(false);releaseExterior();await ready;expect(context.entryReady).toBe(true);
+});
+test('entry frame barrier waits for a completed Town draw and keeps its first submission target',async()=>{
+ const queued=[];let painted=0,finished=false;
+ const context={entrySceneFrame:4,frameGate:{completedFrame:4,ready:()=>true},requestAnimationFrame:fn=>queued.push(fn),afterFirstPaint:async()=>painted++};
+ const app=read('playable-3d/app.js'),source=app.slice(app.indexOf('async function waitForVisibleEntryFrame(){'),app.indexOf('async function prepareEntry(){'));
+ const wait=vm.runInNewContext(source+';waitForVisibleEntryFrame;',context),ready=wait().then(()=>finished=true);
+ context.frameGate.completedFrame=100;queued.shift()();await Promise.resolve();expect(finished).toBe(false); // Other scenes do not qualify.
+ context.frameGate.completedFrame=4;context.entrySceneFrame=5;queued.shift()();await Promise.resolve();expect(finished).toBe(false);
+ context.entrySceneFrame=6;context.frameGate.completedFrame=5;queued.shift()();await ready;expect(finished).toBe(true);expect(painted).toBe(1);
 });

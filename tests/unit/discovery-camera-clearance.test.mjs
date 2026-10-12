@@ -1,6 +1,6 @@
 import {test,expect} from 'vitest';
 import {Vector3} from '../../playable-3d/vendor/three/build/three.module.js';
-import {keepOutdoorClearance,keepChapelClearance,insideCanopy} from '../../playable-3d/camera-clearance.mjs';
+import {keepOutdoorClearance,keepChapelClearance,insideCanopy,campusEntryFraming} from '../../playable-3d/camera-clearance.mjs';
 const T={Vector3},p=new Vector3();
 test('clear views stay untouched; obstructed close view can recover above a low obstacle',()=>{
  const camera={position:new Vector3(0,3,6)};const clear={protectCamera(){throw Error('clear view should not be retraced');}};
@@ -21,3 +21,10 @@ test('outdoor recovery rejects a nearly vertical top-of-head view',()=>{const ca
 
 test('a normal trailing camera cannot stay inside the authored canopy above the Chapel approach',()=>{const p=new Vector3(-2,0,-16.5),camera={position:new Vector3(-2,3.1,-11)};expect(keepOutdoorClearance(T,{protectCamera(){}},p,camera,0)).toBe(true);expect(insideCanopy(camera.position)).toBe(false);expect(p.toArray()).toEqual([-2,0,-16.5]);});
 test('Market exit keeps the player visible outside the roof overhang and preserves collision checks',()=>{const p=new Vector3(43,0,-17.8),camera={position:new Vector3(43,3.1,-24.2)},calls=[];expect(insideCanopy(camera.position)).toBe(true);expect(keepOutdoorClearance(T,{protectCamera(inside,player,candidate){calls.push(candidate.clone());expect(inside).toBe(false);expect(player).toBe(p);}},p,camera,Math.PI)).toBe(true);expect(insideCanopy(camera.position)).toBe(false);expect(calls.length).toBeGreaterThan(0);expect(p.toArray()).toEqual([43,0,-17.8]);});
+
+test('Arrival Gardens shows the rear campus and smoothly returns to normal walking framing',()=>{
+ const entry=campusEntryFraming({x:-7,z:23.3});expect(entry).toMatchObject({blend:1,distance:18,height:11,lookAhead:12,bias:6,fov:55});
+ const chapel=campusEntryFraming({x:-3.15,z:-8.8});expect(chapel).toMatchObject({blend:0,distance:6.4,height:3.1,lookAhead:.6,bias:0});
+ const halfway=campusEntryFraming({x:-7,z:13.5});expect(halfway.blend).toBe(.5);expect(halfway.height).toBeGreaterThan(chapel.height);expect(halfway.height).toBeLessThan(entry.height);
+ expect(campusEntryFraming({x:-19,z:23.3}).blend).toBe(0);expect(campusEntryFraming({x:-7,z:23.3},true)).toMatchObject({height:14,fov:78});
+});
