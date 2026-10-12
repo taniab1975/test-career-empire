@@ -3,7 +3,7 @@ import {installMarketTimingProbe} from './market-timing-probe.js';
 
 test('actual photo review precedes accurate orientation handover, Mara map target and Market entry',async({page},info)=>{
  test.setTimeout(120000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await installMarketTimingProbe(page,{extraSource:`\nwindow.handoverProbe=()=>({pageMs:performance.now(),mode,frame:renderedFrames,position:actor.model.position.toArray(),discovery:discovery.snapshot(),tools:explorationTools.snapshot()});`});
+ await installMarketTimingProbe(page,{extraSource:`\nwindow.handoverProbe=()=>({pageMs:performance.now(),mode,frame:renderedFrames,position:actor?.model?.position.toArray(),discovery:discovery?.snapshot(),tools:explorationTools?.snapshot()});`});
  // Explicit post-mural fixture; the teachers, cast photo, rewards and navigation
  // below use the ordinary student controls and actual rendered game.
  await page.addInitScript(()=>{const c=document.createElement('canvas');c.width=c.height=10;sessionStorage.setItem('ce-game-run-handoff-v1',JSON.stringify({id:'orientation-handover',createdAt:Date.now(),data:{'ce-taster-intro-v1:avery':'seen','ce-missing-frame-local-review-v1':JSON.stringify({step:4,developed:true,chapelVisited:true,shots:{mural:{label:'Post-mural fixture',image:c.toDataURL('image/jpeg')}},souvenir:null})}}));});

@@ -1,5 +1,5 @@
 {
-  "release": "test-visual-restoration-handover-20261012",
+  "release": "test-mural-manual-guard-20261012",
   "gameUrl": "/playable-3d/",
   "baseCommit": "cb05d4ef12addb53f0c744655bfbb19261f18671",
   "scope": "Personal test copy: original student camera, original opening trees and gardens, complete exterior geometry and actual completed entry frame; restored world phases, original rendered mural and accurate photo-to-Mara handover. Deferred interiors and decorative detail remain separate. Exact failures are recorded in QA.",
@@ -590,7 +590,7 @@
     },
     {
       "path": "discovery-opening.js",
-      "sha256": "3b91cef065de8d70d0f1b0aa116fcc679afbaa132e4fd6aeba9cffb4ccf5ca10"
+      "sha256": "3860a009bde387c2140e5de5523e7a6be0de75bb5d6f7e8dae4ef3642aabe27d"
     },
     {
       "path": "discovery-state.mjs",
