@@ -28,6 +28,9 @@ test('stalled Market import has bounded recovery, fresh retry and no late naviga
   h.pending[0].resolve(h.kit);await Promise.resolve();expect(h.created()).toBe(0);const retry=h.api.openMarket();expect(h.urls[1]).toContain('&retry=1');h.pending[1].resolve(h.kit);await retry;expect(h.modes).toEqual(['market']);expect(h.created()).toBe(1);
  }finally{vi.useRealTimers();}
 });
+function exitHarness(){const pending=deferred(),modes=[],teleports=[];const context={mode:'market',modeRequest:1,marketLeaving:false,resetNavigationInput(){},actor:{setWalking(){},model:{position:{copy(){}},rotation:{}}},ensureCampus:()=>pending.promise,setMode:async mode=>{context.mode=mode;context.modeRequest++;modes.push(mode);},worlds:{teleport:(...p)=>teleports.push(p),position:()=>({})},performance:{now:()=>100},marketTravelCooldownUntil:0,yaw:0,updateCamera(){},setLocation(){},canvas:{focus(){}},toast(){}};const source=app.slice(app.indexOf('async function leaveMarketByGate(){'),app.indexOf('function returnTown(){'));const leave=vm.runInNewContext(source+';leaveMarketByGate;',context);return {pending,modes,teleports,context,leave};}
+test('a newer Market choice owns navigation while an earlier physical exit prepares campus',async()=>{const h=exitHarness(),exit=h.leave();h.context.modeRequest++;h.pending.resolve();await exit;expect(h.modes).toEqual([]);expect(h.teleports).toEqual([]);expect(h.context.marketLeaving).toBe(false);});
+test('an unchanged physical exit reaches campus once and releases its guard',async()=>{const h=exitHarness(),exit=h.leave();h.pending.resolve();await exit;expect(h.modes).toEqual(['town']);expect(h.teleports).toEqual([[false,43,-17.8]]);expect(h.context.marketLeaving).toBe(false);});
 function teacherHarness(failures){
  let now=0;const urls=[];
  const source=app.slice(app.indexOf('function updateTeacherLoading(){'),app.indexOf('function greetTeacher(')).replace(/import\(([^)]+)\)/g,'importTeachers($1)');

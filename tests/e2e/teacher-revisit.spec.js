@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-async function state(page){return page.locator('#diagnostics').evaluate(e=>JSON.parse(e.dataset.state||'{}'));}
+async function state(page){return page.evaluate(()=>JSON.parse(document.querySelector('#diagnostics').dataset.state||'{}'));}
 async function options(page){if(!await page.locator('#exploration-options').evaluate(e=>e.open))await page.locator('#exploration-options > summary').click({timeout:5000});}
 async function closeOptions(page){if(await page.locator('#exploration-options').evaluate(e=>e.open))await page.locator('#exploration-options > summary').click({timeout:5000});}
 async function trail(page){await options(page);if(!await page.locator('#exploration-trail-options').evaluate(e=>e.open))await page.locator('#exploration-trail-options > summary').click({timeout:5000});}

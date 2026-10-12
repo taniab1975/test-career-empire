@@ -1,6 +1,6 @@
 # Test copy repair status
 
-Updated 2026-10-12 19:01 UTC. Only `taniab1975/test-career-empire`
+Updated 2026-10-12 19:49 UTC. Only `taniab1975/test-career-empire`
 (GitHub ID 1415756807) is authorized. Seed
 `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. The Mac candidate was not
@@ -11,7 +11,7 @@ imported. No production repository or deployment was changed.
 | Check | Result / evidence |
 | --- | --- |
 | Locked dependencies and source | Installed; source checks pass; 270 exact hashes, 82 runtime modules |
-| Units | 209 passed in 49 files on the latest repairs; seed had 187 |
+| Units | 212 passed in 49 files on the latest repairs; seed had 187 |
 | Supported browser | Chromium 154.0.8037.57, `chromiumSandbox: true` |
 | Desktop intro video → Start exploring → exterior campus → actual walking → automatic parcel → develop Chapel picture | Passed; handover 6.847 s; player z 23.3 → 16.522; rendered frame 72 → 92 |
 | Phone startup at 390 × 844 | Earlier focused check passed; not repeated after the later teacher/photo changes |
@@ -28,6 +28,10 @@ imported. No production repository or deployment was changed.
 | Actual desktop keyboard entrance to Administration | Passed in 72.0 s: west doorway → reception → Nora/Signal or Spin → opportunities → Market return; same run and $18 retained; screenshots inspected |
 | Pending Market → Character Studio, then late import finishes | Browser passed in 17.3 s; Studio stays visible, rendering continues and late completion cannot change destination |
 | Paused Stats metadata and honest frame counter | Browser passed in 38.3 s; actual Save $5 updates UI and diagnostics ($18 → $13, savings $5) while frame count remains 40 |
+| Physical walking Market gate, two cycles | Passed in 96.5 s within original 120-second budget; same run, accepted shift/events unchanged; clear outside-player screenshot inspected |
+| Mara progressive briefing | Passed in 89.8 s: walking, real 768px images, pause/next, skip/replay, accept and progressive signs |
+| Actual guest initiative shift | Passed in 73.1 s: real walking/setup/trial/inspection/learning handover; $18 net, $2 community contribution and crew pass; repeat pay unavailable/events unchanged |
+| Actual mural shot → natural keyboard oval arrival → visible teachers | Passed in 78.6 s from explicit post-Chapel fixture; preload 41 ms after shot, ready at 8.047 s, ready 14.972 s before arrival; both actual models visibly rendered |
 | Review failure/retry units | Six runtime regressions and cancellation/deadline helper checks pass; automatic teacher-module retry is bounded and explicit retry recovers |
 
 Entry evidence: `qa/cloud-startup-evidence.json`. Companion scene bounds and
@@ -39,7 +43,10 @@ Market and photo evidence is retained in `coverage/market-transition-after-evide
 and `coverage/photo-market-after-evidence/`.
 Latest acceptance and review-fix results: `qa/cloud-acceptance-checkpoint.json`.
 Admin screenshots and logs: `coverage/batch-admin-walk-after-evidence/` and
-`coverage/batch-admin-walk-after.log`. No browser or test session is running.
+`coverage/batch-admin-walk-after.log`. No browser or test session is running. Environment commands/files/browser remained
+available after the reported 19:44 disconnect; no restart occurred.
+Latest student journey evidence: `qa/cloud-student-journeys.json` and
+`coverage/journeys-final-focused-evidence/`.
 
 ## Failed / incomplete
 
@@ -51,11 +58,11 @@ Admin screenshots and logs: `coverage/batch-admin-walk-after-evidence/` and
   approaches that budget on software graphics. A 55-second gap across companion
   Skip and return-to-photo controls preceded the repaired handoff in the latest
   run; further UI/render profiling is warranted. No deadline was increased.
-- Teacher parsing by 30.9 s is still too slow to claim ready-by-arrival. Automatic
-  preload starts only in town after the mural checkpoint (step ≥ 3), within 28 m
-  of the oval; it can advance while clue/options UI pauses movement. Natural
-  journey readiness at arrival has not been measured. No teacher preload is
-  introduced before the Chapel/mural checkpoint.
+- Earlier returning-photo teacher parsing took 30.9 s. Natural arrival is now
+  measured separately: no teacher requests before the real mural shot; both
+  loaded by 8.047 s after the shot and were ready 14.972 s before the normal
+  keyboard arrival. The visible invitation screenshot confirms both models.
+  No teacher preload is introduced before the Chapel/mural checkpoint.
 - The first companion check sampled zero in-frustum meshes immediately after
   readiness. Runtime unchanged, the bounds/screenshot rerun passes. Acceptance
   now polls actual in-view geometry, active-scene parenting and rendered-frame
@@ -66,11 +73,29 @@ Admin screenshots and logs: `coverage/batch-admin-walk-after-evidence/` and
   60-second total budget. It recovers from the 15-second import deadline and
   retries into Market; the failure snapshot shows opening=false and actual
   keyboard travel to z=5.257. The whole timing case remains failed.
-- Physical Market exit/re-entry, progressive Mara briefing, phone keyboard Admin
-  entry, natural teacher ready-by-arrival and persistent teacher revisit: not run
-  in this checkpoint. Stronger Stats tax-history assertions are added but their
-  rerun is pending. Earlier startup/photo passes have not been repeated after
-  these review fixes.
+- Persistent teacher revisit failed its first 60-second invite wait before the
+  latest cinematic timing/travel-priority repair. Its failure snapshot eventually
+  shows invite and both teachers visible; the complete return/reaction path is
+  not accepted. A post-repair revisit rerun remains pending.
+- Phone versions of the latest journey checks, phone keyboard Admin entry and
+  the stronger Stats tax-history assertion rerun remain pending. Earlier fresh
+  startup/photo passes have not been repeated after the latest timing repairs.
+
+## Latest student journey repairs
+
+The Market roof overhang extended beyond its wall collider and blocked the
+outside camera. Collision-checked view recovery now avoids that volume without
+moving the player or bypassing walls. A pending physical exit also respects a
+newer navigation request. The live-keyboard gate driver retains the same event
+and reward assertions; optional access waits for the new diagnostic snapshot
+rather than throwing during a Town-to-Market publication boundary.
+
+The nine-second Market group and the teacher camera reveal used a physics-style
+0.25-second elapsed clamp. Slow software frames made the observation and reveal
+much longer than their real durations. Those visible sequences now follow elapsed
+time; hidden tabs still skip updates/reset their clocks. Requested trail travel
+holds the previous visible scene while its assets prepare. Actual customer
+results, wages and visible teachers pass their unchanged acceptance waits.
 
 ## Independent review repairs
 
@@ -139,7 +164,9 @@ performance. Immediate page errors and phase timings are recorded in the tests.
 Read-only Pages inspection: the public test repository reports `has_pages=false`,
 homepage=null, zero Actions runs and no tracked workflow files. Pages deployment
 is not configured. Evidence: `qa/cloud-pages-status.json`. No account, security,
-connector or hosting setting was changed.
+connector or hosting setting was changed. A minimal static export/activation plan
+is in `qa/cloud-deployment-plan.md`; repository admin access is verified, while
+connector Pages/Administration API write scopes are unverified.
 
 Commands and files are responsive. Managed Chromium download is blocked by HTTP
 403 `Domain forbidden` from `cdn.playwright.dev`. Inside the workspace wrapper,
@@ -149,9 +176,9 @@ browser sandbox, OS security, credentials or connector grants were altered.
 
 Software rendering remains slow; these results do not establish native-hardware
 smoothness. Full browser-suite testing is deferred. No browser session is running at this
-checkpoint. Next bounded work: physical Market exit/re-entry and progressive Mara
-briefing, then teacher-module browser retry, natural mural-to-oval readiness and
-persistent revisits. The parent requested this checkpoint after the bounded Admin
-test; a full suite is not running.
+checkpoint. Next bounded work: post-repair persistent teacher revisit and module
+retry, phone journey coverage and fresh startup/photo acceptance; then validate
+the proposed static deployment export. The parent requested this checkpoint after
+the current test; a full suite is not running.
 Use `npx playwright test --config playwright.cloud-sandbox.config.mjs` with the
 sandbox-preserving approved execution path. No production deployment is claimed.

@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "88ebb485942df25ef20fd2f7a2bcc32ae93b75ea0eff3e8dd03fa7bc880da862"
+      "sha256": "3d288a4c0e3b714cf50c9fad5f020706bc84f4128473512b27079e0830860606"
     },
     {
       "path": "arcade-carnival.js",
@@ -550,7 +550,7 @@
     },
     {
       "path": "camera-clearance.mjs",
-      "sha256": "aed6e3d381e94ff937b519a1108abb3487f7ddb793de43b59e7b661f108e0d75"
+      "sha256": "31851ba40ad4bce96c275caea2ea29244a33bad032885be4c4666c8ac439ecc2"
     },
     {
       "path": "campus-landscape.js",
@@ -590,7 +590,7 @@
     },
     {
       "path": "discovery-opening.js",
-      "sha256": "3e59d6b3bb886fc61dcee2119e4984c5dbeca02bb5f612444acf5b8cf97b141d"
+      "sha256": "71fd8db8d9211f6129d2c533cb6d9b94581407b94917a315d59f46d5d425a4f6"
     },
     {
       "path": "discovery-state.mjs",
