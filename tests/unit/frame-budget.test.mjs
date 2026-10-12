@@ -41,3 +41,13 @@ test('first-view completion belongs to a real completed submission, never an inv
  expect(()=>gate.submitted()).toThrow('preceding frame');expect(gate.submittedFrame).toBe(1);
  complete=true;expect(gate.ready()).toBe(true);expect(gate.completedFrame).toBe(1);
 });
+
+test('completed software frames leave browser layout/input ticks before another scene draw',()=>{
+ let complete=false;const gl={TIMEOUT_EXPIRED:1,SYNC_GPU_COMMANDS_COMPLETE:3,fenceSync:()=>({}),clientWaitSync:()=>complete?2:1,deleteSync(){},flush(){}};
+ const gate=createGpuFrameGate({getContext:()=>gl},true);expect(gate.readyForDraw(0)).toBe(true);gate.submitted();expect(gate.readyForDraw(10)).toBe(false);
+ complete=true;expect(gate.readyForDraw(100)).toBe(false);expect(gate.completedFrame).toBe(1);expect(gate.ready()).toBe(true);expect(gate.readyForDraw(147)).toBe(false);expect(gate.readyForDraw(148)).toBe(true);
+ gate.submitted();complete=false;expect(gate.readyForDraw(149)).toBe(false);
+});
+test('hardware input opportunities preserve ordinary draw scheduling',()=>{
+ const gate=createGpuFrameGate({getContext:()=>({})},false);gate.submitted();expect(gate.readyForDraw(0)).toBe(true);gate.submitted();expect(gate.readyForDraw(1)).toBe(true);
+});
