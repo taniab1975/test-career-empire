@@ -51,7 +51,8 @@ def main():
             failures.add(f'{by}: forbidden development path {name}'); return
         if name not in entries:
             failures.add(f'{by}: missing {name}'); return
-        if PurePosixPath(name).suffix.lower() not in WEB:
+        license_notice = name.startswith('playable-3d/vendor/') and 'license' in PurePosixPath(name).name.lower()
+        if PurePosixPath(name).suffix.lower() not in WEB and not license_notice:
             return
         if name not in selected:
             selected.add(name); queue.append(name)

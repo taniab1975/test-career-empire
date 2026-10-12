@@ -14,6 +14,8 @@ export async function observeMarketWalking(page){
 // publication. This observes position; it never sets position or progress.
 export async function walkMarket(page,key,stop,timeout=90000){
  await page.locator('#scene').focus();
+ // Modal close events clear old keys asynchronously; settle before a new hold.
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  const stopped=page.evaluate(({key,stop,timeout})=>new Promise((resolve,reject)=>{
   const started=performance.now(),release=()=>window.dispatchEvent(new KeyboardEvent('keyup',{code:key,bubbles:true}));
   function check(){const sample=window.observeMarketWalking?.(),value=sample?.position?.[{x:0,y:1,z:2}[stop.axis]],element=stop.selector&&document.querySelector(stop.selector);
