@@ -76,7 +76,7 @@ let introWarmTime=-Infinity;
 let toastTimer,drag=null,lastTime=0,accumulator=0,metricsTime=0,frames=0,viewport={width:1,height:1};
 let tapMovement=null,watchingEST=false;
 const teachers=[];
-let teacherLoading=false,teacherAttempted=false,ovalVisitRecorded=false,teacherLoad,teacherModuleFailure=null;
+let teacherLoading=false,teacherAttempted=false,ovalVisitRecorded=false,teacherLoad,teacherModuleFailure=null,teacherModuleRequest=0;
 const teacherFailures=new Map();
 const teacherRay=new THREE.Raycaster(),teacherPointer=new THREE.Vector2();
 function updateTeacherLoading(){
@@ -93,8 +93,8 @@ function loadTeachers({explicit=false}={}){
  if(teachers.length===2)return Promise.resolve();
  if(teacherLoad)return teacherLoad;
  teacherLoading=true;teacherAttempted=true;
- const moduleAttempt=teacherModuleFailure?.attempts||0;
- const moduleRequest=moduleAttempt?import('./teacher-npc.js?v=teacher-revisit-20261012&retry='+moduleAttempt):import('./teacher-npc.js?v=teacher-revisit-20261012');
+ const moduleAttempt=teacherModuleFailure?.attempts||0,moduleGeneration=teacherModuleRequest++;
+ const moduleRequest=moduleGeneration?import('./teacher-npc.js?v=teacher-revisit-20261012&retry='+moduleGeneration):import('./teacher-npc.js?v=teacher-revisit-20261012');
  teacherLoad=moduleRequest.then(async m=>{teacherModuleFailure=null;
   // Stagger decode/upload work and isolate each optional NPC's failure.
   for(const config of m.TEACHERS)if(!teachers.some(n=>n.id===config.id)){
@@ -742,7 +742,7 @@ function animate(){
     if(mode==='town'&&campusReady&&travelled>.001&&performance.now()>marketTravelCooldownUntil&&Math.hypot(actor.model.position.x-43,actor.model.position.z+22)<1.2)openMarket();
     // A render frame with no physics tick is not a stop. Never restart its walk.
     if(steps)actor.setWalking(travelled/(steps*STEP)>.03,travelled/(steps*STEP));
-    if(mode==='town'){if(entryReady&&!campusReady&&actor.model.position.z<-14&&worlds.scenery.status==='pending')openCampusInBackground();for(const npc of teachers)npc.update(discovery?.reduced()?0:dt,actor.model.position);}actor.update(discovery?.reduced()?0:dt);prepareNextTask(now);worlds.update(now,camera);updateInteraction();updateMission();
+    if(mode==='town'){if(entryReady&&!campusReady&&actor.model.position.z<-14&&worlds.scenery.status==='pending')openCampusInBackground();for(const npc of teachers)npc.update(Math.max(0,elapsed),actor.model.position);}actor.update(discovery?.reduced()?0:dt);prepareNextTask(now);worlds.update(now,camera);updateInteraction();updateMission();
   }else {renderMotion=null;locomotion.reset();accumulator=0;actor.setWalking(false);if(mode==='studio')preview?.update(dt);}
   updateTeacherLoading();
   // The ungraded queue observation follows visible elapsed time. Clamping it

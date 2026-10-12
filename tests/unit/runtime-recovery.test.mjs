@@ -35,7 +35,7 @@ function teacherHarness(failures){
  let now=0;const urls=[];
  const source=app.slice(app.indexOf('function updateTeacherLoading(){'),app.indexOf('function greetTeacher(')).replace(/import\(([^)]+)\)/g,'importTeachers($1)');
  const context={Math,Map,document:{hidden:false},performance:{now:()=>now},console:{warn(){}},discoveryReview:true,discovery:{revealed:()=>false,snapshot:()=>({step:3}),reduced:()=>false},mode:'town',actor:{model:{position:new THREE.Vector3(-4,0,-57)}},worlds:{},explore:async()=>true,importTeachers:async url=>{urls.push(url);if(failures-->0)throw Error('module offline');return {TEACHERS:[{id:'middleton'},{id:'psandodakis'}],createTeacherNPC:async(_,c)=>({id:c.id,near:()=>false})};}};
- const api=vm.runInNewContext('const teachers=[],teacherFailures=new Map();let teacherLoading=false,teacherAttempted=false,ovalVisitRecorded=false,teacherLoad,teacherModuleFailure=null;'+source+';({loadTeachers,updateTeacherLoading,state:()=>({count:teachers.length,attempted:teacherAttempted,loading:teacherLoading,failure:teacherModuleFailure})});',context);
+ const api=vm.runInNewContext('const teachers=[],teacherFailures=new Map();let teacherLoading=false,teacherAttempted=false,ovalVisitRecorded=false,teacherLoad,teacherModuleFailure=null,teacherModuleRequest=0;'+source+';({loadTeachers,updateTeacherLoading,state:()=>({count:teachers.length,attempted:teacherAttempted,loading:teacherLoading,failure:teacherModuleFailure})});',context);
  return {api,urls,time:t=>now=t};
 }
 test('teacher module failure retries after backoff with a fresh URL and shares loaded actors',async()=>{
@@ -50,4 +50,13 @@ test('paused heartbeat publishes new UI state without inventing rendered frames 
  const context={$:()=>diagnostic,gameSession:{isGuest:true,id:'paused'},document:{documentElement:{dataset:{}}},entryReady:true,worlds:{pendingSurfaceDetails:0,arrivalOnly:false,scenery:{}},detailFailed:false,preparing:false,renderer:{getPixelRatio:()=>.5,info:{render:{calls:20,triangles:100}},getContext(){throw Error('paused readback');}},renderBackend:'software',lastRenderMs:4,discovery:{snapshot:()=>({...discovery})},intro:{snapshot:()=>({open:false})},echo:{snapshot:()=>({...echo})},actor:{model,profile:{body:'antonio'},clips:{}},campusReady:true,teachers:[],mode:'town',phase:'flourishing',state:{activeId:'avery'},pixelDiagnostics:true,frames:0,metricsTime:0,canvas:{dataset:{}}};
  Object.assign(context,{explorationTools:null,explorationMenuOpen:()=>false,marketOpening:false,teacherLoading:false,teacherModuleFailure:null});const source=app.slice(app.indexOf('let renderedFrames=0,'),app.indexOf('function animate(){'));
  const publish=vm.runInNewContext(source+';publishDiagnostics;',context);publish(1.1);discovery.step=4;echo.helper='sprout';publish(2.2);const state=JSON.parse(diagnostic.dataset.state);expect(state.discovery.step).toBe(4);expect(state.echo.helper).toBe('sprout');expect(state.renderedFrames).toBe(0);expect(state.fps).toBe(0);expect(context.canvas.dataset.rendered).toBeUndefined();
+});
+
+test('repeated manual module failures use unique URLs after automatic retries stop',async()=>{
+ const h=teacherHarness(5);for(const t of [0,2001,6002]){h.time(t);await h.api.updateTeacherLoading();}
+ for(let i=0;i<2;i++)await h.api.loadTeachers({explicit:true});
+ await h.api.loadTeachers({explicit:true});
+ expect(h.api.state()).toMatchObject({count:2,failure:null});
+ expect(h.urls).toHaveLength(6);expect(new Set(h.urls).size).toBe(6);
+ expect(h.urls.slice(1).map(url=>new URL(url,'https://game.test/').searchParams.get('retry'))).toEqual(['1','2','3','4','5']);
 });

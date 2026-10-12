@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "3d288a4c0e3b714cf50c9fad5f020706bc84f4128473512b27079e0830860606"
+      "sha256": "28d0078205273206d5e1084e936da0b97f5c4dad8ab0d9ff0d635bbb94ca3b92"
     },
     {
       "path": "arcade-carnival.js",
@@ -982,7 +982,7 @@
     },
     {
       "path": "teacher-npc.js",
-      "sha256": "fa3c7ee941060f9d9501af013ce27bfbff07ab22ac3fb8cd4a3db8be87d63f9c"
+      "sha256": "fef906d4bd9dfc48dcb833028590342067ea0ac3eca07439c7b3c523603bca3c"
     },
     {
       "path": "test-avatar-catalog.mjs",

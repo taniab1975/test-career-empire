@@ -1,6 +1,6 @@
 # Test copy repair status
 
-Updated 2026-10-12 19:49 UTC. Only `taniab1975/test-career-empire`
+Updated 2026-10-12 20:17 UTC. Only `taniab1975/test-career-empire`
 (GitHub ID 1415756807) is authorized. Seed
 `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. The Mac candidate was not
@@ -11,7 +11,7 @@ imported. No production repository or deployment was changed.
 | Check | Result / evidence |
 | --- | --- |
 | Locked dependencies and source | Installed; source checks pass; 270 exact hashes, 82 runtime modules |
-| Units | 212 passed in 49 files on the latest repairs; seed had 187 |
+| Units | 213 passed in 49 files on the latest repairs; seed had 187 |
 | Supported browser | Chromium 154.0.8037.57, `chromiumSandbox: true` |
 | Desktop intro video → Start exploring → exterior campus → actual walking → automatic parcel → develop Chapel picture | Passed; handover 6.847 s; player z 23.3 → 16.522; rendered frame 72 → 92 |
 | Phone startup at 390 × 844 | Earlier focused check passed; not repeated after the later teacher/photo changes |
@@ -43,7 +43,8 @@ Market and photo evidence is retained in `coverage/market-transition-after-evide
 and `coverage/photo-market-after-evidence/`.
 Latest acceptance and review-fix results: `qa/cloud-acceptance-checkpoint.json`.
 Admin screenshots and logs: `coverage/batch-admin-walk-after-evidence/` and
-`coverage/batch-admin-walk-after.log`. No browser or test session is running. Environment commands/files/browser remained
+`coverage/batch-admin-walk-after.log`. A bounded final entry/Chapel/photo smoke is currently running; its result will
+be recorded before the next checkpoint. Environment commands/files/browser remained
 available after the reported 19:44 disconnect; no restart occurred.
 Latest student journey evidence: `qa/cloud-student-journeys.json` and
 `coverage/journeys-final-focused-evidence/`.
@@ -52,7 +53,9 @@ Latest student journey evidence: `qa/cloud-student-journeys.json` and
 
 - Chapel keyboard approach reaches the real doorway; interior entry and the
   colourful mural clue appear in evidence. The strict 90-second end-to-end case
-  still fails on software rendering. Mural photo → oval clue is not accepted yet.
+  still fails on software rendering. Separately, the explicit post-Chapel mural
+  shot → oval clue → natural keyboard arrival → visible teachers case passed
+  in 78.6 s; the complete uninterrupted intro/Chapel path remains separate.
 - Earlier photo cases exhausted the 120-second total deadline at Market. The
   instrumented baseline and latest repaired case pass, but the latter still
   approaches that budget on software graphics. A 55-second gap across companion
@@ -67,8 +70,10 @@ Latest student journey evidence: `qa/cloud-student-journeys.json` and
   readiness. Runtime unchanged, the bounds/screenshot rerun passes. Acceptance
   now polls actual in-view geometry, active-scene parenting and rendered-frame
   advancement within the same 30-second waits and 90-second total deadline.
-- Persistent teacher cancellation, greetings, Market/module returns and replay:
-  not run on the latest repairs.
+- Persistent teacher revisit: latest rerun passed cancellation and two actual
+  greetings for each teacher after repairing elapsed greeting time. It failed
+  opening Options (unchanged 5-second click limit) at 176.0 s before photo and
+  Market/module returns; those remaining persistence stages are not accepted.
 - The combined delayed-Market/retry/walking regression exhausts its unchanged
   60-second total budget. It recovers from the 15-second import deadline and
   retries into Market; the failure snapshot shows opening=false and actual
@@ -76,7 +81,8 @@ Latest student journey evidence: `qa/cloud-student-journeys.json` and
 - Persistent teacher revisit failed its first 60-second invite wait before the
   latest cinematic timing/travel-priority repair. Its failure snapshot eventually
   shows invite and both teachers visible; the complete return/reaction path is
-  not accepted. A post-repair revisit rerun remains pending.
+  not accepted. The later rerun passes the invite/cancellation/repeated greetings,
+  then fails opening Options; this does not establish complete persistence.
 - Phone versions of the latest journey checks, phone keyboard Admin entry and
   the stronger Stats tax-history assertion rerun remain pending. Earlier fresh
   startup/photo passes have not been repeated after the latest timing repairs.
@@ -107,9 +113,12 @@ the real Character Studio detour pass.
 
 Teacher-module failure now records attempts/backoff separately from individual
 NPC failures. Automatic retries use fresh URLs and stop after three failures;
-explicit student retry can recover. Success clears module failure state and
-retains the shared request/no-duplicate cast guards. Browser module-retry and
-natural-arrival timing remain pending; units pass.
+explicit student retry can recover. Each module request now has a monotonic
+generation independent of the bounded automatic retry budget, including repeated
+manual failures. Success clears module failure state and
+retains the shared request/no-duplicate cast guards. The repeated manual failure/restored-availability unit passes; browser
+module-failure recovery remains pending. Natural mural-to-oval arrival passes
+in 78.6 s with actual models and keyboard movement.
 
 Diagnostics publish lightweight metadata on their own one-second cadence even
 when rendering is cached. Image bytes are omitted from debug snapshots. The
