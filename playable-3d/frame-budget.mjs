@@ -1,7 +1,7 @@
 // Keep a constrained GPU to one submitted scene frame. Poll without waiting on
 // the CPU so downloads, input and UI can run while that frame finishes.
 export function createGpuFrameGate(renderer,enabled=false){
- const gl=renderer.getContext();let fence=null,submittedFrame=0,completedFrame=0;
+ const gl=renderer.getContext();let fence=null,submittedFrame=0,completedFrame=0,releasedFrame=0,nextDrawAt=0;
  const supported=enabled&&typeof gl.fenceSync==='function'&&typeof gl.clientWaitSync==='function';
  function ready(){
   if(!fence)return true;
@@ -9,12 +9,20 @@ export function createGpuFrameGate(renderer,enabled=false){
   if(status===gl.TIMEOUT_EXPIRED)return false;
   gl.deleteSync(fence);fence=null;completedFrame=submittedFrame;return true;
  }
+ // Leave consecutive browser animation ticks free for layout/input after a
+ // slow GPU finishes. Asset uploads and requested captures can still use ready().
+ function readyForDraw(now=performance.now()){
+  if(!ready())return false;
+  if(!supported)return true;
+  if(completedFrame!==releasedFrame){releasedFrame=completedFrame;nextDrawAt=now+48;return false;}
+  return now>=nextDrawAt;
+ }
  function submitted(){
   if(supported&&fence)throw new Error('GPU frame submitted before the preceding frame completed');
   submittedFrame++;if(!supported){completedFrame=submittedFrame;return;}
   fence=gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE,0);gl.flush();
  }
- return {ready,submitted,get submittedFrame(){return submittedFrame;},get completedFrame(){return completedFrame;}};
+ return {ready,readyForDraw,submitted,get submittedFrame(){return submittedFrame;},get completedFrame(){return completedFrame;}};
 }
 
 // Decoded decorative images retain their original pixels, but become visible

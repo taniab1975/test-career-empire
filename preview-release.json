@@ -1,9 +1,9 @@
 {
   "repository": "taniab1975/test-career-empire",
-  "sourceCommit": "f7331060ce86ef1eedecf4e6a1271a68e36d4689",
+  "sourceCommit": "8ee2a7b6e9b162affedd4d2b57b87fcfeee4fbc4",
   "gamePath": "playable-3d/",
   "fileCount": 623,
-  "dependencyBytes": 524888216,
+  "dependencyBytes": 524889389,
   "existingLegacyLinkWarnings": [
     "data/world/town-layout.stage1-corrected.json: unresolved ../modules/megatrends/index.html"
   ],
@@ -1550,8 +1550,8 @@
     },
     {
       "path": "playable-3d/app.js",
-      "bytes": 106904,
-      "sha256": "f4ff96be7807362df37ad728d1ddb1078d1a4ea5d592265e71fec8aa5e57b90d"
+      "bytes": 107644,
+      "sha256": "f9ff2458b0f037bacb2e145d244ee3f3b3e389238917d379d91984afc7efb0c6"
     },
     {
       "path": "playable-3d/arcade-carnival.js",
@@ -2565,8 +2565,8 @@
     },
     {
       "path": "playable-3d/frame-budget.mjs",
-      "bytes": 1904,
-      "sha256": "d5b05e74660c41337ec1a36f36fd42645ee7eb7b48162e6ddad6002cecb9bbe0"
+      "bytes": 2337,
+      "sha256": "b3204b74a583e0f69c783c268f639fbcf704595865d41f578af5314d5d9420dd"
     },
     {
       "path": "playable-3d/game-session.mjs",
