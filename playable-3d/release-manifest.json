@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "8e7490ac95a3b7d68b052833a8f8774bc9373ed8c49a80d1a421918f44b9666b"
+      "sha256": "88ebb485942df25ef20fd2f7a2bcc32ae93b75ea0eff3e8dd03fa7bc880da862"
     },
     {
       "path": "arcade-carnival.js",
@@ -790,7 +790,7 @@
     },
     {
       "path": "exploration-tools.mjs",
-      "sha256": "8f34c852f946764b05f400c9f6398dac7b5cbb91cb7b9554d3f38f98ab47110f"
+      "sha256": "5a0ce98cac98d19a20a87e48069bb27a890fa3c2cd883e3a664a1da627c5886c"
     },
     {
       "path": "field-guide.html",
@@ -962,7 +962,7 @@
     },
     {
       "path": "startup-assets.mjs",
-      "sha256": "56294558b9da37b3cc8a05c4abf373ba9ed0c4f987fed3603e7652573fb270b2"
+      "sha256": "aafe7461355477e47f90eb1e002b8ffe93f407bdd1bd16690c86352473d1ce71"
     },
     {
       "path": "studio.js",

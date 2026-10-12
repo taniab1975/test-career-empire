@@ -1,6 +1,6 @@
 # Test copy repair status
 
-Updated 2026-10-12 18:14 UTC. Only `taniab1975/test-career-empire`
+Updated 2026-10-12 19:01 UTC. Only `taniab1975/test-career-empire`
 (GitHub ID 1415756807) is authorized. Seed
 `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. The Mac candidate was not
@@ -11,7 +11,7 @@ imported. No production repository or deployment was changed.
 | Check | Result / evidence |
 | --- | --- |
 | Locked dependencies and source | Installed; source checks pass; 270 exact hashes, 82 runtime modules |
-| Units | 202 passed on the latest runtime repairs; seed had 187 |
+| Units | 209 passed in 49 files on the latest repairs; seed had 187 |
 | Supported browser | Chromium 154.0.8037.57, `chromiumSandbox: true` |
 | Desktop intro video → Start exploring → exterior campus → actual walking → automatic parcel → develop Chapel picture | Passed; handover 6.847 s; player z 23.3 → 16.522; rendered frame 72 → 92 |
 | Phone startup at 390 × 844 | Earlier focused check passed; not repeated after the later teacher/photo changes |
@@ -23,6 +23,12 @@ imported. No production repository or deployment was changed.
 | Held photo before companion, optional Skip, Mystery/Comedy distinction | Whole actual UI case passed with its unchanged 120-second test timeout; reporter duration 120.5 s includes fixture/teardown; PNG previews, pixel difference > 10, optional Skip and Market handover |
 | Full-campus photo → visible Market → keyboard walk to Mara → briefing opens | Focused check passed before/after repair; screenshot inspected; original 90-second total and interaction assertions retained |
 | Visible Sprout in campus and Market | Focused check passed twice (63.9 s; rendered-observation rerun 80.2 s); screenshots inspected; mesh in view, correct active-scene parent and advancing rendered frames |
+| Stats money/collection, desktop and phone | Both default cases passed after foreground module priority; savings/withdrawal, one-time giving and retained plant/ticket tested; screenshot shows $12 wallet and $4 contributions |
+| Administration curriculum, desktop and phone module harness | Both passed: reception, two sources, 6/6 customer-group rehearsal, application review; $18 wallet retained |
+| Actual desktop keyboard entrance to Administration | Passed in 72.0 s: west doorway → reception → Nora/Signal or Spin → opportunities → Market return; same run and $18 retained; screenshots inspected |
+| Pending Market → Character Studio, then late import finishes | Browser passed in 17.3 s; Studio stays visible, rendering continues and late completion cannot change destination |
+| Paused Stats metadata and honest frame counter | Browser passed in 38.3 s; actual Save $5 updates UI and diagnostics ($18 → $13, savings $5) while frame count remains 40 |
+| Review failure/retry units | Six runtime regressions and cancellation/deadline helper checks pass; automatic teacher-module retry is bounded and explicit retry recovers |
 
 Entry evidence: `qa/cloud-startup-evidence.json`. Companion scene bounds and
 rendered-frame evidence: `qa/cloud-companion-evidence.json`. Market phases and network timings:
@@ -31,6 +37,9 @@ remain under ignored `coverage/`; the companion screenshots are preserved in
 `coverage/companion-bounds-evidence/` and `coverage/companion-rendered-evidence/`.
 Market and photo evidence is retained in `coverage/market-transition-after-evidence/`
 and `coverage/photo-market-after-evidence/`.
+Latest acceptance and review-fix results: `qa/cloud-acceptance-checkpoint.json`.
+Admin screenshots and logs: `coverage/batch-admin-walk-after-evidence/` and
+`coverage/batch-admin-walk-after.log`. No browser or test session is running.
 
 ## Failed / incomplete
 
@@ -53,8 +62,36 @@ and `coverage/photo-market-after-evidence/`.
   advancement within the same 30-second waits and 90-second total deadline.
 - Persistent teacher cancellation, greetings, Market/module returns and replay:
   not run on the latest repairs.
-- Live minimap, stats/earnings acceptance, physical Market exit/re-entry and
-  Market Admin: not run on the latest repairs.
+- The combined delayed-Market/retry/walking regression exhausts its unchanged
+  60-second total budget. It recovers from the 15-second import deadline and
+  retries into Market; the failure snapshot shows opening=false and actual
+  keyboard travel to z=5.257. The whole timing case remains failed.
+- Physical Market exit/re-entry, progressive Mara briefing, phone keyboard Admin
+  entry, natural teacher ready-by-arrival and persistent teacher revisit: not run
+  in this checkpoint. Stronger Stats tax-history assertions are added but their
+  rerun is pending. Earlier startup/photo passes have not been repeated after
+  these review fixes.
+
+## Independent review repairs
+
+Market travel now has navigation ownership, immediate cancellation and a bounded
+15-second import deadline. Choosing another destination releases the old render
+hold; late completion cannot construct/switch scenes. Failure uses a fresh retry
+URL, and old completion cannot clear a newer request. Controlled unit cases and
+the real Character Studio detour pass.
+
+Teacher-module failure now records attempts/backoff separately from individual
+NPC failures. Automatic retries use fresh URLs and stop after three failures;
+explicit student retry can recover. Success clears module failure state and
+retains the shared request/no-duplicate cast guards. Browser module-retry and
+natural-arrival timing remain pending; units pass.
+
+Diagnostics publish lightweight metadata on their own one-second cadence even
+when rendering is cached. Image bytes are omitted from debug snapshots. The
+frame counter only increments after a scene render, and pixel readback remains
+an explicit rendered-frame diagnostic. Paused software UI retains the current
+camera and does not redraw just because a decorative texture arrives. Actual
+visible UI, screenshots and movement remain separate acceptance evidence.
 
 ## Repairs already verified
 
@@ -99,6 +136,11 @@ performance. Immediate page errors and phase timings are recorded in the tests.
 
 ## Environment and next action
 
+Read-only Pages inspection: the public test repository reports `has_pages=false`,
+homepage=null, zero Actions runs and no tracked workflow files. Pages deployment
+is not configured. Evidence: `qa/cloud-pages-status.json`. No account, security,
+connector or hosting setting was changed.
+
 Commands and files are responsive. Managed Chromium download is blocked by HTTP
 403 `Domain forbidden` from `cdn.playwright.dev`. Inside the workspace wrapper,
 SUID helper ownership maps to `nobody` and Chromium aborts. Approved execution
@@ -107,8 +149,9 @@ browser sandbox, OS security, credentials or connector grants were altered.
 
 Software rendering remains slow; these results do not establish native-hardware
 smoothness. Full browser-suite testing is deferred. No browser session is running at this
-checkpoint. Next bounded work: Market Admin presence/access, physical entrance
-and exit, Options resume, Stats/earnings and progressive Mara briefing; then
-measure natural mural-to-oval teacher readiness and persistent revisits.
+checkpoint. Next bounded work: physical Market exit/re-entry and progressive Mara
+briefing, then teacher-module browser retry, natural mural-to-oval readiness and
+persistent revisits. The parent requested this checkpoint after the bounded Admin
+test; a full suite is not running.
 Use `npx playwright test --config playwright.cloud-sandbox.config.mjs` with the
 sandbox-preserving approved execution path. No production deployment is claimed.

@@ -11,8 +11,9 @@ export async function installMarketTimingProbe(page){
   const response=await route.fetch();let source=await response.text();
   const replace=(from,to)=>{if(!source.includes(from))throw Error('Market timing marker missing: '+from);source=source.replace(from,to);};
   const mark=phase=>`window.recordMarketPhase('${phase}');`;
-  replace('if(marketOpening)return;marketOpening=true;',"if(marketOpening)return;marketOpening=true;"+mark('opening'));
-  replace("if(!nightMarket){const {createNightMarket}=await import('./night-market.js?v=market-arrangement-20261012');nightMarket=createNightMarket(","if(!nightMarket){"+mark('module-requested')+"const {createNightMarket}=await import('./night-market.js?v=market-arrangement-20261012');"+mark('module-ready')+mark('construction-start')+'nightMarket=createNightMarket(');
+  replace("marketOpening=true;resetNavigationInput();", "marketOpening=true;"+mark('opening')+"resetNavigationInput();");
+  replace("if(!nightMarket){const moduleReady=", "if(!nightMarket){"+mark('module-requested')+'const moduleReady=');
+  replace("if(request!==marketTravelRequest)return;nightMarket=createNightMarket(",mark('module-ready')+"if(request!==marketTravelRequest)return;"+mark('construction-start')+'nightMarket=createNightMarket(');
   replace('});nightMarket.scene.environment=worlds.town.environment;', '});'+mark('construction-end')+'nightMarket.scene.environment=worlds.town.environment;');
   replace("await setMode('market');}",mark('set-mode-start')+"await setMode('market');"+mark('set-mode-end')+'}');
   replace('portraitCapturePending=true;', 'portraitCapturePending=true;'+mark('portrait-requested'));
