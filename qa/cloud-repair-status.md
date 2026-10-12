@@ -1,6 +1,6 @@
 # Test copy repair status
 
-Updated 2026-10-12 16:14 UTC. Environment commands and files are available;
+Updated 2026-10-12 16:36 UTC. Environment commands and files are available;
 this task has resumed as sole writer. Only `taniab1975/test-career-empire` (1415756807).
 Seed `cb05d4ef12addb53f0c744655bfbb19261f18671` came from ECC
 `b596b0e760dc0949afd120d74166cb19797abfa2`. Repairs were implemented here;
@@ -56,6 +56,18 @@ Early handover/movement checks failed their strict budgets; those failures promp
 runtime repairs. Existing acceptance deadlines were not increased.
 
 ## Latest focused run / next work
+
+Review found a `block` helper scope regression in the entry/full split. The helper
+is now shared by both paths; a new unit and real browser geometry test pass the
+entry-to-full transition and repeated collider integration. Visible full-campus
+rendering is still under verification.
+
+The original Chapel failure screenshot is at Administration. A live keyboard/map
+route reaches the actual Chapel door, enters the interior, and the exit snapshot
+shows the colourful mural clue. Its strict total timing check still fails on the
+software renderer. The minimap also lagged position updates on slow frames; a
+per-pose update is being verified. Heavy landscape rendering during integration
+is being staged to keep the completed entry responsive.
 
 The twelve-check run was stopped for an ownership handoff: one passed (real entry
 geometry/collision), one failed, one was interrupted and nine did not run. The

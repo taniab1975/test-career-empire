@@ -62,11 +62,11 @@ const priorUpdate=world.baseEnvironmentUpdate||world.update;world.baseEnvironmen
  for(const sun of directional){const p=presets[activePhase].p,a=shadowAnchor(pos,p,sun.shadow.camera,sun.shadow.mapSize);sun.position.set(p[0]+a[0],p[1]+a[1],p[2]+a[2]);sun.target.position.fromArray(a);sun.target.updateMatrixWorld();}
 };
 
+const block=(x,y,z,w,h,d)=>world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cuboid(w/2,h/2,d/2).setTranslation(x,y,z));
 if(!world.teachingExteriorColliders){
 // Closed reference building footprint where the approved Media exterior meets the playable edge.
 world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cuboid(10.95,3.6,3.25).setTranslation(-4,3.6,-37).setRotation({x:0,y:1,z:0,w:0}));
 // Newly accessible exteriors remain solid; the playing surface stays open.
-const block=(x,y,z,w,h,d)=>world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cuboid(w/2,h/2,d/2).setTranslation(x,y,z));
 block(18.68,2.8,-53,5.95,5.6,21.25);
 // SPACE has a real raised forecourt. Its top surface and shallow approach
 // are colliders too, so the character rises onto the orange terrace rather
@@ -85,7 +85,10 @@ world.teachingExteriorColliders=true;
 
 if(entryOnly)return;
 
-for(const [x,z,w,d]of surroundings.userData.extraBeds)block(x,.22,z,w,.44,d);
-for(const {x,z} of surroundings.userData.treePlacements)world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cylinder(2,.28).setTranslation(x,2,z));
+if(!world.surroundingsColliders){
+ for(const [x,z,w,d]of surroundings.userData.extraBeds)block(x,.22,z,w,.44,d);
+ for(const {x,z} of surroundings.userData.treePlacements)world.townPhysics.world.createCollider(RAPIER.ColliderDesc.cylinder(2,.28).setTranslation(x,2,z));
+ world.surroundingsColliders=true;
+}
 
 }
