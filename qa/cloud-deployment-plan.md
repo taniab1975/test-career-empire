@@ -31,7 +31,7 @@ for that owner action. No grant is being requested by this plan.
 2. The exporter builds from the verified release manifest, reachable runtime graph,
    HTML/CSS dependencies, dynamic avatar/helper catalog assets and linked course,
    My Life and Administration resources. Fail the export for missing files.
-   The completed export has 623 files totaling 525,005,414 bytes (500.68 MiB),
+   The completed export has 623 files totaling 525,006,587 bytes (500.68 MiB),
    below 1 GB. All 620 dependency files matched their expected hashes through
    HTTP at `/test-career-empire/`; video byte ranges returned 206. GLB external
    images and phone models retain their actual loader resource bases. One
@@ -64,8 +64,8 @@ The expected game path after a verified deployment is
 
 ## Current branch and exact blockers
 
-Source: `f7331060ce86ef1eedecf4e6a1271a68e36d4689`. Export:
-`bc412a4d59d842b666123eb3fb7f15ef142f7934` on `gh-pages`; both remote
+Source: `8ee2a7b6e9b162affedd4d2b57b87fcfeee4fbc4`. Export:
+`11340016f6ef1e51ee0671ec93c203890777eb33` on `gh-pages`; both remote
 heads were verified. Source-only status/test scripts remain on `main`.
 
 The existing CLI Pages read returned:
@@ -86,7 +86,14 @@ Detailed publication evidence: `qa/cloud-pages-publication.json`. Reproduction:
 HTTP verification: `python3 scripts/verify-test-pages.py <permitted-base-url/> <source-commit>`.
 
 Initial rear-building visibility and actual parcel walking pass on the rebuilt
-project-prefix export; the unchanged eight-second cold handover target remains
-unaccepted. Natural video/Chapel/mural now passes. See
+project-prefix export; the unchanged eight-second cold handover target now passes
+with actual completed-canvas/control-release timing, recorded separately from
+Node observation latency. Natural video/Chapel/mural now passes. See
 `qa/cloud-visibility-chapel-checkpoint.json`. No Pages permission/public URL retry
 was made in this visibility repair batch.
+
+Morning update: teacher persistence, desktop Stats reopening and cold eight-second
+real handover now pass. Natural-video preparation completes before EOF. Artifact
+refreshed from the same tested runtime source; all 620 HTTP hashes and media ranges
+verified. No blocked Pages/public-network request was retried. Latest evidence:
+`qa/cloud-morning-checkpoint.json`.
