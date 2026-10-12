@@ -3,6 +3,9 @@
 // This changes input only: no teleport, physics mutation or progression writes.
 export async function walkToMap(page,key,axis,limit,timeout=20000){
  await page.locator('#scene').focus();
+ // A dialog close event can clear navigation after the DOM open flag changes.
+ // Let that event settle before sending the real keyboard hold.
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  const stopped=page.evaluate(({key,axis,limit,timeout})=>new Promise((resolve,reject)=>{
   const started=performance.now();
   function release(){window.dispatchEvent(new KeyboardEvent('keyup',{code:key,bubbles:true}));}
