@@ -42,7 +42,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "b976707890f2d2f9b76756ff631caa8795795bdb102911ff80766ca13bdbd554"
+      "sha256": "826472f381ace1d5330ab8cd990db0ec8ac1af1730405314665573d8520e95ec"
     },
     {
       "path": "arcade-carnival.js",
@@ -862,7 +862,7 @@
     },
     {
       "path": "locomotion.js",
-      "sha256": "fc62c2bd6f803807d0fc807d0538e46382d175a2551feb6149563c0486b3b7b8"
+      "sha256": "270edfe2f8851eb7d713b85177ada1b6506de53289645fe3085280a688941bb0"
     },
     {
       "path": "market-arrangement.mjs",
@@ -938,7 +938,7 @@
     },
     {
       "path": "render-quality.mjs",
-      "sha256": "0346ba566fbab723060f9ca0d23126594b048f2ef126168905713dbebac4661c"
+      "sha256": "34dd19a1fd94b03ec479e0177b0361be156a647211bfcef4a119726ce2fc2875"
     },
     {
       "path": "reveal-layout.mjs",

@@ -7,7 +7,7 @@ import {createTasterIntro} from './intro-taster.mjs?v=default-exploration-202610
 import {revealLayout,preparePortrait,prepareCastPortrait} from './reveal-layout.mjs';
 import {keepOutdoorClearance,keepChapelClearance} from './camera-clearance.mjs?v=default-exploration-20261011';
 import {createDiscovery} from './discovery-opening.js?v=photo-review-20261012';
-import {createLocomotion, STEP, turnTowards} from './locomotion.js?v=travel-20260927';
+import {createLocomotion, STEP, turnTowards,accumulateTravelTime} from './locomotion.js?v=slow-render-20261012';
 import {createHelperPicker} from './helper-picker.js?v=options-companion-20261012';
 import {createExplorer} from '../economy-lab/exploration.mjs?v=navigation-20261012';
 import {createFlyover} from './flyover.js?v=student-usability-20260924';
@@ -482,6 +482,7 @@ function resetStudioCamera(){const distance=isMobile()?4.25:4.0;camera.position.
 let renderBackend='',lastRenderMs=0;
 function applyRenderQuality(){
  const quality=renderQuality(renderBackend,$('quality').value,devicePixelRatio);let changed=false;
+ if(renderer.shadowMap.enabled!==quality.shadows){renderer.shadowMap.enabled=quality.shadows;changed=true;}
  if(renderer.getPixelRatio()!==quality.pixelRatio){renderer.setPixelRatio(quality.pixelRatio);resize();changed=true;}
  worlds.town.traverse(o=>{if(o.isDirectionalLight&&o.castShadow&&o.shadow.mapSize.x!==quality.shadowSize){o.shadow.mapSize.set(quality.shadowSize,quality.shadowSize);o.shadow.map?.dispose();o.shadow.map=null;o.shadow.needsUpdate=true;changed=true;}});
  return changed;
@@ -599,7 +600,7 @@ function openModule(name,stage,url){
 }
 function closeModule(){moduleObserver?.disconnect();clearTimeout(moduleTimer);$('module-overlay').hidden=true;$('experience').inert=false;$('module-frame').onload=null;$('module-frame').removeAttribute('src');canvas.focus();}
 function phaseChange(name){if(!Object.hasOwn(PHASES,name))return;phase=name;worlds.phase(name);$('phase').value=name;}
-function qualityChange(){const q=$('quality').value;renderer.setPixelRatio(q==='low'?Math.min(devicePixelRatio,1):q==='high'?Math.min(devicePixelRatio,2):sharpRatio);renderer.shadowMap.enabled=q!=='low';resize();}
+function qualityChange(){const q=$('quality').value;renderer.setPixelRatio(q==='low'?Math.min(devicePixelRatio,1):q==='high'?Math.min(devicePixelRatio,2):sharpRatio);renderer.shadowMap.enabled=renderQuality(renderBackend,q,devicePixelRatio).shadows;resize();}
 function bindEvents(){
   document.addEventListener('visibilitychange',()=>{lastTime=clock.getElapsedTime();accumulator=0;frames=0;metricsTime=lastTime;if(document.hidden)resetNavigationInput();});
   const header=document.querySelector('.topbar');
@@ -677,7 +678,7 @@ function animate(){
     if(!renderMotion||renderMotion.shown.distanceToSquared(actor.model.position)>1e-10){
       renderMotion={previous:actor.model.position.clone(),current:actor.model.position.clone(),shown:actor.model.position.clone()};
     }
-    accumulator=Math.min(accumulator+dt,.25);let travelled=0,steps=0;
+    accumulator=accumulateTravelTime(accumulator,elapsed);let travelled=0,steps=0;
     while(accumulator>=STEP){
       const previous=renderMotion.current.clone();
       const delta=locomotion.step(x,z,yaw,running);
@@ -767,7 +768,7 @@ async function boot(){
   configurePhoneAssets();
   THREE.Cache.enabled=true;
   try{
-    icons();renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(sharpRatio);renderBackend=rendererName(renderer);renderer.setPixelRatio(renderQuality(renderBackend,$('quality').value,devicePixelRatio).pixelRatio);renderer.localClippingEnabled=true;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.03;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.autoClear=false;
+    icons();renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(sharpRatio);renderBackend=rendererName(renderer);renderer.setPixelRatio(renderQuality(renderBackend,$('quality').value,devicePixelRatio).pixelRatio);renderer.localClippingEnabled=true;renderer.shadowMap.enabled=renderQuality(renderBackend,$('quality').value,devicePixelRatio).shadows;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.03;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.autoClear=false;
     frameGate=createGpuFrameGate(renderer,renderQuality(renderBackend,'auto',devicePixelRatio).software);
     surfaceUploads=createTextureUploadQueue({waitForFrame:()=>new Promise(resolve=>{const next=()=>requestAnimationFrame(()=>{if(document.hidden||!frameGate.ready())next();else resolve();});next();}),upload:texture=>renderer.initTexture(texture)});
     camera=new THREE.PerspectiveCamera(55,1,.08,220);
